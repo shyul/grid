@@ -6,22 +6,81 @@
    version="1.0"
    description=""
    tags=""
-   categories="" />
+   categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
+   element $${FILENAME}
+   {
+   }
+   element RGB_LED_F2.LEDD
+   {
+      datum baseAddress
+      {
+         value = "268435464";
+         type = "long";
+      }
+   }
+   element RGB_LED_F1.LEDD
+   {
+      datum baseAddress
+      {
+         value = "268435460";
+         type = "long";
+      }
+   }
+   element RGB_LED_F3.LEDD
+   {
+      datum baseAddress
+      {
+         value = "268435468";
+         type = "long";
+      }
+   }
+   element RGB_LED_F0.LEDD
+   {
+      datum baseAddress
+      {
+         value = "268435456";
+         type = "long";
+      }
+   }
+   element RGB_LED_F0
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element RGB_LED_F1
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+   element RGB_LED_F2
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element RGB_LED_F3
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
    element SAM9_HOST
    {
       datum _sortIndex
       {
          value = "0";
-         type = "int";
-      }
-   }
-   element TEST_LED
-   {
-      datum _sortIndex
-      {
-         value = "1";
          type = "int";
       }
    }
@@ -31,62 +90,6 @@
       {
          value = "5";
          type = "int";
-      }
-   }
-   element TEST_REG0
-   {
-      datum _sortIndex
-      {
-         value = "2";
-         type = "int";
-      }
-   }
-   element TEST_REG1
-   {
-      datum _sortIndex
-      {
-         value = "3";
-         type = "int";
-      }
-   }
-   element TEST_REG2
-   {
-      datum _sortIndex
-      {
-         value = "4";
-         type = "int";
-      }
-   }
-   element TEST_REG1.TestReg
-   {
-      datum baseAddress
-      {
-         value = "268435464";
-         type = "long";
-      }
-   }
-   element TEST_REG2.TestReg
-   {
-      datum baseAddress
-      {
-         value = "268435468";
-         type = "long";
-      }
-   }
-   element TEST_REG0.TestReg
-   {
-      datum baseAddress
-      {
-         value = "268435460";
-         type = "long";
-      }
-   }
-   element TEST_LED.TestReg
-   {
-      datum baseAddress
-      {
-         value = "268435456";
-         type = "long";
       }
    }
    element TEST_MEM.s1
@@ -109,34 +112,25 @@
  <parameter name="globalResetBus" value="false" />
  <parameter name="hdlLanguage" value="VERILOG" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="" />
+ <parameter name="projectName" value="grid.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1342494604996" />
+ <parameter name="timeStamp" value="1342498958802" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="m1" internal="SAM9_HOST.EXPORT" type="conduit" dir="end" />
- <interface name="led" internal="TEST_LED.EXPORT" type="conduit" dir="end" />
+ <interface name="led_f0" internal="RGB_LED_F0.EXPORT" type="conduit" dir="end" />
+ <interface name="led_f1" internal="RGB_LED_F1.EXPORT" type="conduit" dir="end" />
+ <interface name="led_f2" internal="RGB_LED_F2.EXPORT" type="conduit" dir="end" />
+ <interface name="led_f3" internal="RGB_LED_F3.EXPORT" type="conduit" dir="end" />
  <module kind="qsys_host_SAM9" version="1.0" enabled="1" name="SAM9_HOST" />
- <module kind="qsys_test_LED" version="1.0" enabled="1" name="TEST_LED">
-  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
- </module>
- <module kind="qsys_test_RegRW" version="1.0" enabled="1" name="TEST_REG0">
-  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
- </module>
- <module kind="qsys_test_RegRW" version="1.0" enabled="1" name="TEST_REG1">
-  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
- </module>
- <module kind="qsys_test_RegRW" version="1.0" enabled="1" name="TEST_REG2">
-  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
- </module>
  <module
    kind="altera_avalon_onchip_memory2"
    version="11.1"
    enabled="1"
    name="TEST_MEM">
   <parameter name="allowInSystemMemoryContentEditor" value="false" />
-  <parameter name="autoInitializationFileName" value="unsaved_TEST_MEM" />
+  <parameter name="autoInitializationFileName" value="frontier_TEST_MEM" />
   <parameter name="blockType" value="M9K" />
   <parameter name="dataWidth" value="32" />
   <parameter name="deviceFamily" value="Cyclone IV E" />
@@ -155,26 +149,18 @@
   <parameter name="useShallowMemBlocks" value="false" />
   <parameter name="writable" value="true" />
  </module>
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9_HOST.MRST"
-   end="TEST_LED.MRST" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9_HOST.MRST"
-   end="TEST_REG0.MRST" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9_HOST.MRST"
-   end="TEST_REG1.MRST" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9_HOST.MRST"
-   end="TEST_REG2.MRST" />
+ <module kind="qsys_basic_RGB_LED" version="1.0" enabled="1" name="RGB_LED_F0">
+  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
+ </module>
+ <module kind="qsys_basic_RGB_LED" version="1.0" enabled="1" name="RGB_LED_F1">
+  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
+ </module>
+ <module kind="qsys_basic_RGB_LED" version="1.0" enabled="1" name="RGB_LED_F2">
+  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
+ </module>
+ <module kind="qsys_basic_RGB_LED" version="1.0" enabled="1" name="RGB_LED_F3">
+  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
+ </module>
  <connection
    kind="reset"
    version="11.1"
@@ -184,32 +170,56 @@
    kind="clock"
    version="11.1"
    start="SAM9_HOST.MCLK"
-   end="TEST_LED.MCLK" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9_HOST.MCLK"
-   end="TEST_REG0.MCLK" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9_HOST.MCLK"
-   end="TEST_REG1.MCLK" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9_HOST.MCLK"
-   end="TEST_REG2.MCLK" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9_HOST.MCLK"
    end="TEST_MEM.clk1" />
+ <connection kind="avalon" version="11.1" start="SAM9_HOST.M1" end="TEST_MEM.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10001000" />
+ </connection>
+ <connection
+   kind="reset"
+   version="11.1"
+   start="SAM9_HOST.MRST"
+   end="RGB_LED_F0.MRST" />
+ <connection
+   kind="reset"
+   version="11.1"
+   start="SAM9_HOST.MRST"
+   end="RGB_LED_F1.MRST" />
+ <connection
+   kind="reset"
+   version="11.1"
+   start="SAM9_HOST.MRST"
+   end="RGB_LED_F2.MRST" />
+ <connection
+   kind="reset"
+   version="11.1"
+   start="SAM9_HOST.MRST"
+   end="RGB_LED_F3.MRST" />
+ <connection
+   kind="clock"
+   version="11.1"
+   start="SAM9_HOST.MCLK"
+   end="RGB_LED_F0.MCLK" />
+ <connection
+   kind="clock"
+   version="11.1"
+   start="SAM9_HOST.MCLK"
+   end="RGB_LED_F1.MCLK" />
+ <connection
+   kind="clock"
+   version="11.1"
+   start="SAM9_HOST.MCLK"
+   end="RGB_LED_F2.MCLK" />
+ <connection
+   kind="clock"
+   version="11.1"
+   start="SAM9_HOST.MCLK"
+   end="RGB_LED_F3.MCLK" />
  <connection
    kind="avalon"
    version="11.1"
    start="SAM9_HOST.M1"
-   end="TEST_LED.TestReg">
+   end="RGB_LED_F0.LEDD">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x10000000" />
  </connection>
@@ -217,7 +227,7 @@
    kind="avalon"
    version="11.1"
    start="SAM9_HOST.M1"
-   end="TEST_REG0.TestReg">
+   end="RGB_LED_F1.LEDD">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x10000004" />
  </connection>
@@ -225,7 +235,7 @@
    kind="avalon"
    version="11.1"
    start="SAM9_HOST.M1"
-   end="TEST_REG1.TestReg">
+   end="RGB_LED_F2.LEDD">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x10000008" />
  </connection>
@@ -233,12 +243,8 @@
    kind="avalon"
    version="11.1"
    start="SAM9_HOST.M1"
-   end="TEST_REG2.TestReg">
+   end="RGB_LED_F3.LEDD">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x1000000c" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9_HOST.M1" end="TEST_MEM.s1">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10001000" />
  </connection>
 </system>
