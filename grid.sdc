@@ -35,7 +35,6 @@ set_time_format -unit ns -decimal_places 3
 # Create Clock
 #**************************************************************
 
-create_clock -name {QSYS_M0} -period 6.000 -waveform { 0.000 3.000 } [get_pins *cso_M1CLK_clk]
 create_clock -name {HPS_Clocks} -period 15.000 -waveform { 0.000 7.500 } [get_ports {M1_CLK M2_CLK0 M2_CLK1 ISI_MCLK}]
 create_clock -name {LCD_Clock} -period 15.000 -waveform { 0.000 10.000 } [get_ports {LCD_PCLK}]
 create_clock -name {AC97_Clock} -period 40.000 -waveform { 0.000 20.000 } [get_ports {LDB_AC97_MCLK}]
@@ -43,7 +42,7 @@ create_clock -name {AC97_Clock} -period 40.000 -waveform { 0.000 20.000 } [get_p
 #**************************************************************
 # Create Generated Clock
 #**************************************************************
-derive_pll_clocks -create_base_clocks
+derive_pll_clocks
 
 #**************************************************************
 # Set Clock Latency
@@ -61,13 +60,14 @@ derive_clock_uncertainty
 # Set Input Delay
 #**************************************************************
 
-
+set_input_delay -clock HPS_Clocks -max 2 [all_inputs]
+set_input_delay -clock HPS_Clocks -min 0 [all_inputs]
 
 #**************************************************************
 # Set Output Delay
 #**************************************************************
 
-
+set_output_delay -clock HPS_Clocks 2 [all_outputs]
 
 #**************************************************************
 # Set Clock Groups

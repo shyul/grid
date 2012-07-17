@@ -27,6 +27,11 @@ input					avm_M1_waitrequest,
 input		[9:0]		inr_EVENTS_irq
 );
 
+//	rSMC_SETUP(0) = (0 << 24) + (2 << 16) + (0 << 8) + (2 << 0);
+//	rSMC_PULSE(0) = (0 << 24) + (6 << 16) + (0 << 8) + (4 << 0);
+//	rSMC_CYCLE(0) = (0 << 23) + (8 << 16) + (0 << 7) + (6 << 0);
+//	rSMC_MODE(0) = (0 << 28) + (0 << 24) + (1 << 20) + (8 << 16) + (2 << 12) + (0 << 8) + (2 << 4) + (1 << 1) + (1 << 0);
+
 assign 	rso_MRST_reset		= ~(pll_locked & coe_M1_RSTN);
 assign	cso_MCLK_clk		= pll_clocks[0];	//133.33 MHz
 
@@ -52,7 +57,7 @@ assign	q_reset = rso_MRST_reset;
 
 wire					q_clock;
 wire					q_reset;
-reg		[1:0]		q_state = 0;
+reg		[2:0]		state = 0;
 
 reg		[31:0]	h_rdata = 0;
 reg					h_wait = 0;
@@ -73,7 +78,7 @@ reg		[21:0]	tmp_addr;
 always@(posedge q_clock or posedge q_reset)
 begin
 	if(q_reset) begin
-		q_state <= 0;
+		state <= 0;
 		h_rdata <= 0;
 		q_wdata <= 0;
 		q_addr <= 0;
@@ -84,7 +89,7 @@ begin
 		h_wait <= 0;
 	end
 	else begin
-		case(q_state)
+		case(state)
 			0: begin
 			
 				case(coe_M1_CSN)
@@ -103,18 +108,17 @@ begin
 					h_wait <= 1;
 					tmp_cs <= coe_M1_CSN;
 					tmp_addr <= coe_M1_ADDR;
-					q_state <= 1;
+					state <= 1;
 				end
 				else if(!coe_M1_WRN) begin
-					q_wdata <= coe_M1_DATA;
 					q_be <= ~coe_M1_BEN;
-					q_btrans <= 1;
-					q_wr <= 1;
+					q_btrans <= 0;
+					q_wr <= 0;
 					q_rd <= 0;
 					h_wait <= 1;
 					tmp_cs <= coe_M1_CSN;
 					tmp_addr <= coe_M1_ADDR;
-					q_state <= 3;
+					state <= 3;
 				end
 				else begin
 					q_btrans <= 0;
@@ -122,7 +126,7 @@ begin
 					q_rd <= 0;
 					q_be <= 0;
 					h_wait <= 0;
-					q_state <= 0;
+					state <= 0;
 				end
 				
 			end
@@ -130,27 +134,39 @@ begin
 			// Read process.
 			1: begin
 				q_btrans <= 0;
-				if(q_rdvalid) begin h_rdata <= q_rdata; h_wait <= q_wait; q_state <= 2; end
+				if(q_rdvalid) begin h_rdata <= q_rdata; h_wait <= q_wait; state <= 2; end
 			end
 			
 			2: begin
 				q_rd <= 0;
 				h_wait <= q_wait; 
-				if((tmp_addr != coe_M1_ADDR)||(tmp_cs != coe_M1_CSN)||(coe_M1_RDN)) q_state <= 0;
+				if((tmp_addr != coe_M1_ADDR)||(tmp_cs != coe_M1_CSN)||(coe_M1_RDN)) state <= 0;
 			end
 			
 			// Write process.
 			3: begin
+				q_wdata <= coe_M1_DATA;
+				q_btrans <= 1;
+				q_wr <= 1;
+				state <= state + 1;
+			end
+			
+			4: begin
 				q_btrans <= 0;
 				if(!q_wait) begin
 					q_wr <= 0;
 					h_wait <= 0;
-					if((tmp_addr != coe_M1_ADDR)||(tmp_cs != coe_M1_CSN)||(coe_M1_WRN)) q_state <= 0;
+					state <= state + 1;
 				end
 			end
 			
+			5: begin
+				q_wdata <= 0;
+				if((tmp_addr != coe_M1_ADDR)||(tmp_cs != coe_M1_CSN)||(coe_M1_WRN)) state <= 0;
+			end
+			
 			default: begin
-				q_state <= 0;
+				state <= 0;
 				h_rdata <= 0;
 				h_wait <= 0;
 				q_wdata <= 0;

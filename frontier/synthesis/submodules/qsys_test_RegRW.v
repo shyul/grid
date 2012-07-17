@@ -1,7 +1,7 @@
 module qsys_test_RegRW(
 //Avalon System control signal.
-input					csi_MCLK_clk,
 input					rsi_MRST_reset,	// reset_n from MCU GPIO
+input					csi_MCLK_clk,
 
 //Avalon-MM Control.
 output	[31:0]	avs_TestReg_readdata,

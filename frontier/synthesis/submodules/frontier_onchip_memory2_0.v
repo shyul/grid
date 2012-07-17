@@ -18,23 +18,23 @@
 // altera message_level Level1 
 // altera message_off 10034 10035 10036 10037 10230 10240 10030 
 
-module frontier_TEST_MEM (
-                           // inputs:
-                            address,
-                            byteenable,
-                            chipselect,
-                            clk,
-                            clken,
-                            reset,
-                            write,
-                            writedata,
+module frontier_onchip_memory2_0 (
+                                   // inputs:
+                                    address,
+                                    byteenable,
+                                    chipselect,
+                                    clk,
+                                    clken,
+                                    reset,
+                                    write,
+                                    writedata,
 
-                           // outputs:
-                            readdata
-                         )
+                                   // outputs:
+                                    readdata
+                                 )
 ;
 
-  parameter INIT_FILE = "../frontier_TEST_MEM.hex";
+  parameter INIT_FILE = "../frontier_onchip_memory2_0.hex";
 
 
   output  [ 31: 0] readdata;
@@ -96,7 +96,7 @@ module frontier_TEST_MEM (
 //    );
 //
 //  defparam the_altsyncram.byte_size = 8,
-//           the_altsyncram.init_file = "frontier_TEST_MEM.hex",
+//           the_altsyncram.init_file = "frontier_onchip_memory2_0.hex",
 //           the_altsyncram.lpm_type = "altsyncram",
 //           the_altsyncram.maximum_depth = 1024,
 //           the_altsyncram.numwords_a = 1024,
