@@ -1,0 +1,219 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 256 464)
+	(text "frontier" (rect 107 -1 163 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 448 36 460)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "m1_RSTN" (rect 0 0 49 12)(font "Arial" (font_size 8)))
+		(text "m1_RSTN" (rect 4 61 46 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 96 72)(line_width 1))
+	)
+	(port
+		(pt 0 88)
+		(input)
+		(text "m1_CLK" (rect 0 0 42 12)(font "Arial" (font_size 8)))
+		(text "m1_CLK" (rect 4 77 40 88)(font "Arial" (font_size 8)))
+		(line (pt 0 88)(pt 96 88)(line_width 1))
+	)
+	(port
+		(pt 0 104)
+		(input)
+		(text "m1_ADDR[21..0]" (rect 0 0 99 12)(font "Arial" (font_size 8)))
+		(text "m1_ADDR[21..0]" (rect 4 93 88 104)(font "Arial" (font_size 8)))
+		(line (pt 0 104)(pt 96 104)(line_width 3))
+	)
+	(port
+		(pt 0 136)
+		(input)
+		(text "m1_CSN[3..0]" (rect 0 0 84 12)(font "Arial" (font_size 8)))
+		(text "m1_CSN[3..0]" (rect 4 125 76 136)(font "Arial" (font_size 8)))
+		(line (pt 0 136)(pt 96 136)(line_width 3))
+	)
+	(port
+		(pt 0 152)
+		(input)
+		(text "m1_BEN[3..0]" (rect 0 0 84 12)(font "Arial" (font_size 8)))
+		(text "m1_BEN[3..0]" (rect 4 141 76 152)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 96 152)(line_width 3))
+	)
+	(port
+		(pt 0 168)
+		(input)
+		(text "m1_RDN" (rect 0 0 42 12)(font "Arial" (font_size 8)))
+		(text "m1_RDN" (rect 4 157 40 168)(font "Arial" (font_size 8)))
+		(line (pt 0 168)(pt 96 168)(line_width 1))
+	)
+	(port
+		(pt 0 184)
+		(input)
+		(text "m1_WRN" (rect 0 0 42 12)(font "Arial" (font_size 8)))
+		(text "m1_WRN" (rect 4 173 40 184)(font "Arial" (font_size 8)))
+		(line (pt 0 184)(pt 96 184)(line_width 1))
+	)
+	(port
+		(pt 0 200)
+		(output)
+		(text "m1_WAITN" (rect 0 0 56 12)(font "Arial" (font_size 8)))
+		(text "m1_WAITN" (rect 4 189 52 200)(font "Arial" (font_size 8)))
+		(line (pt 0 200)(pt 96 200)(line_width 1))
+	)
+	(port
+		(pt 0 216)
+		(output)
+		(text "m1_EINT[9..0]" (rect 0 0 92 12)(font "Arial" (font_size 8)))
+		(text "m1_EINT[9..0]" (rect 4 205 82 216)(font "Arial" (font_size 8)))
+		(line (pt 0 216)(pt 96 216)(line_width 3))
+	)
+	(port
+		(pt 0 256)
+		(output)
+		(text "led_F0R" (rect 0 0 49 12)(font "Arial" (font_size 8)))
+		(text "led_F0R" (rect 4 245 46 256)(font "Arial" (font_size 8)))
+		(line (pt 0 256)(pt 96 256)(line_width 1))
+	)
+	(port
+		(pt 0 272)
+		(output)
+		(text "led_F0G" (rect 0 0 49 12)(font "Arial" (font_size 8)))
+		(text "led_F0G" (rect 4 261 46 272)(font "Arial" (font_size 8)))
+		(line (pt 0 272)(pt 96 272)(line_width 1))
+	)
+	(port
+		(pt 0 288)
+		(output)
+		(text "led_F0B" (rect 0 0 49 12)(font "Arial" (font_size 8)))
+		(text "led_F0B" (rect 4 277 46 288)(font "Arial" (font_size 8)))
+		(line (pt 0 288)(pt 96 288)(line_width 1))
+	)
+	(port
+		(pt 0 304)
+		(output)
+		(text "led_F1R" (rect 0 0 49 12)(font "Arial" (font_size 8)))
+		(text "led_F1R" (rect 4 293 46 304)(font "Arial" (font_size 8)))
+		(line (pt 0 304)(pt 96 304)(line_width 1))
+	)
+	(port
+		(pt 0 320)
+		(output)
+		(text "led_F1G" (rect 0 0 49 12)(font "Arial" (font_size 8)))
+		(text "led_F1G" (rect 4 309 46 320)(font "Arial" (font_size 8)))
+		(line (pt 0 320)(pt 96 320)(line_width 1))
+	)
+	(port
+		(pt 0 336)
+		(output)
+		(text "led_F1B" (rect 0 0 49 12)(font "Arial" (font_size 8)))
+		(text "led_F1B" (rect 4 325 46 336)(font "Arial" (font_size 8)))
+		(line (pt 0 336)(pt 96 336)(line_width 1))
+	)
+	(port
+		(pt 0 352)
+		(output)
+		(text "led_F2R" (rect 0 0 49 12)(font "Arial" (font_size 8)))
+		(text "led_F2R" (rect 4 341 46 352)(font "Arial" (font_size 8)))
+		(line (pt 0 352)(pt 96 352)(line_width 1))
+	)
+	(port
+		(pt 0 368)
+		(output)
+		(text "led_F2G" (rect 0 0 49 12)(font "Arial" (font_size 8)))
+		(text "led_F2G" (rect 4 357 46 368)(font "Arial" (font_size 8)))
+		(line (pt 0 368)(pt 96 368)(line_width 1))
+	)
+	(port
+		(pt 0 384)
+		(output)
+		(text "led_F2B" (rect 0 0 49 12)(font "Arial" (font_size 8)))
+		(text "led_F2B" (rect 4 373 46 384)(font "Arial" (font_size 8)))
+		(line (pt 0 384)(pt 96 384)(line_width 1))
+	)
+	(port
+		(pt 0 400)
+		(output)
+		(text "led_F3R" (rect 0 0 49 12)(font "Arial" (font_size 8)))
+		(text "led_F3R" (rect 4 389 46 400)(font "Arial" (font_size 8)))
+		(line (pt 0 400)(pt 96 400)(line_width 1))
+	)
+	(port
+		(pt 0 416)
+		(output)
+		(text "led_F3G" (rect 0 0 49 12)(font "Arial" (font_size 8)))
+		(text "led_F3G" (rect 4 405 46 416)(font "Arial" (font_size 8)))
+		(line (pt 0 416)(pt 96 416)(line_width 1))
+	)
+	(port
+		(pt 0 432)
+		(output)
+		(text "led_F3B" (rect 0 0 49 12)(font "Arial" (font_size 8)))
+		(text "led_F3B" (rect 4 421 46 432)(font "Arial" (font_size 8)))
+		(line (pt 0 432)(pt 96 432)(line_width 1))
+	)
+	(port
+		(pt 0 120)
+		(bidir)
+		(text "m1_DATA[31..0]" (rect 0 0 99 12)(font "Arial" (font_size 8)))
+		(text "m1_DATA[31..0]" (rect 4 109 88 120)(font "Arial" (font_size 8)))
+		(line (pt 0 120)(pt 96 120)(line_width 3))
+	)
+	(drawing
+		(text "m1" (rect 81 43 174 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "RSTN" (rect 101 67 226 144)(font "Arial" (color 0 0 0)))
+		(text "CLK" (rect 101 83 220 176)(font "Arial" (color 0 0 0)))
+		(text "ADDR" (rect 101 99 226 208)(font "Arial" (color 0 0 0)))
+		(text "DATA" (rect 101 115 226 240)(font "Arial" (color 0 0 0)))
+		(text "CSN" (rect 101 131 220 272)(font "Arial" (color 0 0 0)))
+		(text "BEN" (rect 101 147 220 304)(font "Arial" (color 0 0 0)))
+		(text "RDN" (rect 101 163 220 336)(font "Arial" (color 0 0 0)))
+		(text "WRN" (rect 101 179 220 368)(font "Arial" (color 0 0 0)))
+		(text "WAITN" (rect 101 195 232 400)(font "Arial" (color 0 0 0)))
+		(text "EINT" (rect 101 211 226 432)(font "Arial" (color 0 0 0)))
+		(text "led" (rect 80 227 178 467)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "F0R" (rect 101 251 220 512)(font "Arial" (color 0 0 0)))
+		(text "F0G" (rect 101 267 220 544)(font "Arial" (color 0 0 0)))
+		(text "F0B" (rect 101 283 220 576)(font "Arial" (color 0 0 0)))
+		(text "F1R" (rect 101 299 220 608)(font "Arial" (color 0 0 0)))
+		(text "F1G" (rect 101 315 220 640)(font "Arial" (color 0 0 0)))
+		(text "F1B" (rect 101 331 220 672)(font "Arial" (color 0 0 0)))
+		(text "F2R" (rect 101 347 220 704)(font "Arial" (color 0 0 0)))
+		(text "F2G" (rect 101 363 220 736)(font "Arial" (color 0 0 0)))
+		(text "F2B" (rect 101 379 220 768)(font "Arial" (color 0 0 0)))
+		(text "F3R" (rect 101 395 220 800)(font "Arial" (color 0 0 0)))
+		(text "F3G" (rect 101 411 220 832)(font "Arial" (color 0 0 0)))
+		(text "F3B" (rect 101 427 220 864)(font "Arial" (color 0 0 0)))
+		(text " frontier " (rect 221 448 502 906)(font "Arial" ))
+		(line (pt 97 52)(pt 97 220)(line_width 1))
+		(line (pt 98 52)(pt 98 220)(line_width 1))
+		(line (pt 97 236)(pt 97 436)(line_width 1))
+		(line (pt 98 236)(pt 98 436)(line_width 1))
+		(line (pt 96 32)(pt 160 32)(line_width 1))
+		(line (pt 160 32)(pt 160 448)(line_width 1))
+		(line (pt 96 448)(pt 160 448)(line_width 1))
+		(line (pt 96 32)(pt 96 448)(line_width 1))
+		(line (pt 0 0)(pt 256 0)(line_width 1))
+		(line (pt 256 0)(pt 256 464)(line_width 1))
+		(line (pt 0 464)(pt 256 464)(line_width 1))
+		(line (pt 0 0)(pt 0 464)(line_width 1))
+	)
+)

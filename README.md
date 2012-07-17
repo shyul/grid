@@ -1,4 +1,4 @@
 grid
 ====
 
-Grid the FPGA project for Lophilo platform
+Lophilo's FPGA project.

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element SAM9_HOST
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element TEST_LED
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element TEST_MEM
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
+   element TEST_REG0
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+   element TEST_REG1
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element TEST_REG2
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element TEST_REG1.TestReg
+   {
+      datum baseAddress
+      {
+         value = "268435464";
+         type = "long";
+      }
+   }
+   element TEST_REG2.TestReg
+   {
+      datum baseAddress
+      {
+         value = "268435468";
+         type = "long";
+      }
+   }
+   element TEST_REG0.TestReg
+   {
+      datum baseAddress
+      {
+         value = "268435460";
+         type = "long";
+      }
+   }
+   element TEST_LED.TestReg
+   {
+      datum baseAddress
+      {
+         value = "268435456";
+         type = "long";
+      }
+   }
+   element TEST_MEM.s1
+   {
+      datum baseAddress
+      {
+         value = "268439552";
+         type = "long";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="" />
+ <parameter name="deviceFamily" value="CYCLONEIVE" />
+ <parameter name="deviceSpeedGrade" value="" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="1" />
+ <parameter name="timeStamp" value="1342494604996" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface name="m1" internal="SAM9_HOST.EXPORT" type="conduit" dir="end" />
+ <interface name="led" internal="TEST_LED.EXPORT" type="conduit" dir="end" />
+ <module kind="qsys_host_SAM9" version="1.0" enabled="1" name="SAM9_HOST" />
+ <module kind="qsys_test_LED" version="1.0" enabled="1" name="TEST_LED">
+  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
+ </module>
+ <module kind="qsys_test_RegRW" version="1.0" enabled="1" name="TEST_REG0">
+  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
+ </module>
+ <module kind="qsys_test_RegRW" version="1.0" enabled="1" name="TEST_REG1">
+  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
+ </module>
+ <module kind="qsys_test_RegRW" version="1.0" enabled="1" name="TEST_REG2">
+  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
+ </module>
+ <module
+   kind="altera_avalon_onchip_memory2"
+   version="11.1"
+   enabled="1"
+   name="TEST_MEM">
+  <parameter name="allowInSystemMemoryContentEditor" value="false" />
+  <parameter name="autoInitializationFileName" value="unsaved_TEST_MEM" />
+  <parameter name="blockType" value="M9K" />
+  <parameter name="dataWidth" value="32" />
+  <parameter name="deviceFamily" value="Cyclone IV E" />
+  <parameter name="dualPort" value="false" />
+  <parameter name="initMemContent" value="true" />
+  <parameter name="initializationFileName" value="TEST_MEM" />
+  <parameter name="instanceID" value="NONE" />
+  <parameter name="memorySize" value="4096" />
+  <parameter name="readDuringWriteMode" value="DONT_CARE" />
+  <parameter name="simAllowMRAMContentsFile" value="false" />
+  <parameter name="simMemInitOnlyFilename" value="0" />
+  <parameter name="singleClockOperation" value="false" />
+  <parameter name="slave1Latency" value="1" />
+  <parameter name="slave2Latency" value="1" />
+  <parameter name="useNonDefaultInitFile" value="false" />
+  <parameter name="useShallowMemBlocks" value="false" />
+  <parameter name="writable" value="true" />
+ </module>
+ <connection
+   kind="reset"
+   version="11.1"
+   start="SAM9_HOST.MRST"
+   end="TEST_LED.MRST" />
+ <connection
+   kind="reset"
+   version="11.1"
+   start="SAM9_HOST.MRST"
+   end="TEST_REG0.MRST" />
+ <connection
+   kind="reset"
+   version="11.1"
+   start="SAM9_HOST.MRST"
+   end="TEST_REG1.MRST" />
+ <connection
+   kind="reset"
+   version="11.1"
+   start="SAM9_HOST.MRST"
+   end="TEST_REG2.MRST" />
+ <connection
+   kind="reset"
+   version="11.1"
+   start="SAM9_HOST.MRST"
+   end="TEST_MEM.reset1" />
+ <connection
+   kind="clock"
+   version="11.1"
+   start="SAM9_HOST.MCLK"
+   end="TEST_LED.MCLK" />
+ <connection
+   kind="clock"
+   version="11.1"
+   start="SAM9_HOST.MCLK"
+   end="TEST_REG0.MCLK" />
+ <connection
+   kind="clock"
+   version="11.1"
+   start="SAM9_HOST.MCLK"
+   end="TEST_REG1.MCLK" />
+ <connection
+   kind="clock"
+   version="11.1"
+   start="SAM9_HOST.MCLK"
+   end="TEST_REG2.MCLK" />
+ <connection
+   kind="clock"
+   version="11.1"
+   start="SAM9_HOST.MCLK"
+   end="TEST_MEM.clk1" />
+ <connection
+   kind="avalon"
+   version="11.1"
+   start="SAM9_HOST.M1"
+   end="TEST_LED.TestReg">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10000000" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="11.1"
+   start="SAM9_HOST.M1"
+   end="TEST_REG0.TestReg">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10000004" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="11.1"
+   start="SAM9_HOST.M1"
+   end="TEST_REG1.TestReg">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10000008" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="11.1"
+   start="SAM9_HOST.M1"
+   end="TEST_REG2.TestReg">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x1000000c" />
+ </connection>
+ <connection kind="avalon" version="11.1" start="SAM9_HOST.M1" end="TEST_MEM.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10001000" />
+ </connection>
+</system>

@@ -1,7 +1,23 @@
+# Compiled Binary files
+*.rbf
+*.sof
+*.pof
+
 # Compiled Object files
 *.slo
 *.lo
 *.o
+*.rpt
+*.summary
+*.smsg
+.sopc_builder/
+.qsys_edit/
+stp_root/
+db/
+incremental_db/
+output/
+greybox_tmp/
+
 
 # Compiled Dynamic libraries
 *.so
@@ -10,3 +26,10 @@
 *.lai
 *.la
 *.a
+
+# Trash
+*.*~
+*.bak
+*.lst
+*.txt
+*.dep
