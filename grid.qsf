@@ -18,7 +18,7 @@
 #
 # Quartus II 32-bit
 # Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Full Version
-# Date created = 21:05:07  July 17, 2012
+# Date created = 18:22:38  July 18, 2012
 #
 # -------------------------------------------------------------------------- #
 #
@@ -233,6 +233,109 @@ set_location_assignment PIN_H16 -to AC97_TX
 set_location_assignment PIN_J16 -to AC97_RX
 set_location_assignment PIN_J15 -to AC97_FS
 set_location_assignment PIN_H19 -to AC97_CLK
+set_location_assignment PIN_R16 -to SPDIF_OUT
+set_location_assignment PIN_T16 -to SPDIF_IN
+set_location_assignment PIN_AA12 -to AUDIO_MCK
+set_location_assignment PIN_AB16 -to AUDIO_SDI
+set_location_assignment PIN_AB15 -to AUDIO_SCLK
+set_location_assignment PIN_AA15 -to AUDIO_SDO
+set_location_assignment PIN_AA16 -to AUDIO_SFS
+set_location_assignment PIN_N14 -to DET_AIN
+set_location_assignment PIN_P15 -to DET_AOUT
+set_location_assignment PIN_P14 -to DET_DIN
+set_location_assignment PIN_W20 -to DET_DOUT
+set_location_assignment PIN_AA3 -to IO_A_OCN
+set_location_assignment PIN_R9 -to IO_A_PWREN
+set_location_assignment PIN_T8 -to IO_A_SCL
+set_location_assignment PIN_R11 -to IO_A_SDA
+set_location_assignment PIN_V7 -to IO_A_HOE
+set_location_assignment PIN_AA5 -to IO_A_LOE
+set_location_assignment PIN_U9 -to IO_A0
+set_location_assignment PIN_U10 -to IO_A1
+set_location_assignment PIN_T10 -to IO_A2
+set_location_assignment PIN_R10 -to IO_A3
+set_location_assignment PIN_T9 -to IO_A4
+set_location_assignment PIN_V8 -to IO_A5
+set_location_assignment PIN_AA4 -to IO_A6
+set_location_assignment PIN_AB4 -to IO_A7
+set_location_assignment PIN_AA7 -to IO_A8
+set_location_assignment PIN_AB7 -to IO_A9
+set_location_assignment PIN_AA8 -to IO_A10
+set_location_assignment PIN_AB8 -to IO_A11
+set_location_assignment PIN_AA9 -to IO_A12
+set_location_assignment PIN_AB9 -to IO_A13
+set_location_assignment PIN_AA10 -to IO_A14
+set_location_assignment PIN_Y10 -to IO_A15
+set_location_assignment PIN_W10 -to IO_A16
+set_location_assignment PIN_V11 -to IO_A17
+set_location_assignment PIN_U8 -to IO_A18
+set_location_assignment PIN_U7 -to IO_A19
+set_location_assignment PIN_Y7 -to IO_A20
+set_location_assignment PIN_W7 -to IO_A21
+set_location_assignment PIN_W6 -to IO_A22
+set_location_assignment PIN_V5 -to IO_A23
+set_location_assignment PIN_V6 -to IO_A24
+set_location_assignment PIN_R12 -to IO_A25
+set_location_assignment PIN_AB3 -to IO_B_OCN
+set_location_assignment PIN_AB5 -to IO_B_PWREN
+set_location_assignment PIN_N22 -to IO_B_HOE
+set_location_assignment PIN_W19 -to IO_B_LOE
+set_location_assignment PIN_U19 -to IO_B_SCL
+set_location_assignment PIN_R18 -to IO_B_SDA
+set_location_assignment PIN_M15 -to IO_B0
+set_location_assignment PIN_N15 -to IO_B1
+set_location_assignment PIN_N17 -to IO_B2
+set_location_assignment PIN_N18 -to IO_B3
+set_location_assignment PIN_N20 -to IO_B4
+set_location_assignment PIN_N19 -to IO_B5
+set_location_assignment PIN_Y22 -to IO_B6
+set_location_assignment PIN_Y21 -to IO_B7
+set_location_assignment PIN_W22 -to IO_B8
+set_location_assignment PIN_W21 -to IO_B9
+set_location_assignment PIN_V22 -to IO_B10
+set_location_assignment PIN_V21 -to IO_B11
+set_location_assignment PIN_U22 -to IO_B12
+set_location_assignment PIN_U21 -to IO_B13
+set_location_assignment PIN_M21 -to IO_B14
+set_location_assignment PIN_M22 -to IO_B15
+set_location_assignment PIN_N21 -to IO_B16
+set_location_assignment PIN_P21 -to IO_B17
+set_location_assignment PIN_P22 -to IO_B18
+set_location_assignment PIN_R21 -to IO_B19
+set_location_assignment PIN_P16 -to IO_B20
+set_location_assignment PIN_U20 -to IO_B21
+set_location_assignment PIN_R22 -to IO_B22
+set_location_assignment PIN_M19 -to IO_B23
+set_location_assignment PIN_M20 -to IO_B24
+set_location_assignment PIN_R19 -to IO_B25
+set_location_assignment PIN_AB17 -to PNL_SDI
+set_location_assignment PIN_AA17 -to PNL_SDO
+set_location_assignment PIN_AB18 -to PNL_SCLK
+set_location_assignment PIN_AA18 -to PNL_SLE
+set_location_assignment PIN_AB19 -to PNL_RDY
+set_location_assignment PIN_AA19 -to PNL_INT
+set_location_assignment PIN_W17 -to PLCD_PCLK
+set_location_assignment PIN_Y17 -to PLCD_VDEN
+set_location_assignment PIN_AB20 -to PLCD_VSYNC
+set_location_assignment PIN_AA20 -to PLCD_HSYNC
+set_location_assignment PIN_T14 -to PLCD_R[2]
+set_location_assignment PIN_T15 -to PLCD_R[3]
+set_location_assignment PIN_AA13 -to PLCD_R[4]
+set_location_assignment PIN_AB13 -to PLCD_R[5]
+set_location_assignment PIN_AA14 -to PLCD_R[6]
+set_location_assignment PIN_R15 -to PLCD_R[7]
+set_location_assignment PIN_AB14 -to PLCD_G[2]
+set_location_assignment PIN_T12 -to PLCD_G[3]
+set_location_assignment PIN_W13 -to PLCD_G[4]
+set_location_assignment PIN_U12 -to PLCD_G[5]
+set_location_assignment PIN_R14 -to PLCD_G[6]
+set_location_assignment PIN_V14 -to PLCD_G[7]
+set_location_assignment PIN_U13 -to PLCD_B[2]
+set_location_assignment PIN_Y13 -to PLCD_B[3]
+set_location_assignment PIN_U14 -to PLCD_B[4]
+set_location_assignment PIN_U15 -to PLCD_B[5]
+set_location_assignment PIN_W15 -to PLCD_B[6]
+set_location_assignment PIN_V15 -to PLCD_B[7]
 
 # Classic Timing Assignments
 # ==========================
@@ -343,11 +446,6 @@ set_instance_assignment -name IO_STANDARD "1.8 V" -to LCD_DEN
 # =====================
 set_global_assignment -name GENERATE_RBF_FILE ON
 set_global_assignment -name STRATIX_JTAG_USER_CODE EA68B010
-
-# SignalTap II Assignments
-# ========================
-set_global_assignment -name ENABLE_SIGNALTAP OFF
-set_global_assignment -name USE_SIGNALTAP_FILE stp_root/test_bus.stp
 
 # Power Estimation Assignments
 # ============================

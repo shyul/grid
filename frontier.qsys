@@ -12,19 +12,24 @@
    element $${FILENAME}
    {
    }
+   element qsys_basic_lophilo_module_ctrl_0.Ctrl
+   {
+      datum _tags
+      {
+         value = "";
+         type = "String";
+      }
+      datum baseAddress
+      {
+         value = "268435476";
+         type = "long";
+      }
+   }
    element RGB_LED_F3.LEDD
    {
       datum baseAddress
       {
          value = "268435468";
-         type = "long";
-      }
-   }
-   element RGB_LED_F2.LEDD
-   {
-      datum baseAddress
-      {
-         value = "268435464";
          type = "long";
       }
    }
@@ -44,15 +49,23 @@
          type = "long";
       }
    }
-   element RGB_LED_F0
+   element RGB_LED_F2.LEDD
    {
-      datum _sortIndex
+      datum baseAddress
       {
-         value = "2";
-         type = "int";
+         value = "268435464";
+         type = "long";
       }
    }
-   element RGB_LED_F0S
+   element qsys_basic_lophilo_module_ctrl_0.MCLK
+   {
+      datum _tags
+      {
+         value = "";
+         type = "String";
+      }
+   }
+   element RGB_LED_F0
    {
       datum _sortIndex
       {
@@ -60,7 +73,7 @@
          type = "int";
       }
    }
-   element RGB_LED_F1
+   element RGB_LED_F0S
    {
       datum _sortIndex
       {
@@ -68,7 +81,7 @@
          type = "int";
       }
    }
-   element RGB_LED_F1S
+   element RGB_LED_F1
    {
       datum _sortIndex
       {
@@ -76,7 +89,7 @@
          type = "int";
       }
    }
-   element RGB_LED_F2
+   element RGB_LED_F1S
    {
       datum _sortIndex
       {
@@ -84,7 +97,7 @@
          type = "int";
       }
    }
-   element RGB_LED_F2S
+   element RGB_LED_F2
    {
       datum _sortIndex
       {
@@ -92,7 +105,7 @@
          type = "int";
       }
    }
-   element RGB_LED_F3
+   element RGB_LED_F2S
    {
       datum _sortIndex
       {
@@ -100,11 +113,19 @@
          type = "int";
       }
    }
-   element RGB_LED_F3S
+   element RGB_LED_F3
    {
       datum _sortIndex
       {
          value = "9";
+         type = "int";
+      }
+   }
+   element RGB_LED_F3S
+   {
+      datum _sortIndex
+      {
+         value = "10";
          type = "int";
       }
    }
@@ -136,7 +157,15 @@
    {
       datum _sortIndex
       {
-         value = "10";
+         value = "11";
+         type = "int";
+      }
+   }
+   element qsys_basic_lophilo_module_ctrl_0
+   {
+      datum _sortIndex
+      {
+         value = "2";
          type = "int";
       }
    }
@@ -163,7 +192,7 @@
  <parameter name="projectName" value="grid.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1342530835139" />
+ <parameter name="timeStamp" value="1342608619181" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="m1" internal="SAM9_HOST.EXPORT" type="conduit" dir="end" />
@@ -171,6 +200,11 @@
  <interface name="led_f1" internal="RGB_LED_F1.EXPORT" type="conduit" dir="end" />
  <interface name="led_f2" internal="RGB_LED_F2.EXPORT" type="conduit" dir="end" />
  <interface name="led_f3" internal="RGB_LED_F3.EXPORT" type="conduit" dir="end" />
+ <interface
+   name="admin"
+   internal="qsys_basic_lophilo_module_ctrl_0.EXPORT"
+   type="conduit"
+   dir="end" />
  <module kind="qsys_host_SAM9" version="1.0" enabled="1" name="SAM9_HOST" />
  <module kind="qsys_basic_RGB_LED" version="1.0" enabled="1" name="RGB_LED_F0">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
@@ -240,6 +274,11 @@
   <parameter name="useShallowMemBlocks" value="false" />
   <parameter name="writable" value="true" />
  </module>
+ <module
+   kind="qsys_basic_lophilo_module_ctrl"
+   version="1.0"
+   enabled="1"
+   name="qsys_basic_lophilo_module_ctrl_0" />
  <connection
    kind="reset"
    version="11.1"
@@ -407,5 +446,30 @@
    end="onchip_memory2_0.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x10001000" />
+ </connection>
+ <connection
+   kind="reset"
+   version="11.1"
+   start="SAM9_HOST.MRST"
+   end="qsys_basic_lophilo_module_ctrl_0.MRST" />
+ <connection
+   kind="clock"
+   version="11.1"
+   start="SAM9_HOST.MCLK"
+   end="qsys_basic_lophilo_module_ctrl_0.MCLK" />
+ <connection
+   kind="avalon"
+   version="11.1"
+   start="SAM9_HOST.M1"
+   end="qsys_basic_lophilo_module_ctrl_0.Ctrl">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10000014" />
+ </connection>
+ <connection
+   kind="interrupt"
+   version="11.1"
+   start="SAM9_HOST.EVENTS"
+   end="qsys_basic_lophilo_module_ctrl_0.OC">
+  <parameter name="irqNumber" value="9" />
  </connection>
 </system>

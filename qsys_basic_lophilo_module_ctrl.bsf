@@ -1,0 +1,148 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 416 208)
+	(text "qsys_basic_lophilo_module_ctrl" (rect 5 0 217 12)(font "Arial" ))
+	(text "inst" (rect 8 176 36 188)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "rsi_MRST_reset" (rect 0 0 99 12)(font "Arial" ))
+		(text "rsi_MRST_reset" (rect 21 27 120 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "csi_MCLK_clk" (rect 0 0 84 12)(font "Arial" ))
+		(text "csi_MCLK_clk" (rect 21 43 105 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "avs_Ctrl_writedata[31..0]" (rect 0 0 177 12)(font "Arial" ))
+		(text "avs_Ctrl_writedata[31..0]" (rect 21 59 198 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "avs_Ctrl_byteenable[3..0]" (rect 0 0 177 12)(font "Arial" ))
+		(text "avs_Ctrl_byteenable[3..0]" (rect 21 75 198 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "avs_Ctrl_write" (rect 0 0 99 12)(font "Arial" ))
+		(text "avs_Ctrl_write" (rect 21 91 120 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "avs_Ctrl_read" (rect 0 0 92 12)(font "Arial" ))
+		(text "avs_Ctrl_read" (rect 21 107 113 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "coe_A_OCN" (rect 0 0 63 12)(font "Arial" ))
+		(text "coe_A_OCN" (rect 21 123 84 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "coe_B_OCN" (rect 0 0 63 12)(font "Arial" ))
+		(text "coe_B_OCN" (rect 21 139 84 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
+	)
+	(port
+		(pt 400 32)
+		(output)
+		(text "avs_Ctrl_readdata[31..0]" (rect 0 0 169 12)(font "Arial" ))
+		(text "avs_Ctrl_readdata[31..0]" (rect 210 27 379 39)(font "Arial" ))
+		(line (pt 400 32)(pt 384 32)(line_width 3))
+	)
+	(port
+		(pt 400 48)
+		(output)
+		(text "avs_Ctrl_waitrequest" (rect 0 0 141 12)(font "Arial" ))
+		(text "avs_Ctrl_waitrequest" (rect 238 43 379 55)(font "Arial" ))
+		(line (pt 400 48)(pt 384 48)(line_width 1))
+	)
+	(port
+		(pt 400 64)
+		(output)
+		(text "ins_OC_irq" (rect 0 0 70 12)(font "Arial" ))
+		(text "ins_OC_irq" (rect 309 59 379 71)(font "Arial" ))
+		(line (pt 400 64)(pt 384 64)(line_width 1))
+	)
+	(port
+		(pt 400 80)
+		(output)
+		(text "coe_A_PWREN" (rect 0 0 77 12)(font "Arial" ))
+		(text "coe_A_PWREN" (rect 302 75 379 87)(font "Arial" ))
+		(line (pt 400 80)(pt 384 80)(line_width 1))
+	)
+	(port
+		(pt 400 96)
+		(output)
+		(text "coe_A_HOE" (rect 0 0 63 12)(font "Arial" ))
+		(text "coe_A_HOE" (rect 316 91 379 103)(font "Arial" ))
+		(line (pt 400 96)(pt 384 96)(line_width 1))
+	)
+	(port
+		(pt 400 112)
+		(output)
+		(text "coe_A_LOE" (rect 0 0 63 12)(font "Arial" ))
+		(text "coe_A_LOE" (rect 316 107 379 119)(font "Arial" ))
+		(line (pt 400 112)(pt 384 112)(line_width 1))
+	)
+	(port
+		(pt 400 128)
+		(output)
+		(text "coe_B_PWREN" (rect 0 0 77 12)(font "Arial" ))
+		(text "coe_B_PWREN" (rect 302 123 379 135)(font "Arial" ))
+		(line (pt 400 128)(pt 384 128)(line_width 1))
+	)
+	(port
+		(pt 400 144)
+		(output)
+		(text "coe_B_HOE" (rect 0 0 63 12)(font "Arial" ))
+		(text "coe_B_HOE" (rect 316 139 379 151)(font "Arial" ))
+		(line (pt 400 144)(pt 384 144)(line_width 1))
+	)
+	(port
+		(pt 400 160)
+		(output)
+		(text "coe_B_LOE" (rect 0 0 63 12)(font "Arial" ))
+		(text "coe_B_LOE" (rect 316 155 379 167)(font "Arial" ))
+		(line (pt 400 160)(pt 384 160)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 384 176)(line_width 1))
+	)
+)
