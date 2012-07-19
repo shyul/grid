@@ -38,8 +38,8 @@ assign	cso_MCLK_clk		= pll_clocks[0];	//133.33 MHz
 assign	cso_H1CLK_clk			= coe_M1_CLK;	//66.66 MHz
 assign	cso_H2CLK_clk			= pll_clocks[1];	//200.00 MHz
 
-assign	coe_M1_DATA				= ((!coe_M1_RDN) && (coe_M1_CSN != 4'b1111)) ? h_rdata : 32'bzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz;
-assign	coe_M1_WAITN			= ~h_wait;
+assign	coe_M1_DATA				= ((!coe_M1_RDN) && (coe_M1_CSN != 4'b1111) && (!rso_MRST_reset)) ? h_rdata : 32'bzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz;
+assign	coe_M1_WAITN			= (~h_wait) | (rso_MRST_reset);
 assign	coe_M1_EINT				= inr_EVENTS_irq;
 
 assign	avm_M1_writedata		= q_wdata;
