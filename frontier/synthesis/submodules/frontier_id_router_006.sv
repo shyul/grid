@@ -29,17 +29,17 @@
 
 `timescale 1 ns / 1 ns
 
-module frontier_id_router_default_decode
+module frontier_id_router_006_default_decode
   #(
      parameter DEFAULT_CHANNEL = 0,
                DEFAULT_DESTID = 0 
    )
-  (output [91 - 86 : 0] default_destination_id,
+  (output [64 - 59 : 0] default_destination_id,
    output [58-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
-    DEFAULT_DESTID[91 - 86 : 0];
+    DEFAULT_DESTID[64 - 59 : 0];
   generate begin : default_decode
     if (DEFAULT_CHANNEL == -1)
       assign default_src_channel = '0;
@@ -50,7 +50,7 @@ module frontier_id_router_default_decode
 endmodule
 
 
-module frontier_id_router
+module frontier_id_router_006
 (
     // -------------------
     // Clock & Reset
@@ -62,7 +62,7 @@ module frontier_id_router
     // Command Sink (Input)
     // -------------------
     input                       sink_valid,
-    input  [93-1 : 0]    sink_data,
+    input  [66-1 : 0]    sink_data,
     input                       sink_startofpacket,
     input                       sink_endofpacket,
     output                      sink_ready,
@@ -71,7 +71,7 @@ module frontier_id_router
     // Command Source (Output)
     // -------------------
     output                          src_valid,
-    output reg [93-1    : 0] src_data,
+    output reg [66-1    : 0] src_data,
     output reg [58-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
@@ -81,16 +81,16 @@ module frontier_id_router
     // -------------------------------------------------------
     // Local parameters and variables
     // -------------------------------------------------------
-    localparam PKT_ADDR_H = 67;
-    localparam PKT_ADDR_L = 36;
-    localparam PKT_DEST_ID_H = 91;
-    localparam PKT_DEST_ID_L = 86;
-    localparam ST_DATA_W = 93;
+    localparam PKT_ADDR_H = 40;
+    localparam PKT_ADDR_L = 9;
+    localparam PKT_DEST_ID_H = 64;
+    localparam PKT_DEST_ID_L = 59;
+    localparam ST_DATA_W = 66;
     localparam ST_CHANNEL_W = 58;
     localparam DECODER_TYPE = 1;
 
-    localparam PKT_TRANS_WRITE = 70;
-    localparam PKT_TRANS_READ  = 71;
+    localparam PKT_TRANS_WRITE = 43;
+    localparam PKT_TRANS_READ  = 44;
 
     localparam PKT_ADDR_W = PKT_ADDR_H-PKT_ADDR_L + 1;
     localparam PKT_DEST_ID_W = PKT_DEST_ID_H-PKT_DEST_ID_L + 1;
@@ -132,7 +132,7 @@ module frontier_id_router
 
 
 
-    frontier_id_router_default_decode the_default_decode(
+    frontier_id_router_006_default_decode the_default_decode(
       .default_destination_id (default_destid),
       .default_src_channel (default_src_channel)
     );

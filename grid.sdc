@@ -37,7 +37,7 @@ set_time_format -unit ns -decimal_places 3
 
 create_clock -name {HPS_Clocks} -period 15.000 -waveform { 0.000 7.500 } [get_ports {M1_CLK M2_CLK0 M2_CLK1 ISI_MCLK}]
 create_clock -name {LCD_Clock} -period 15.000 -waveform { 0.000 10.000 } [get_ports {LCD_PCLK}]
-create_clock -name {AC97_Clock} -period 40.000 -waveform { 0.000 20.000 } [get_ports {LDB_AC97_MCLK}]
+create_clock -name {AC97_Clock} -period 40.000 -waveform { 0.000 20.000 } [get_ports {AUDIO_MCK}]
 
 #**************************************************************
 # Create Generated Clock

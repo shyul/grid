@@ -1,4 +1,4 @@
-module qsys_test_RGB_LED_ASO(
+module qsys_test_LEDState(
 //Avalon System control signal.
 input					rsi_MRST_reset,	// reset_n from MCU GPIO
 input					csi_MCLK_clk,

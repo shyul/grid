@@ -1,4 +1,4 @@
-module qsys_basic_RGB_LED(
+module qsys_basic_FuncLED(
 //Avalon System control signal.
 input					rsi_MRST_reset,	// reset_n from MCU GPIO
 input					csi_MCLK_clk,

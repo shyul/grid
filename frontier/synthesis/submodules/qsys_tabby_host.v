@@ -1,4 +1,4 @@
-module qsys_host_SAM9(
+module qsys_tabby_host(
 input					coe_M1_RSTN, coe_M1_CLK,
 
 input		[21:0]	coe_M1_ADDR,
