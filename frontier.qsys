@@ -77,19 +77,6 @@
          type = "boolean";
       }
    }
-   element FuncLED_0.LEDD
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "268435472";
-         type = "long";
-      }
-   }
    element FuncLED_1.LEDD
    {
       datum _lockedAddress
@@ -129,6 +116,19 @@
          type = "long";
       }
    }
+   element FuncLED_0.LEDD
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "268435472";
+         type = "long";
+      }
+   }
    element Shield_Admin.MRST
    {
       datum _tags
@@ -146,7 +146,7 @@
       }
       datum sopceditor_expanded
       {
-         value = "1";
+         value = "0";
          type = "boolean";
       }
    }
@@ -163,7 +163,7 @@
          type = "boolean";
       }
    }
-   element Shiled_IO_A0
+   element Shield_PIO_A
    {
       datum _sortIndex
       {
@@ -176,661 +176,11 @@
          type = "boolean";
       }
    }
-   element Shiled_IO_A1
+   element Shield_PIO_B
    {
       datum _sortIndex
       {
          value = "12";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_A10
-   {
-      datum _sortIndex
-      {
-         value = "21";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_A11
-   {
-      datum _sortIndex
-      {
-         value = "22";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_A12
-   {
-      datum _sortIndex
-      {
-         value = "23";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_A13
-   {
-      datum _sortIndex
-      {
-         value = "24";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_A14
-   {
-      datum _sortIndex
-      {
-         value = "25";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_A15
-   {
-      datum _sortIndex
-      {
-         value = "26";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_A16
-   {
-      datum _sortIndex
-      {
-         value = "27";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_A17
-   {
-      datum _sortIndex
-      {
-         value = "28";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_A18
-   {
-      datum _sortIndex
-      {
-         value = "29";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_A19
-   {
-      datum _sortIndex
-      {
-         value = "30";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_A2
-   {
-      datum _sortIndex
-      {
-         value = "13";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_A20
-   {
-      datum _sortIndex
-      {
-         value = "31";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_A21
-   {
-      datum _sortIndex
-      {
-         value = "32";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_A22
-   {
-      datum _sortIndex
-      {
-         value = "33";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_A23
-   {
-      datum _sortIndex
-      {
-         value = "34";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_A24
-   {
-      datum _sortIndex
-      {
-         value = "35";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_A25
-   {
-      datum _sortIndex
-      {
-         value = "36";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_A3
-   {
-      datum _sortIndex
-      {
-         value = "14";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_A4
-   {
-      datum _sortIndex
-      {
-         value = "15";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_A5
-   {
-      datum _sortIndex
-      {
-         value = "16";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_A6
-   {
-      datum _sortIndex
-      {
-         value = "17";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_A7
-   {
-      datum _sortIndex
-      {
-         value = "18";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_A8
-   {
-      datum _sortIndex
-      {
-         value = "19";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_A9
-   {
-      datum _sortIndex
-      {
-         value = "20";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_B0
-   {
-      datum _sortIndex
-      {
-         value = "37";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_B1
-   {
-      datum _sortIndex
-      {
-         value = "38";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_B10
-   {
-      datum _sortIndex
-      {
-         value = "47";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_B11
-   {
-      datum _sortIndex
-      {
-         value = "48";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_B12
-   {
-      datum _sortIndex
-      {
-         value = "49";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_B13
-   {
-      datum _sortIndex
-      {
-         value = "50";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_B14
-   {
-      datum _sortIndex
-      {
-         value = "51";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_B15
-   {
-      datum _sortIndex
-      {
-         value = "52";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_B16
-   {
-      datum _sortIndex
-      {
-         value = "53";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_B17
-   {
-      datum _sortIndex
-      {
-         value = "54";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_B18
-   {
-      datum _sortIndex
-      {
-         value = "55";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_B19
-   {
-      datum _sortIndex
-      {
-         value = "56";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_B2
-   {
-      datum _sortIndex
-      {
-         value = "39";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_B20
-   {
-      datum _sortIndex
-      {
-         value = "57";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_B21
-   {
-      datum _sortIndex
-      {
-         value = "58";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_B22
-   {
-      datum _sortIndex
-      {
-         value = "59";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_B23
-   {
-      datum _sortIndex
-      {
-         value = "60";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_B24
-   {
-      datum _sortIndex
-      {
-         value = "61";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_B25
-   {
-      datum _sortIndex
-      {
-         value = "62";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_B3
-   {
-      datum _sortIndex
-      {
-         value = "40";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_B4
-   {
-      datum _sortIndex
-      {
-         value = "41";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_B5
-   {
-      datum _sortIndex
-      {
-         value = "42";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_B6
-   {
-      datum _sortIndex
-      {
-         value = "43";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_B7
-   {
-      datum _sortIndex
-      {
-         value = "44";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_B8
-   {
-      datum _sortIndex
-      {
-         value = "45";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shiled_IO_B9
-   {
-      datum _sortIndex
-      {
-         value = "46";
          type = "int";
       }
       datum sopceditor_expanded
@@ -865,419 +215,29 @@
          type = "boolean";
       }
    }
-   element Shiled_IO_B25.ctrl
+   element Shield_PIO_A.gpio
    {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
       datum baseAddress
       {
-         value = "268443705";
+         value = "268439808";
          type = "long";
       }
    }
-   element Shiled_IO_A14.ctrl
+   element Shield_PIO_B.gpio
    {
-      datum baseAddress
+      datum _lockedAddress
       {
-         value = "268443662";
-         type = "long";
+         value = "1";
+         type = "boolean";
       }
-   }
-   element Shiled_IO_A5.ctrl
-   {
       datum baseAddress
       {
-         value = "268443653";
-         type = "long";
-      }
-   }
-   element Shiled_IO_A22.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443670";
-         type = "long";
-      }
-   }
-   element Shiled_IO_B21.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443701";
-         type = "long";
-      }
-   }
-   element Shiled_IO_A3.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443651";
-         type = "long";
-      }
-   }
-   element Shiled_IO_B5.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443685";
-         type = "long";
-      }
-   }
-   element Shiled_IO_B8.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443688";
-         type = "long";
-      }
-   }
-   element Shiled_IO_B24.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443704";
-         type = "long";
-      }
-   }
-   element Shiled_IO_A18.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443666";
-         type = "long";
-      }
-   }
-   element Shiled_IO_A17.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443665";
-         type = "long";
-      }
-   }
-   element Shiled_IO_A15.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443663";
-         type = "long";
-      }
-   }
-   element Shiled_IO_B19.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443699";
-         type = "long";
-      }
-   }
-   element Shiled_IO_B9.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443689";
-         type = "long";
-      }
-   }
-   element Shiled_IO_B2.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443682";
-         type = "long";
-      }
-   }
-   element Shiled_IO_A12.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443660";
-         type = "long";
-      }
-   }
-   element Shiled_IO_A6.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443654";
-         type = "long";
-      }
-   }
-   element Shiled_IO_A10.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443658";
-         type = "long";
-      }
-   }
-   element Shiled_IO_B3.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443683";
-         type = "long";
-      }
-   }
-   element Shiled_IO_A16.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443664";
-         type = "long";
-      }
-   }
-   element Shiled_IO_B6.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443686";
-         type = "long";
-      }
-   }
-   element Shiled_IO_B20.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443700";
-         type = "long";
-      }
-   }
-   element Shiled_IO_A24.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443672";
-         type = "long";
-      }
-   }
-   element Shiled_IO_A21.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443669";
-         type = "long";
-      }
-   }
-   element Shiled_IO_A19.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443667";
-         type = "long";
-      }
-   }
-   element Shiled_IO_A11.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443659";
-         type = "long";
-      }
-   }
-   element Shiled_IO_B4.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443684";
-         type = "long";
-      }
-   }
-   element Shiled_IO_A9.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443657";
-         type = "long";
-      }
-   }
-   element Shiled_IO_A2.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443650";
-         type = "long";
-      }
-   }
-   element Shiled_IO_B7.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443687";
-         type = "long";
-      }
-   }
-   element Shiled_IO_A7.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443655";
-         type = "long";
-      }
-   }
-   element Shiled_IO_B12.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443692";
-         type = "long";
-      }
-   }
-   element Shiled_IO_B1.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443681";
-         type = "long";
-      }
-   }
-   element Shiled_IO_A23.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443671";
-         type = "long";
-      }
-   }
-   element Shiled_IO_B22.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443702";
-         type = "long";
-      }
-   }
-   element Shiled_IO_B14.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443694";
-         type = "long";
-      }
-   }
-   element Shiled_IO_A13.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443661";
-         type = "long";
-      }
-   }
-   element Shiled_IO_B15.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443695";
-         type = "long";
-      }
-   }
-   element Shiled_IO_A25.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443673";
-         type = "long";
-      }
-   }
-   element Shiled_IO_B18.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443698";
-         type = "long";
-      }
-   }
-   element Shiled_IO_B16.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443696";
-         type = "long";
-      }
-   }
-   element Shiled_IO_A0.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443648";
-         type = "long";
-      }
-   }
-   element Shiled_IO_B0.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443680";
-         type = "long";
-      }
-   }
-   element Shiled_IO_A4.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443652";
-         type = "long";
-      }
-   }
-   element Shiled_IO_B11.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443691";
-         type = "long";
-      }
-   }
-   element Shiled_IO_B10.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443690";
-         type = "long";
-      }
-   }
-   element Shiled_IO_A8.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443656";
-         type = "long";
-      }
-   }
-   element Shiled_IO_B17.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443697";
-         type = "long";
-      }
-   }
-   element Shiled_IO_B23.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443703";
-         type = "long";
-      }
-   }
-   element Shiled_IO_B13.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443693";
-         type = "long";
-      }
-   }
-   element Shiled_IO_A20.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443668";
-         type = "long";
-      }
-   }
-   element Shiled_IO_A1.ctrl
-   {
-      datum baseAddress
-      {
-         value = "268443649";
+         value = "268439936";
          type = "long";
       }
    }
@@ -1289,7 +249,7 @@
          type = "int";
       }
    }
-   element qsys_test_LEDState_0
+   element test_LEDState_0
    {
       datum _sortIndex
       {
@@ -1302,7 +262,7 @@
          type = "boolean";
       }
    }
-   element qsys_test_LEDState_1
+   element test_LEDState_1
    {
       datum _sortIndex
       {
@@ -1315,7 +275,7 @@
          type = "boolean";
       }
    }
-   element qsys_test_LEDState_2
+   element test_LEDState_2
    {
       datum _sortIndex
       {
@@ -1328,7 +288,7 @@
          type = "boolean";
       }
    }
-   element qsys_test_LEDState_3
+   element test_LEDState_3
    {
       datum _sortIndex
       {
@@ -1356,7 +316,7 @@
  <parameter name="projectName" value="grid.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1342772330352" />
+ <parameter name="timeStamp" value="1342774865983" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="m1" internal="SAM9.EXPORT" type="conduit" dir="end" />
@@ -1365,58 +325,8 @@
  <interface name="led_f2" internal="FuncLED_2.EXPORT" type="conduit" dir="end" />
  <interface name="led_f3" internal="FuncLED_3.EXPORT" type="conduit" dir="end" />
  <interface name="shield" internal="Shield_Admin.EXPORT" type="conduit" dir="end" />
- <interface name="a0" internal="Shiled_IO_A0.EXPORT" type="conduit" dir="end" />
- <interface name="a1" internal="Shiled_IO_A1.EXPORT" type="conduit" dir="end" />
- <interface name="a2" internal="Shiled_IO_A2.EXPORT" type="conduit" dir="end" />
- <interface name="a3" internal="Shiled_IO_A3.EXPORT" type="conduit" dir="end" />
- <interface name="a4" internal="Shiled_IO_A4.EXPORT" type="conduit" dir="end" />
- <interface name="a5" internal="Shiled_IO_A5.EXPORT" type="conduit" dir="end" />
- <interface name="a6" internal="Shiled_IO_A6.EXPORT" type="conduit" dir="end" />
- <interface name="a7" internal="Shiled_IO_A7.EXPORT" type="conduit" dir="end" />
- <interface name="a8" internal="Shiled_IO_A8.EXPORT" type="conduit" dir="end" />
- <interface name="a9" internal="Shiled_IO_A9.EXPORT" type="conduit" dir="end" />
- <interface name="a10" internal="Shiled_IO_A10.EXPORT" type="conduit" dir="end" />
- <interface name="a11" internal="Shiled_IO_A11.EXPORT" type="conduit" dir="end" />
- <interface name="a12" internal="Shiled_IO_A12.EXPORT" type="conduit" dir="end" />
- <interface name="a13" internal="Shiled_IO_A13.EXPORT" type="conduit" dir="end" />
- <interface name="a14" internal="Shiled_IO_A14.EXPORT" type="conduit" dir="end" />
- <interface name="a15" internal="Shiled_IO_A15.EXPORT" type="conduit" dir="end" />
- <interface name="a16" internal="Shiled_IO_A16.EXPORT" type="conduit" dir="end" />
- <interface name="a17" internal="Shiled_IO_A17.EXPORT" type="conduit" dir="end" />
- <interface name="a18" internal="Shiled_IO_A18.EXPORT" type="conduit" dir="end" />
- <interface name="a19" internal="Shiled_IO_A19.EXPORT" type="conduit" dir="end" />
- <interface name="a20" internal="Shiled_IO_A20.EXPORT" type="conduit" dir="end" />
- <interface name="a21" internal="Shiled_IO_A21.EXPORT" type="conduit" dir="end" />
- <interface name="a22" internal="Shiled_IO_A22.EXPORT" type="conduit" dir="end" />
- <interface name="a23" internal="Shiled_IO_A23.EXPORT" type="conduit" dir="end" />
- <interface name="a24" internal="Shiled_IO_A24.EXPORT" type="conduit" dir="end" />
- <interface name="a25" internal="Shiled_IO_A25.EXPORT" type="conduit" dir="end" />
- <interface name="b0" internal="Shiled_IO_B0.EXPORT" type="conduit" dir="end" />
- <interface name="b1" internal="Shiled_IO_B1.EXPORT" type="conduit" dir="end" />
- <interface name="b2" internal="Shiled_IO_B2.EXPORT" type="conduit" dir="end" />
- <interface name="b3" internal="Shiled_IO_B3.EXPORT" type="conduit" dir="end" />
- <interface name="b4" internal="Shiled_IO_B4.EXPORT" type="conduit" dir="end" />
- <interface name="b5" internal="Shiled_IO_B5.EXPORT" type="conduit" dir="end" />
- <interface name="b6" internal="Shiled_IO_B6.EXPORT" type="conduit" dir="end" />
- <interface name="b7" internal="Shiled_IO_B7.EXPORT" type="conduit" dir="end" />
- <interface name="b8" internal="Shiled_IO_B8.EXPORT" type="conduit" dir="end" />
- <interface name="b9" internal="Shiled_IO_B9.EXPORT" type="conduit" dir="end" />
- <interface name="b10" internal="Shiled_IO_B10.EXPORT" type="conduit" dir="end" />
- <interface name="b11" internal="Shiled_IO_B11.EXPORT" type="conduit" dir="end" />
- <interface name="b12" internal="Shiled_IO_B12.EXPORT" type="conduit" dir="end" />
- <interface name="b13" internal="Shiled_IO_B13.EXPORT" type="conduit" dir="end" />
- <interface name="b14" internal="Shiled_IO_B14.EXPORT" type="conduit" dir="end" />
- <interface name="b15" internal="Shiled_IO_B15.EXPORT" type="conduit" dir="end" />
- <interface name="b16" internal="Shiled_IO_B16.EXPORT" type="conduit" dir="end" />
- <interface name="b17" internal="Shiled_IO_B17.EXPORT" type="conduit" dir="end" />
- <interface name="b18" internal="Shiled_IO_B18.EXPORT" type="conduit" dir="end" />
- <interface name="b19" internal="Shiled_IO_B19.EXPORT" type="conduit" dir="end" />
- <interface name="b20" internal="Shiled_IO_B20.EXPORT" type="conduit" dir="end" />
- <interface name="b21" internal="Shiled_IO_B21.EXPORT" type="conduit" dir="end" />
- <interface name="b22" internal="Shiled_IO_B22.EXPORT" type="conduit" dir="end" />
- <interface name="b23" internal="Shiled_IO_B23.EXPORT" type="conduit" dir="end" />
- <interface name="b24" internal="Shiled_IO_B24.EXPORT" type="conduit" dir="end" />
- <interface name="b25" internal="Shiled_IO_B25.EXPORT" type="conduit" dir="end" />
+ <interface name="slot_a" internal="Shield_PIO_A.EXPORT" type="conduit" dir="end" />
+ <interface name="slot_b" internal="Shield_PIO_B.EXPORT" type="conduit" dir="end" />
  <module kind="qsys_tabby_host" version="1.0" enabled="1" name="SAM9" />
  <module kind="qsys_basic_SysID" version="1.0" enabled="1" name="SysID">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
@@ -1444,340 +354,84 @@
    kind="qsys_test_LEDState"
    version="1.0"
    enabled="1"
-   name="qsys_test_LEDState_0">
+   name="test_LEDState_1">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
  </module>
  <module
    kind="qsys_test_LEDState"
    version="1.0"
    enabled="1"
-   name="qsys_test_LEDState_1">
+   name="test_LEDState_2">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
  </module>
  <module
    kind="qsys_test_LEDState"
    version="1.0"
    enabled="1"
-   name="qsys_test_LEDState_2">
+   name="test_LEDState_3">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
  </module>
  <module
    kind="qsys_test_LEDState"
    version="1.0"
    enabled="1"
-   name="qsys_test_LEDState_3">
+   name="test_LEDState_0">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
  </module>
  <module
-   kind="qsys_shield_gpioFuncSel"
+   kind="qsys_shield_pio26b"
    version="1.0"
    enabled="1"
-   name="Shiled_IO_A0" />
+   name="Shield_PIO_A">
+  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
+ </module>
  <module
-   kind="qsys_shield_gpioFuncSel"
+   kind="qsys_shield_pio26b"
    version="1.0"
    enabled="1"
-   name="Shiled_IO_A1" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_A2" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_A3" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_A4" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_A5" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_A6" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_A7" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_A8" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_A9" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_A10" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_A11" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_A12" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_A13" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_A14" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_A15" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_A16" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_A17" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_A18" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_A19" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_A20" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_A21" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_A22" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_A23" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_A24" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_A25" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_B0" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_B1" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_B2" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_B3" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_B4" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_B5" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_B6" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_B7" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_B8" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_B9" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_B10" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_B11" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_B12" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_B13" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_B14" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_B15" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_B16" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_B17" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_B18" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_B19" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_B20" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_B21" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_B22" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_B23" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_B24" />
- <module
-   kind="qsys_shield_gpioFuncSel"
-   version="1.0"
-   enabled="1"
-   name="Shiled_IO_B25" />
+   name="Shield_PIO_B">
+  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
+ </module>
  <connection kind="reset" version="11.1" start="SAM9.MRST" end="SysID.MRST" />
  <connection kind="clock" version="11.1" start="SAM9.MCLK" end="SysID.MCLK" />
  <connection kind="reset" version="11.1" start="SAM9.MRST" end="FuncLED_0.MRST" />
  <connection kind="clock" version="11.1" start="SAM9.MCLK" end="FuncLED_0.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="qsys_test_LEDState_0.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="qsys_test_LEDState_0.MCLK" />
  <connection kind="reset" version="11.1" start="SAM9.MRST" end="FuncLED_1.MRST" />
  <connection kind="clock" version="11.1" start="SAM9.MCLK" end="FuncLED_1.MCLK" />
  <connection
    kind="reset"
    version="11.1"
    start="SAM9.MRST"
-   end="qsys_test_LEDState_1.MRST" />
+   end="test_LEDState_1.MRST" />
  <connection
    kind="clock"
    version="11.1"
    start="SAM9.MCLK"
-   end="qsys_test_LEDState_1.MCLK" />
+   end="test_LEDState_1.MCLK" />
  <connection kind="reset" version="11.1" start="SAM9.MRST" end="FuncLED_2.MRST" />
  <connection kind="clock" version="11.1" start="SAM9.MCLK" end="FuncLED_2.MCLK" />
  <connection
    kind="reset"
    version="11.1"
    start="SAM9.MRST"
-   end="qsys_test_LEDState_2.MRST" />
+   end="test_LEDState_2.MRST" />
  <connection
    kind="clock"
    version="11.1"
    start="SAM9.MCLK"
-   end="qsys_test_LEDState_2.MCLK" />
+   end="test_LEDState_2.MCLK" />
  <connection kind="reset" version="11.1" start="SAM9.MRST" end="FuncLED_3.MRST" />
  <connection kind="clock" version="11.1" start="SAM9.MCLK" end="FuncLED_3.MCLK" />
  <connection
    kind="reset"
    version="11.1"
    start="SAM9.MRST"
-   end="qsys_test_LEDState_3.MRST" />
+   end="test_LEDState_3.MRST" />
  <connection
    kind="clock"
    version="11.1"
    start="SAM9.MCLK"
-   end="qsys_test_LEDState_3.MCLK" />
+   end="test_LEDState_3.MCLK" />
  <connection kind="reset" version="11.1" start="SAM9.MRST" end="Shield_Admin.MRST" />
  <connection kind="clock" version="11.1" start="SAM9.MCLK" end="Shield_Admin.MCLK" />
  <connection kind="avalon" version="11.1" start="SAM9.M1" end="SysID.SysID">
@@ -1807,22 +461,17 @@
  <connection
    kind="avalon_streaming"
    version="11.1"
-   start="qsys_test_LEDState_0.LEDS"
-   end="FuncLED_0.LEDS" />
- <connection
-   kind="avalon_streaming"
-   version="11.1"
-   start="qsys_test_LEDState_1.LEDS"
+   start="test_LEDState_1.LEDS"
    end="FuncLED_1.LEDS" />
  <connection
    kind="avalon_streaming"
    version="11.1"
-   start="qsys_test_LEDState_2.LEDS"
+   start="test_LEDState_2.LEDS"
    end="FuncLED_2.LEDS" />
  <connection
    kind="avalon_streaming"
    version="11.1"
-   start="qsys_test_LEDState_3.LEDS"
+   start="test_LEDState_3.LEDS"
    end="FuncLED_3.LEDS" />
  <connection
    kind="interrupt"
@@ -1831,572 +480,45 @@
    end="Shield_Admin.OC">
   <parameter name="irqNumber" value="0" />
  </connection>
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="Shiled_IO_A0.MRST" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="Shiled_IO_A0.MCLK" />
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="Shiled_IO_A1.MRST" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="Shiled_IO_A1.MCLK" />
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="Shiled_IO_A2.MRST" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="Shiled_IO_A2.MCLK" />
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="Shiled_IO_A3.MRST" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="Shiled_IO_A3.MCLK" />
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="Shiled_IO_A4.MRST" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="Shiled_IO_A4.MCLK" />
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="Shiled_IO_A5.MRST" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="Shiled_IO_A5.MCLK" />
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="Shiled_IO_A6.MRST" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="Shiled_IO_A6.MCLK" />
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="Shiled_IO_A7.MRST" />
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="Shiled_IO_A8.MRST" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="Shiled_IO_A7.MCLK" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="Shiled_IO_A8.MCLK" />
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="Shiled_IO_A9.MRST" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="Shiled_IO_A9.MCLK" />
  <connection
    kind="reset"
    version="11.1"
    start="SAM9.MRST"
-   end="Shiled_IO_A10.MRST" />
+   end="test_LEDState_0.MRST" />
  <connection
    kind="clock"
    version="11.1"
    start="SAM9.MCLK"
-   end="Shiled_IO_A10.MCLK" />
+   end="test_LEDState_0.MCLK" />
  <connection
-   kind="clock"
+   kind="avalon_streaming"
    version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_A11.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_A11.MRST" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_A12.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_A12.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_A13.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_A13.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_A14.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_A14.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_A15.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_A15.MCLK" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_A16.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_A16.MRST" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_A17.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_A17.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_A18.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_A18.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_A19.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_A19.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_A20.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_A20.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_A21.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_A21.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_A22.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_A22.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_A23.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_A23.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_A24.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_A24.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_A25.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_A25.MCLK" />
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="Shiled_IO_B0.MRST" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="Shiled_IO_B0.MCLK" />
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="Shiled_IO_B1.MRST" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="Shiled_IO_B2.MCLK" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="Shiled_IO_B1.MCLK" />
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="Shiled_IO_B2.MRST" />
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="Shiled_IO_B3.MRST" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="Shiled_IO_B3.MCLK" />
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="Shiled_IO_B4.MRST" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="Shiled_IO_B4.MCLK" />
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="Shiled_IO_B5.MRST" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="Shiled_IO_B5.MCLK" />
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="Shiled_IO_B6.MRST" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="Shiled_IO_B6.MCLK" />
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="Shiled_IO_B7.MRST" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="Shiled_IO_B7.MCLK" />
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="Shiled_IO_B8.MRST" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="Shiled_IO_B8.MCLK" />
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="Shiled_IO_B9.MRST" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="Shiled_IO_B9.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_B10.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_B10.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_B11.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_B11.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_B12.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_B12.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_B13.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_B13.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_B14.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_B14.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_B15.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_B15.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_B16.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_B16.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_B17.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_B17.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_B18.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_B18.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_B19.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_B19.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_B20.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_B20.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_B21.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_B21.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_B22.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_B22.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_B23.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_B23.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_B24.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_B24.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="Shiled_IO_B25.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="Shiled_IO_B25.MCLK" />
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_A0.ctrl">
+   start="test_LEDState_0.LEDS"
+   end="FuncLED_0.LEDS" />
+ <connection kind="reset" version="11.1" start="SAM9.MRST" end="Shield_PIO_A.MRST" />
+ <connection kind="clock" version="11.1" start="SAM9.MCLK" end="Shield_PIO_A.MCLK" />
+ <connection kind="reset" version="11.1" start="SAM9.MRST" end="Shield_PIO_B.MRST" />
+ <connection kind="clock" version="11.1" start="SAM9.MCLK" end="Shield_PIO_B.MCLK" />
+ <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shield_PIO_A.gpio">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002000" />
+  <parameter name="baseAddress" value="0x10001100" />
  </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_A1.ctrl">
+ <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shield_PIO_B.gpio">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002001" />
+  <parameter name="baseAddress" value="0x10001180" />
  </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_A2.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002002" />
+ <connection
+   kind="interrupt"
+   version="11.1"
+   start="SAM9.EVENTS"
+   end="Shield_PIO_A.INTRQ">
+  <parameter name="irqNumber" value="8" />
  </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_A3.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002003" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_A4.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002004" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_A5.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002005" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_A6.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002006" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_A7.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002007" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_A8.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002008" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_A9.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002009" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_A10.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x1000200a" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_A11.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x1000200b" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_A13.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x1000200d" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_A12.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x1000200c" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_A14.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x1000200e" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_A15.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x1000200f" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_A17.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002011" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_A16.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002010" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_A18.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002012" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_A19.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002013" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_A20.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002014" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_A21.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002015" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_A22.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002016" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_A23.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002017" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_A24.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002018" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_A25.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002019" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_B0.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002020" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_B1.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002021" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_B2.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002022" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_B3.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002023" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_B4.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002024" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_B6.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002026" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_B5.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002025" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_B7.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002027" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_B8.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002028" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_B9.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002029" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_B10.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x1000202a" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_B11.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x1000202b" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_B12.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x1000202c" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_B13.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x1000202d" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_B14.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x1000202e" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_B15.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x1000202f" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_B16.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002030" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_B17.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002031" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_B18.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002032" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_B19.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002033" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_B20.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002034" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_B21.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002035" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_B22.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002036" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_B23.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002037" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_B24.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002038" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shiled_IO_B25.ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10002039" />
+ <connection
+   kind="interrupt"
+   version="11.1"
+   start="SAM9.EVENTS"
+   end="Shield_PIO_B.INTRQ">
+  <parameter name="irqNumber" value="9" />
  </connection>
 </system>
