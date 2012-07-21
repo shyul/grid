@@ -18,4 +18,4 @@ You should have received a copy of the GNU Affero General Public License along w
 
 How to use grid
 ----------------
-1. Compile it with Quartus II 11.1sp2 and above, and get the grid.rbf under the /output folder.
+1. Compile it with Quartus II 11.1sp2 web edition and above (http://www.altera.com), and get the grid.rbf under the /output folder.
