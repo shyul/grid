@@ -6,7 +6,7 @@
    version="1.0"
    description=""
    tags=""
-   categories="" />
+   categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
    element $${FILENAME}
@@ -77,32 +77,6 @@
          type = "boolean";
       }
    }
-   element FuncLED_3.LEDD
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "268435596";
-         type = "long";
-      }
-   }
-   element FuncLED_0.LEDD
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "268435584";
-         type = "long";
-      }
-   }
    element FuncLED_1.LEDD
    {
       datum _lockedAddress
@@ -126,6 +100,32 @@
       datum baseAddress
       {
          value = "268435592";
+         type = "long";
+      }
+   }
+   element FuncLED_3.LEDD
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "268435596";
+         type = "long";
+      }
+   }
+   element FuncLED_0.LEDD
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "268435584";
          type = "long";
       }
    }
@@ -155,14 +155,6 @@
          type = "long";
       }
    }
-   element test_RegRW32_2.TestReg
-   {
-      datum baseAddress
-      {
-         value = "1073741832";
-         type = "long";
-      }
-   }
    element test_RegRW32_1.TestReg
    {
       datum baseAddress
@@ -176,6 +168,14 @@
       datum baseAddress
       {
          value = "1073741824";
+         type = "long";
+      }
+   }
+   element test_RegRW32_2.TestReg
+   {
+      datum baseAddress
+      {
+         value = "1073741832";
          type = "long";
       }
    }
@@ -267,10 +267,10 @@
  <parameter name="globalResetBus" value="false" />
  <parameter name="hdlLanguage" value="VERILOG" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="" />
+ <parameter name="projectName" value="grid.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1342869421530" />
+ <parameter name="timeStamp" value="1342881271452" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="m1" internal="HPS_Tabby.EXPORT" type="conduit" dir="end" />
@@ -278,7 +278,7 @@
  <interface name="led_f1" internal="FuncLED_1.EXPORT" type="conduit" dir="end" />
  <interface name="led_f2" internal="FuncLED_2.EXPORT" type="conduit" dir="end" />
  <interface name="led_f3" internal="FuncLED_3.EXPORT" type="conduit" dir="end" />
- <module kind="hps_tabby" version="1.0" enabled="1" name="HPS_Tabby" />
+ <module kind="hps_tabby" version="1.1" enabled="1" name="HPS_Tabby" />
  <module kind="basic_SysID" version="1.0" enabled="1" name="SysID">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
  </module>

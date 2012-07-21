@@ -16,7 +16,7 @@ output				cso_H2CLK_clk,
 
 output	[31:0]	avm_M1_writedata,
 input		[31:0]	avm_M1_readdata,
-output	[31:0]	avm_M1_address,
+output	[29:0]	avm_M1_address,
 output	[3:0]		avm_M1_byteenable,
 output				avm_M1_write,
 output				avm_M1_read,
@@ -64,7 +64,7 @@ reg					h_wait = 0;
 
 reg		[31:0]	q_wdata = 0;
 wire		[31:0]	q_rdata;
-reg		[31:0]	q_addr = 0;
+reg		[29:0]	q_addr = 0;
 reg		[3:0]		q_be = 0;
 reg					q_wr = 0;
 reg					q_rd = 0;
@@ -83,10 +83,10 @@ begin
 	else begin
 		q_be <= ~coe_M1_BEN; 
 		case(coe_M1_CSN)
-			4'b1110: begin q_addr <= {8'b00010000, coe_M1_ADDR, 2'b0}; end
-			4'b1101: begin q_addr <= {8'b00100000, coe_M1_ADDR, 2'b0}; end
-			4'b1011: begin q_addr <= {8'b00110000, coe_M1_ADDR, 2'b0}; end
-			4'b0111: begin q_addr <= {8'b01000000, coe_M1_ADDR, 2'b0}; end
+			4'b1110: begin q_addr <= {8'b00010000, coe_M1_ADDR}; end
+			4'b1101: begin q_addr <= {8'b00100000, coe_M1_ADDR}; end
+			4'b1011: begin q_addr <= {8'b00110000, coe_M1_ADDR}; end
+			4'b0111: begin q_addr <= {8'b01000000, coe_M1_ADDR}; end
 			default: begin q_addr <= 0; end
 		endcase	
 	end
