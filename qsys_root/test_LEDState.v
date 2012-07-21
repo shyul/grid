@@ -1,12 +1,11 @@
-module qsys_test_LEDState(
+module test_LEDState(
 //Avalon System control signal.
 input					rsi_MRST_reset,	// reset_n from MCU GPIO
 input					csi_MCLK_clk,
 
 //Avalon-ST LED Control.
 output	[23:0]	aso_LEDS_data,
-output				aso_LEDS_valid,
-input					aso_LEDS_ready
+output				aso_LEDS_valid
 );
 
 assign	aso_LEDS_valid = 1;

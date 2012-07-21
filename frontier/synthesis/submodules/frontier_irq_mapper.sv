@@ -20,9 +20,9 @@
 // Altera IRQ Mapper
 //
 // Parameters
-//   NUM_RCVRS        : 3
+//   NUM_RCVRS        : 0
 //   SENDER_IRW_WIDTH : 10
-//   IRQ_MAP          : 0:0,1:8,2:9
+//   IRQ_MAP          : 
 //
 // -------------------------------------------------------
 
@@ -39,9 +39,6 @@ module frontier_irq_mapper
     // -------------------
     // IRQ Receivers
     // -------------------
-    input                receiver0_irq,
-    input                receiver1_irq,
-    input                receiver2_irq,
 
     // -------------------
     // Command Source (Output)
@@ -49,13 +46,11 @@ module frontier_irq_mapper
     output reg [9 : 0] sender_irq
 );
 
+    initial sender_irq = 0;
 
     always @* begin
 	sender_irq = 0;
 
-        sender_irq[0] = receiver0_irq;
-        sender_irq[8] = receiver1_irq;
-        sender_irq[9] = receiver2_irq;
     end
 
 endmodule

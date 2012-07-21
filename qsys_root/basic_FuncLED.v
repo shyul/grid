@@ -1,4 +1,4 @@
-module qsys_basic_FuncLED(
+module basic_FuncLED(
 //Avalon System control signal.
 input					rsi_MRST_reset,	// reset_n from MCU GPIO
 input					csi_MCLK_clk,
@@ -9,12 +9,10 @@ output	[31:0]	avs_LEDD_readdata,
 input		[3:0]		avs_LEDD_byteenable,
 input					avs_LEDD_write,
 input					avs_LEDD_read,
-output				avs_LEDD_waitrequest,
 
 //Avalon-ST LED Control.
 input		[23:0]	asi_LEDS_data,
 input					asi_LEDS_valid,
-output				asi_LEDS_ready,
 
 //LED pin-out.
 output				coe_LED_R,
@@ -23,8 +21,6 @@ output				coe_LED_B
 );
 
 assign	avs_LEDD_readdata = {led_asi_en, 7'b0, led_r_data, led_g_data, led_b_data};
-assign	avs_LEDD_waitrequest = rsi_MRST_reset;
-assign	asi_LEDS_ready = led_asi_en;
 
 reg		[7:0]		led_r_data, led_g_data, led_b_data;
 reg		[7:0]		led_r_cnt, led_g_cnt, led_b_cnt;

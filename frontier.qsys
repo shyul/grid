@@ -6,24 +6,11 @@
    version="1.0"
    description=""
    tags=""
-   categories="System" />
+   categories="" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
    element $${FILENAME}
    {
-   }
-   element Shield_Admin.Ctrl
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "268439552";
-         type = "long";
-      }
    }
    element FuncLED_0
    {
@@ -42,7 +29,7 @@
    {
       datum _sortIndex
       {
-         value = "3";
+         value = "4";
          type = "int";
       }
       datum sopceditor_expanded
@@ -55,7 +42,7 @@
    {
       datum _sortIndex
       {
-         value = "4";
+         value = "6";
          type = "int";
       }
       datum sopceditor_expanded
@@ -68,7 +55,7 @@
    {
       datum _sortIndex
       {
-         value = "5";
+         value = "8";
          type = "int";
       }
       datum sopceditor_expanded
@@ -77,30 +64,17 @@
          type = "boolean";
       }
    }
-   element FuncLED_1.LEDD
+   element HPS_Tabby
    {
-      datum _lockedAddress
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+      datum sopceditor_expanded
       {
          value = "1";
          type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "268435476";
-         type = "long";
-      }
-   }
-   element FuncLED_2.LEDD
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "268435480";
-         type = "long";
       }
    }
    element FuncLED_3.LEDD
@@ -112,7 +86,7 @@
       }
       datum baseAddress
       {
-         value = "268435484";
+         value = "268435596";
          type = "long";
       }
    }
@@ -125,62 +99,41 @@
       }
       datum baseAddress
       {
-         value = "268435472";
+         value = "268435584";
          type = "long";
       }
    }
-   element Shield_Admin.MRST
+   element FuncLED_1.LEDD
    {
-      datum _tags
+      datum _lockedAddress
       {
-         value = "";
-         type = "String";
-      }
-   }
-   element SAM9
-   {
-      datum _sortIndex
-      {
-         value = "0";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
+         value = "1";
          type = "boolean";
       }
-   }
-   element Shield_Admin
-   {
-      datum _sortIndex
+      datum baseAddress
       {
-         value = "10";
-         type = "int";
+         value = "268435588";
+         type = "long";
       }
-      datum sopceditor_expanded
+   }
+   element FuncLED_2.LEDD
+   {
+      datum _lockedAddress
       {
-         value = "0";
+         value = "1";
          type = "boolean";
       }
+      datum baseAddress
+      {
+         value = "268435592";
+         type = "long";
+      }
    }
-   element Shield_PIO_A
+   element SysID
    {
       datum _sortIndex
       {
-         value = "11";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shield_PIO_B
-   {
-      datum _sortIndex
-      {
-         value = "12";
+         value = "1";
          type = "int";
       }
       datum sopceditor_expanded
@@ -202,58 +155,35 @@
          type = "long";
       }
    }
-   element SysID
+   element test_RegRW32_2.TestReg
    {
-      datum _sortIndex
-      {
-         value = "1";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element Shield_PIO_A.gpio
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
       datum baseAddress
       {
-         value = "268439808";
+         value = "1073741832";
          type = "long";
       }
    }
-   element Shield_PIO_B.gpio
+   element test_RegRW32_1.TestReg
    {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
       datum baseAddress
       {
-         value = "268439936";
+         value = "1073741828";
          type = "long";
       }
    }
-   element qsys_shield_gpioFuncSel_13
+   element test_RegRW32_0.TestReg
    {
-      datum _sortIndex
+      datum baseAddress
       {
-         value = "38";
-         type = "int";
+         value = "1073741824";
+         type = "long";
       }
    }
    element test_LEDState_0
    {
       datum _sortIndex
       {
-         value = "6";
+         value = "3";
          type = "int";
       }
       datum sopceditor_expanded
@@ -266,7 +196,7 @@
    {
       datum _sortIndex
       {
-         value = "7";
+         value = "5";
          type = "int";
       }
       datum sopceditor_expanded
@@ -279,7 +209,7 @@
    {
       datum _sortIndex
       {
-         value = "8";
+         value = "7";
          type = "int";
       }
       datum sopceditor_expanded
@@ -301,6 +231,30 @@
          type = "boolean";
       }
    }
+   element test_RegRW32_0
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
+   element test_RegRW32_1
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+   element test_RegRW32_2
+   {
+      datum _sortIndex
+      {
+         value = "12";
+         type = "int";
+      }
+   }
 }
 ]]></parameter>
  <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
@@ -313,151 +267,157 @@
  <parameter name="globalResetBus" value="false" />
  <parameter name="hdlLanguage" value="VERILOG" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="grid.qpf" />
+ <parameter name="projectName" value="" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1342774865983" />
+ <parameter name="timeStamp" value="1342869421530" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
- <interface name="m1" internal="SAM9.EXPORT" type="conduit" dir="end" />
+ <interface name="m1" internal="HPS_Tabby.EXPORT" type="conduit" dir="end" />
  <interface name="led_f0" internal="FuncLED_0.EXPORT" type="conduit" dir="end" />
  <interface name="led_f1" internal="FuncLED_1.EXPORT" type="conduit" dir="end" />
  <interface name="led_f2" internal="FuncLED_2.EXPORT" type="conduit" dir="end" />
  <interface name="led_f3" internal="FuncLED_3.EXPORT" type="conduit" dir="end" />
- <interface name="shield" internal="Shield_Admin.EXPORT" type="conduit" dir="end" />
- <interface name="slot_a" internal="Shield_PIO_A.EXPORT" type="conduit" dir="end" />
- <interface name="slot_b" internal="Shield_PIO_B.EXPORT" type="conduit" dir="end" />
- <module kind="qsys_tabby_host" version="1.0" enabled="1" name="SAM9" />
- <module kind="qsys_basic_SysID" version="1.0" enabled="1" name="SysID">
+ <module kind="hps_tabby" version="1.0" enabled="1" name="HPS_Tabby" />
+ <module kind="basic_SysID" version="1.0" enabled="1" name="SysID">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
  </module>
- <module kind="qsys_basic_FuncLED" version="1.0" enabled="1" name="FuncLED_0">
+ <module kind="basic_FuncLED" version="1.0" enabled="1" name="FuncLED_0">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
  </module>
- <module kind="qsys_basic_FuncLED" version="1.0" enabled="1" name="FuncLED_1">
+ <module kind="basic_FuncLED" version="1.0" enabled="1" name="FuncLED_1">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
  </module>
- <module kind="qsys_basic_FuncLED" version="1.0" enabled="1" name="FuncLED_2">
+ <module kind="basic_FuncLED" version="1.0" enabled="1" name="FuncLED_2">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
  </module>
- <module kind="qsys_basic_FuncLED" version="1.0" enabled="1" name="FuncLED_3">
+ <module kind="basic_FuncLED" version="1.0" enabled="1" name="FuncLED_3">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
  </module>
- <module
-   kind="qsys_shield_moduleBasicCtrl"
-   version="1.0"
-   enabled="1"
-   name="Shield_Admin">
+ <module kind="test_LEDState" version="1.0" enabled="1" name="test_LEDState_0">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
  </module>
- <module
-   kind="qsys_test_LEDState"
-   version="1.0"
-   enabled="1"
-   name="test_LEDState_1">
+ <module kind="test_LEDState" version="1.0" enabled="1" name="test_LEDState_1">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
  </module>
- <module
-   kind="qsys_test_LEDState"
-   version="1.0"
-   enabled="1"
-   name="test_LEDState_2">
+ <module kind="test_LEDState" version="1.0" enabled="1" name="test_LEDState_2">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
  </module>
- <module
-   kind="qsys_test_LEDState"
-   version="1.0"
-   enabled="1"
-   name="test_LEDState_3">
+ <module kind="test_LEDState" version="1.0" enabled="1" name="test_LEDState_3">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
  </module>
- <module
-   kind="qsys_test_LEDState"
-   version="1.0"
-   enabled="1"
-   name="test_LEDState_0">
+ <module kind="test_RegRW32" version="1.0" enabled="1" name="test_RegRW32_0">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
  </module>
- <module
-   kind="qsys_shield_pio26b"
-   version="1.0"
-   enabled="1"
-   name="Shield_PIO_A">
+ <module kind="test_RegRW32" version="1.0" enabled="1" name="test_RegRW32_1">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
  </module>
- <module
-   kind="qsys_shield_pio26b"
-   version="1.0"
-   enabled="1"
-   name="Shield_PIO_B">
+ <module kind="test_RegRW32" version="1.0" enabled="1" name="test_RegRW32_2">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
  </module>
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="SysID.MRST" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="SysID.MCLK" />
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="FuncLED_0.MRST" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="FuncLED_0.MCLK" />
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="FuncLED_1.MRST" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="FuncLED_1.MCLK" />
+ <connection kind="reset" version="11.1" start="HPS_Tabby.MRST" end="SysID.MRST" />
  <connection
    kind="reset"
    version="11.1"
-   start="SAM9.MRST"
+   start="HPS_Tabby.MRST"
+   end="FuncLED_0.MRST" />
+ <connection
+   kind="reset"
+   version="11.1"
+   start="HPS_Tabby.MRST"
+   end="FuncLED_1.MRST" />
+ <connection
+   kind="reset"
+   version="11.1"
+   start="HPS_Tabby.MRST"
+   end="FuncLED_2.MRST" />
+ <connection
+   kind="reset"
+   version="11.1"
+   start="HPS_Tabby.MRST"
+   end="FuncLED_3.MRST" />
+ <connection kind="clock" version="11.1" start="HPS_Tabby.MCLK" end="SysID.MCLK" />
+ <connection
+   kind="clock"
+   version="11.1"
+   start="HPS_Tabby.MCLK"
+   end="FuncLED_0.MCLK" />
+ <connection
+   kind="clock"
+   version="11.1"
+   start="HPS_Tabby.MCLK"
+   end="FuncLED_1.MCLK" />
+ <connection
+   kind="clock"
+   version="11.1"
+   start="HPS_Tabby.MCLK"
+   end="FuncLED_2.MCLK" />
+ <connection
+   kind="clock"
+   version="11.1"
+   start="HPS_Tabby.MCLK"
+   end="FuncLED_3.MCLK" />
+ <connection kind="avalon" version="11.1" start="HPS_Tabby.M1" end="SysID.SysID">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10000000" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="11.1"
+   start="HPS_Tabby.M1"
+   end="FuncLED_0.LEDD">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10000080" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="11.1"
+   start="HPS_Tabby.M1"
+   end="FuncLED_1.LEDD">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10000084" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="11.1"
+   start="HPS_Tabby.M1"
+   end="FuncLED_2.LEDD">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10000088" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="11.1"
+   start="HPS_Tabby.M1"
+   end="FuncLED_3.LEDD">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x1000008c" />
+ </connection>
+ <connection
+   kind="avalon_streaming"
+   version="11.1"
+   start="test_LEDState_0.LEDS"
+   end="FuncLED_0.LEDS" />
+ <connection
+   kind="reset"
+   version="11.1"
+   start="HPS_Tabby.MRST"
+   end="test_LEDState_0.MRST" />
+ <connection
+   kind="clock"
+   version="11.1"
+   start="HPS_Tabby.MCLK"
+   end="test_LEDState_0.MCLK" />
+ <connection
+   kind="reset"
+   version="11.1"
+   start="HPS_Tabby.MRST"
    end="test_LEDState_1.MRST" />
  <connection
    kind="clock"
    version="11.1"
-   start="SAM9.MCLK"
+   start="HPS_Tabby.MCLK"
    end="test_LEDState_1.MCLK" />
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="FuncLED_2.MRST" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="FuncLED_2.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="test_LEDState_2.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="test_LEDState_2.MCLK" />
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="FuncLED_3.MRST" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="FuncLED_3.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="SAM9.MRST"
-   end="test_LEDState_3.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="SAM9.MCLK"
-   end="test_LEDState_3.MCLK" />
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="Shield_Admin.MRST" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="Shield_Admin.MCLK" />
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="SysID.SysID">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10000000" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="FuncLED_0.LEDD">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10000010" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="FuncLED_1.LEDD">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10000014" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="FuncLED_2.LEDD">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10000018" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="FuncLED_3.LEDD">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x1000001c" />
- </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shield_Admin.Ctrl">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10001000" />
- </connection>
  <connection
    kind="avalon_streaming"
    version="11.1"
@@ -474,51 +434,77 @@
    start="test_LEDState_3.LEDS"
    end="FuncLED_3.LEDS" />
  <connection
-   kind="interrupt"
+   kind="reset"
    version="11.1"
-   start="SAM9.EVENTS"
-   end="Shield_Admin.OC">
-  <parameter name="irqNumber" value="0" />
- </connection>
+   start="HPS_Tabby.MRST"
+   end="test_LEDState_2.MRST" />
  <connection
    kind="reset"
    version="11.1"
-   start="SAM9.MRST"
-   end="test_LEDState_0.MRST" />
+   start="HPS_Tabby.MRST"
+   end="test_LEDState_3.MRST" />
  <connection
    kind="clock"
    version="11.1"
-   start="SAM9.MCLK"
-   end="test_LEDState_0.MCLK" />
+   start="HPS_Tabby.MCLK"
+   end="test_LEDState_2.MCLK" />
  <connection
-   kind="avalon_streaming"
+   kind="clock"
    version="11.1"
-   start="test_LEDState_0.LEDS"
-   end="FuncLED_0.LEDS" />
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="Shield_PIO_A.MRST" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="Shield_PIO_A.MCLK" />
- <connection kind="reset" version="11.1" start="SAM9.MRST" end="Shield_PIO_B.MRST" />
- <connection kind="clock" version="11.1" start="SAM9.MCLK" end="Shield_PIO_B.MCLK" />
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shield_PIO_A.gpio">
+   start="HPS_Tabby.MCLK"
+   end="test_LEDState_3.MCLK" />
+ <connection
+   kind="reset"
+   version="11.1"
+   start="HPS_Tabby.MRST"
+   end="test_RegRW32_0.MRST" />
+ <connection
+   kind="clock"
+   version="11.1"
+   start="HPS_Tabby.MCLK"
+   end="test_RegRW32_1.MCLK" />
+ <connection
+   kind="reset"
+   version="11.1"
+   start="HPS_Tabby.MRST"
+   end="test_RegRW32_2.MRST" />
+ <connection
+   kind="clock"
+   version="11.1"
+   start="HPS_Tabby.MCLK"
+   end="test_RegRW32_2.MCLK" />
+ <connection
+   kind="reset"
+   version="11.1"
+   start="HPS_Tabby.MRST"
+   end="test_RegRW32_1.MRST" />
+ <connection
+   kind="avalon"
+   version="11.1"
+   start="HPS_Tabby.M1"
+   end="test_RegRW32_0.TestReg">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10001100" />
+  <parameter name="baseAddress" value="0x40000000" />
  </connection>
- <connection kind="avalon" version="11.1" start="SAM9.M1" end="Shield_PIO_B.gpio">
+ <connection
+   kind="avalon"
+   version="11.1"
+   start="HPS_Tabby.M1"
+   end="test_RegRW32_1.TestReg">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10001180" />
+  <parameter name="baseAddress" value="0x40000004" />
  </connection>
  <connection
-   kind="interrupt"
+   kind="avalon"
    version="11.1"
-   start="SAM9.EVENTS"
-   end="Shield_PIO_A.INTRQ">
-  <parameter name="irqNumber" value="8" />
+   start="HPS_Tabby.M1"
+   end="test_RegRW32_2.TestReg">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x40000008" />
  </connection>
  <connection
-   kind="interrupt"
+   kind="clock"
    version="11.1"
-   start="SAM9.EVENTS"
-   end="Shield_PIO_B.INTRQ">
-  <parameter name="irqNumber" value="9" />
- </connection>
+   start="HPS_Tabby.MCLK"
+   end="test_RegRW32_0.MCLK" />
 </system>

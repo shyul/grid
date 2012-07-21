@@ -1,4 +1,4 @@
-module qsys_tabby_host(
+module hps_tabby(
 input					coe_M1_RSTN, coe_M1_CLK,
 
 input		[21:0]	coe_M1_ADDR,
@@ -136,7 +136,8 @@ begin
 				tmp_addr <= coe_M1_ADDR;
 				tmp_cs <= coe_M1_CSN;
 				q_btrans <= 0;
-				if(q_rdvalid) begin h_rdata <= q_rdata; q_rd <= 0; h_wait <= q_wait; state <= 2; end
+				q_rd <= 0;
+				if(q_rdvalid) begin h_rdata <= q_rdata; h_wait <= q_wait; state <= 2; end
 			end
 			
 			2: begin
@@ -163,12 +164,7 @@ begin
 					state <= 0;
 				end
 			end
-			
-//			5: begin
-//				q_wdata <= 0;
-//				state <= 0;
-//			end
-			
+
 			default: begin
 				state <= 0;
 				h_rdata <= 0;

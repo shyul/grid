@@ -1,4 +1,4 @@
-module qsys_shield_pio26b(
+module grid_PIO26(
 input					rsi_MRST_reset,
 input					csi_MCLK_clk,
 

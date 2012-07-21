@@ -1,4 +1,4 @@
-module qsys_shield_moduleBasicCtrl(
+module basic_ShieldCtrl(
 //Avalon System control signal.
 input					rsi_MRST_reset,	// reset_n from MCU GPIO
 input					csi_MCLK_clk,
@@ -9,7 +9,6 @@ output	[31:0]	avs_Ctrl_readdata,
 input		[3:0]		avs_Ctrl_byteenable,
 input					avs_Ctrl_write,
 input					avs_Ctrl_read,
-output				avs_Ctrl_waitrequest,
 
 //Over current interrupt.
 output				ins_OC_irq,
@@ -33,7 +32,6 @@ reg					rMODB_HOE = 0;
 reg					rMODB_LOE = 0;
 
 assign	avs_Ctrl_readdata = {6'b0, ~rMODB_PWREN, ~rMODA_PWREN, 6'b0, rMODB_HOE, rMODA_HOE, 6'b0, rMODB_LOE, rMODA_LOE, 6'b0, ~coe_B_OCN, ~coe_A_OCN};
-assign	avs_Ctrl_waitrequest = 1'b0;
 assign	ins_OC_irq = ~(coe_A_OCN & coe_B_OCN);
 
 assign	coe_A_PWREN = rMODA_PWREN;
