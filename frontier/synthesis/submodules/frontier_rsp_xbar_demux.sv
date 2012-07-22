@@ -28,8 +28,8 @@
 // ------------------------------------------
 // Generation parameters:
 //   output_name:         frontier_rsp_xbar_demux
-//   ST_DATA_W:           87
-//   ST_CHANNEL_W:        8
+//   ST_DATA_W:           89
+//   ST_CHANNEL_W:        9
 //   NUM_OUTPUTS:         1
 //   VALID_WIDTH:         1
 // ------------------------------------------
@@ -46,8 +46,8 @@ module frontier_rsp_xbar_demux
     // Sink
     // -------------------
     input  [1-1      : 0]   sink_valid,
-    input  [87-1    : 0]   sink_data, // ST_DATA_W=87
-    input  [8-1 : 0]   sink_channel, // ST_CHANNEL_W=8
+    input  [89-1    : 0]   sink_data, // ST_DATA_W=89
+    input  [9-1 : 0]   sink_channel, // ST_CHANNEL_W=9
     input                         sink_startofpacket,
     input                         sink_endofpacket,
     output                        sink_ready,
@@ -56,8 +56,8 @@ module frontier_rsp_xbar_demux
     // Sources 
     // -------------------
     output reg                      src0_valid,
-    output reg [87-1    : 0] src0_data, // ST_DATA_W=87
-    output reg [8-1 : 0] src0_channel, // ST_CHANNEL_W=8
+    output reg [89-1    : 0] src0_data, // ST_DATA_W=89
+    output reg [9-1 : 0] src0_channel, // ST_CHANNEL_W=9
     output reg                      src0_startofpacket,
     output reg                      src0_endofpacket,
     input                           src0_ready,

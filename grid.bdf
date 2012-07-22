@@ -21,7 +21,7 @@ applicable agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 296 200 464 216)
+	(rect 312 200 480 216)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "M1_CLK" (rect 5 0 46 12)(font "Arial" ))
 	(pt 168 8)
@@ -38,7 +38,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 288 216 464 232)
+	(rect 304 216 480 232)
 	(text "INPUT" (rect 141 0 169 10)(font "Arial" (font_size 6)))
 	(text "M1_ADDR[23..2]" (rect 5 0 88 12)(font "Arial" ))
 	(pt 176 8)
@@ -55,7 +55,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 296 248 464 264)
+	(rect 312 248 480 264)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "M1_CSN[3..0]" (rect 5 0 74 12)(font "Arial" ))
 	(pt 168 8)
@@ -72,7 +72,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 296 264 464 280)
+	(rect 312 264 480 280)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "M1_BEN[3..0]" (rect 5 0 73 12)(font "Arial" ))
 	(pt 168 8)
@@ -89,7 +89,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 296 280 464 296)
+	(rect 312 280 480 296)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "M1_RDN" (rect 5 0 49 12)(font "Arial" ))
 	(pt 168 8)
@@ -106,7 +106,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 296 296 464 312)
+	(rect 312 296 480 312)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "M1_WRN" (rect 5 0 52 12)(font "Arial" ))
 	(pt 168 8)
@@ -293,7 +293,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 296 656 464 672)
+	(rect 312 656 480 672)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "IO_A_OCN" (rect 5 0 60 12)(font "Arial" ))
 	(pt 168 8)
@@ -310,7 +310,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 296 720 464 736)
+	(rect 312 720 480 736)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "IO_B_OCN" (rect 5 0 60 12)(font "Arial" ))
 	(pt 168 8)
@@ -514,7 +514,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 296 184 464 200)
+	(rect 312 184 480 200)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "M1_RSTN" (rect 5 0 54 12)(font "Arial" ))
 	(pt 168 8)
@@ -531,7 +531,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 976 80 1155 96)
+	(rect 656 -120 835 -104)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "M2_ADDR[12..0]" (rect 90 0 173 12)(font "Arial" ))
 	(pt 0 8)
@@ -544,11 +544,11 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1179 80 1235 96))
+	(annotation_block (location)(rect 859 -120 915 -104))
 )
 (pin
 	(output)
-	(rect 976 96 1152 112)
+	(rect 656 -104 832 -88)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "M2_BA[2..0]" (rect 90 0 150 12)(font "Arial" ))
 	(pt 0 8)
@@ -561,11 +561,11 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1176 96 1232 112))
+	(annotation_block (location)(rect 856 -104 912 -88))
 )
 (pin
 	(output)
-	(rect 976 112 1152 128)
+	(rect 656 -88 832 -72)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "M2_CSN" (rect 90 0 133 12)(font "Arial" ))
 	(pt 0 8)
@@ -578,11 +578,11 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1176 112 1232 128))
+	(annotation_block (location)(rect 856 -88 912 -72))
 )
 (pin
 	(output)
-	(rect 976 128 1152 144)
+	(rect 656 -72 832 -56)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "M2_WEN" (rect 90 0 136 12)(font "Arial" ))
 	(pt 0 8)
@@ -595,11 +595,11 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1176 128 1232 144))
+	(annotation_block (location)(rect 856 -72 912 -56))
 )
 (pin
 	(output)
-	(rect 976 144 1152 160)
+	(rect 656 -56 832 -40)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "M2_RASN" (rect 90 0 140 12)(font "Arial" ))
 	(pt 0 8)
@@ -612,11 +612,11 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1176 144 1232 160))
+	(annotation_block (location)(rect 856 -56 912 -40))
 )
 (pin
 	(output)
-	(rect 976 160 1152 176)
+	(rect 656 -40 832 -24)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "M2_CASN" (rect 90 0 140 12)(font "Arial" ))
 	(pt 0 8)
@@ -629,11 +629,11 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1176 160 1232 176))
+	(annotation_block (location)(rect 856 -40 912 -24))
 )
 (pin
 	(output)
-	(rect 976 176 1152 192)
+	(rect 656 -24 832 -8)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "M2_CKE" (rect 90 0 132 12)(font "Arial" ))
 	(pt 0 8)
@@ -646,11 +646,11 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1176 176 1232 192))
+	(annotation_block (location)(rect 856 -24 912 -8))
 )
 (pin
 	(output)
-	(rect 976 192 1152 208)
+	(rect 656 -8 832 8)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "M2_CLKP" (rect 90 0 138 12)(font "Arial" ))
 	(pt 0 8)
@@ -663,11 +663,11 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1176 192 1232 208))
+	(annotation_block (location)(rect 856 -8 912 8))
 )
 (pin
 	(output)
-	(rect 976 208 1152 224)
+	(rect 656 8 832 24)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "M2_CLKN" (rect 90 0 139 12)(font "Arial" ))
 	(pt 0 8)
@@ -680,11 +680,11 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1176 208 1232 224))
+	(annotation_block (location)(rect 856 8 912 24))
 )
 (pin
 	(output)
-	(rect 976 224 1152 240)
+	(rect 656 24 832 40)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "M2_ODT" (rect 90 0 132 12)(font "Arial" ))
 	(pt 0 8)
@@ -697,7 +697,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1176 224 1232 240))
+	(annotation_block (location)(rect 856 24 912 40))
 )
 (pin
 	(output)
@@ -803,7 +803,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 976 32 1152 48)
+	(rect 656 -168 832 -152)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "M2_DM[1..0]" (rect 90 0 152 12)(font "Arial" ))
 	(pt 0 8)
@@ -816,11 +816,11 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 1176 32 1232 48))
+	(annotation_block (location)(rect 856 -168 912 -152))
 )
 (pin
 	(output)
-	(rect 288 368 464 384)
+	(rect 304 368 480 384)
 	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
 	(text "LED_F0R" (rect 38 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -838,7 +838,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 288 384 464 400)
+	(rect 304 384 480 400)
 	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
 	(text "LED_F0G" (rect 38 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -856,7 +856,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 288 400 464 416)
+	(rect 304 400 480 416)
 	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
 	(text "LED_F0B" (rect 39 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -874,7 +874,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 288 440 464 456)
+	(rect 304 440 480 456)
 	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
 	(text "LED_F1R" (rect 38 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -892,7 +892,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 288 456 464 472)
+	(rect 304 456 480 472)
 	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
 	(text "LED_F1G" (rect 38 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -910,7 +910,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 288 472 464 488)
+	(rect 304 472 480 488)
 	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
 	(text "LED_F1B" (rect 39 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -928,7 +928,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 288 512 464 528)
+	(rect 304 512 480 528)
 	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
 	(text "LED_F2R" (rect 38 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -946,7 +946,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 288 528 464 544)
+	(rect 304 528 480 544)
 	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
 	(text "LED_F2G" (rect 38 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -964,7 +964,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 288 544 464 560)
+	(rect 304 544 480 560)
 	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
 	(text "LED_F2B" (rect 39 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -982,7 +982,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 288 584 464 600)
+	(rect 304 584 480 600)
 	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
 	(text "LED_F3R" (rect 38 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1000,7 +1000,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 288 600 464 616)
+	(rect 304 600 480 616)
 	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
 	(text "LED_F3G" (rect 38 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1018,7 +1018,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 288 616 464 632)
+	(rect 304 616 480 632)
 	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
 	(text "LED_F3B" (rect 39 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1036,7 +1036,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 288 328 464 344)
+	(rect 304 328 480 344)
 	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
 	(text "M1_EINT[9..0]" (rect 16 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1054,7 +1054,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 288 312 464 328)
+	(rect 304 312 480 328)
 	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
 	(text "M1_WAITN" (rect 31 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1327,7 +1327,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 288 672 464 688)
+	(rect 304 672 480 688)
 	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A_PWREN" (rect 15 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1345,7 +1345,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 288 736 464 752)
+	(rect 304 736 480 752)
 	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B_PWREN" (rect 15 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1363,7 +1363,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 288 688 464 704)
+	(rect 304 688 480 704)
 	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A_HOE" (rect 32 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1381,7 +1381,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 288 704 464 720)
+	(rect 304 704 480 720)
 	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A_LOE" (rect 35 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1399,7 +1399,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 288 752 464 768)
+	(rect 304 752 480 768)
 	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B_HOE" (rect 32 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1417,7 +1417,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 288 768 464 784)
+	(rect 304 768 480 784)
 	(text "OUTPUT" (rect 137 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B_LOE" (rect 35 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1435,7 +1435,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 976 0 1152 16)
+	(rect 656 -200 832 -184)
 	(text "BIDIR" (rect 1 0 25 10)(font "Arial" (font_size 6)))
 	(text "M2_DATA[15..0]" (rect 90 0 170 12)(font "Arial" ))
 	(pt 0 8)
@@ -1449,11 +1449,11 @@ applicable agreement for further details.
 		(line (pt 52 8)(pt 56 12))
 	)
 	(text "VCC" (rect 4 7 24 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 1176 0 1232 16))
+	(annotation_block (location)(rect 856 -200 912 -184))
 )
 (pin
 	(bidir)
-	(rect 976 16 1152 32)
+	(rect 656 -184 832 -168)
 	(text "BIDIR" (rect 1 0 25 10)(font "Arial" (font_size 6)))
 	(text "M2_DQS[1..0]" (rect 90 0 159 12)(font "Arial" ))
 	(pt 0 8)
@@ -1467,11 +1467,11 @@ applicable agreement for further details.
 		(line (pt 52 8)(pt 56 12))
 	)
 	(text "VCC" (rect 4 7 24 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 1176 16 1232 32))
+	(annotation_block (location)(rect 856 -184 912 -168))
 )
 (pin
 	(bidir)
-	(rect 288 232 464 248)
+	(rect 304 232 480 248)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "M1_DATA[31..0]" (rect 6 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1526,7 +1526,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1248 464 1264)
+	(rect 304 1248 480 1264)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B0" (rect 56 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1545,7 +1545,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1264 464 1280)
+	(rect 304 1264 480 1280)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B1" (rect 56 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1564,7 +1564,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1280 464 1296)
+	(rect 304 1280 480 1296)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B2" (rect 56 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1583,7 +1583,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1296 464 1312)
+	(rect 304 1296 480 1312)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B3" (rect 56 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1602,7 +1602,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1312 464 1328)
+	(rect 304 1312 480 1328)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B4" (rect 56 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1621,7 +1621,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1328 464 1344)
+	(rect 304 1328 480 1344)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B5" (rect 56 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1640,7 +1640,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1344 464 1360)
+	(rect 304 1344 480 1360)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B6" (rect 56 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1659,7 +1659,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1360 464 1376)
+	(rect 304 1360 480 1376)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B7" (rect 56 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1678,7 +1678,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1376 464 1392)
+	(rect 304 1376 480 1392)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B8" (rect 56 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1697,7 +1697,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1392 464 1408)
+	(rect 304 1392 480 1408)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B9" (rect 56 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1716,7 +1716,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1408 464 1424)
+	(rect 304 1408 480 1424)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B10" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1735,7 +1735,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1424 464 1440)
+	(rect 304 1424 480 1440)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B11" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1754,7 +1754,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1440 464 1456)
+	(rect 304 1440 480 1456)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B12" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1773,7 +1773,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1456 464 1472)
+	(rect 304 1456 480 1472)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B13" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1792,7 +1792,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1472 464 1488)
+	(rect 304 1472 480 1488)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B14" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1811,7 +1811,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1488 464 1504)
+	(rect 304 1488 480 1504)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B15" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1830,7 +1830,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1504 464 1520)
+	(rect 304 1504 480 1520)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B16" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1849,7 +1849,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1520 464 1536)
+	(rect 304 1520 480 1536)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B17" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1868,7 +1868,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1536 464 1552)
+	(rect 304 1536 480 1552)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B18" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1887,7 +1887,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1552 464 1568)
+	(rect 304 1552 480 1568)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B19" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1906,7 +1906,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1568 464 1584)
+	(rect 304 1568 480 1584)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B20" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1925,7 +1925,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1584 464 1600)
+	(rect 304 1584 480 1600)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B21" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1944,7 +1944,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1600 464 1616)
+	(rect 304 1600 480 1616)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B22" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1963,7 +1963,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1616 464 1632)
+	(rect 304 1616 480 1632)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B23" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -1982,7 +1982,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1632 464 1648)
+	(rect 304 1632 480 1648)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B24" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2001,7 +2001,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1648 464 1664)
+	(rect 304 1688 480 1704)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_B25" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2016,11 +2016,11 @@ applicable agreement for further details.
 	)
 	(flipy)
 	(text "VCC" (rect 152 7 172 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect 208 1648 264 1664))
+	(annotation_block (location)(rect 208 1688 264 1704))
 )
 (pin
 	(bidir)
-	(rect 288 808 464 824)
+	(rect 304 808 480 824)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A0" (rect 56 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2039,7 +2039,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 824 464 840)
+	(rect 304 824 480 840)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A1" (rect 56 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2058,7 +2058,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 840 464 856)
+	(rect 304 840 480 856)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A2" (rect 56 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2077,7 +2077,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 856 464 872)
+	(rect 304 856 480 872)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A3" (rect 56 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2096,7 +2096,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 872 464 888)
+	(rect 304 872 480 888)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A4" (rect 56 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2115,7 +2115,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 888 464 904)
+	(rect 304 888 480 904)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A5" (rect 56 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2134,7 +2134,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 904 464 920)
+	(rect 304 904 480 920)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A6" (rect 56 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2153,7 +2153,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 920 464 936)
+	(rect 304 920 480 936)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A7" (rect 56 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2172,7 +2172,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 936 464 952)
+	(rect 304 936 480 952)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A8" (rect 56 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2191,7 +2191,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 952 464 968)
+	(rect 304 952 480 968)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A9" (rect 56 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2210,7 +2210,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 968 464 984)
+	(rect 304 968 480 984)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A10" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2229,7 +2229,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 984 464 1000)
+	(rect 304 984 480 1000)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A11" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2248,7 +2248,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1000 464 1016)
+	(rect 304 1000 480 1016)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A12" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2267,7 +2267,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1016 464 1032)
+	(rect 304 1016 480 1032)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A13" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2286,7 +2286,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1032 464 1048)
+	(rect 304 1032 480 1048)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A14" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2305,7 +2305,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1048 464 1064)
+	(rect 304 1048 480 1064)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A15" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2324,7 +2324,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1064 464 1080)
+	(rect 304 1064 480 1080)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A16" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2343,7 +2343,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1080 464 1096)
+	(rect 304 1080 480 1096)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A17" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2362,7 +2362,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1096 464 1112)
+	(rect 304 1096 480 1112)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A18" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2381,7 +2381,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1112 464 1128)
+	(rect 304 1112 480 1128)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A19" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2400,7 +2400,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1128 464 1144)
+	(rect 304 1128 480 1144)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A20" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2419,7 +2419,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1144 464 1160)
+	(rect 304 1144 480 1160)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A21" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2438,7 +2438,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1160 464 1176)
+	(rect 304 1160 480 1176)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A22" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2457,7 +2457,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1176 464 1192)
+	(rect 304 1176 480 1192)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A23" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2476,7 +2476,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1192 464 1208)
+	(rect 304 1192 480 1208)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A24" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2495,7 +2495,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 288 1208 464 1224)
+	(rect 304 1208 480 1224)
 	(text "BIDIR" (rect 151 0 175 10)(font "Arial" (font_size 6)))
 	(text "IO_A25" (rect 50 0 86 12)(font "Arial" ))
 	(pt 176 8)
@@ -2791,9 +2791,9 @@ applicable agreement for further details.
 	(flipy_rotate90)
 )
 (symbol
-	(rect 528 120 864 1688)
+	(rect 528 120 864 1728)
 	(text "frontier" (rect 147 -1 193 15)(font "Arial" (font_size 10)))
-	(text "inst" (rect 8 1552 25 1564)(font "Arial" ))
+	(text "inst" (rect 8 1592 25 1604)(font "Arial" ))
 	(port
 		(pt 0 72)
 		(input)
@@ -2996,6 +2996,13 @@ applicable agreement for further details.
 		(text "shield_ctrl_B_LOE" (rect 0 0 103 14)(font "Arial" (font_size 8)))
 		(text "shield_ctrl_B_LOE" (rect 4 645 107 659)(font "Arial" (font_size 8)))
 		(line (pt 0 656)(pt 128 656))
+	)
+	(port
+		(pt 0 1576)
+		(output)
+		(text "pwm_c0_export" (rect 0 0 93 14)(font "Arial" (font_size 8)))
+		(text "pwm_c0_export" (rect 4 1565 97 1579)(font "Arial" (font_size 8)))
+		(line (pt 0 1576)(pt 128 1576))
 	)
 	(port
 		(pt 0 120)
@@ -3459,7 +3466,9 @@ applicable agreement for further details.
 		(text "P23" (rect 133 1499 151 1511)(font "Arial" (color 0 0 0)))
 		(text "P24" (rect 133 1515 151 1527)(font "Arial" (color 0 0 0)))
 		(text "P25" (rect 133 1531 151 1543)(font "Arial" (color 0 0 0)))
-		(text " frontier " (rect 301 1552 343 1564)(font "Arial" ))
+		(text "pwm_c0" (rect 80 1547 135 1562)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 133 1571 163 1583)(font "Arial" (color 0 0 0)))
+		(text " frontier " (rect 301 1592 343 1604)(font "Arial" ))
 		(line (pt 129 52)(pt 129 220))
 		(line (pt 130 52)(pt 130 220))
 		(line (pt 129 236)(pt 129 292))
@@ -3476,14 +3485,16 @@ applicable agreement for further details.
 		(line (pt 130 676)(pt 130 1100))
 		(line (pt 129 1116)(pt 129 1540))
 		(line (pt 130 1116)(pt 130 1540))
+		(line (pt 129 1556)(pt 129 1580))
+		(line (pt 130 1556)(pt 130 1580))
 		(line (pt 128 32)(pt 208 32))
-		(line (pt 208 32)(pt 208 1552))
-		(line (pt 128 1552)(pt 208 1552))
-		(line (pt 128 32)(pt 128 1552))
+		(line (pt 208 32)(pt 208 1592))
+		(line (pt 128 1592)(pt 208 1592))
+		(line (pt 128 32)(pt 128 1592))
 		(line (pt 0 0)(pt 336 0))
-		(line (pt 336 0)(pt 336 1568))
-		(line (pt 0 1568)(pt 336 1568))
-		(line (pt 0 0)(pt 0 1568))
+		(line (pt 336 0)(pt 336 1608))
+		(line (pt 0 1608)(pt 336 1608))
+		(line (pt 0 0)(pt 0 1608))
 	)
 )
 (connector
@@ -3675,337 +3686,337 @@ applicable agreement for further details.
 	(pt 936 816)
 )
 (connector
-	(pt 464 240)
-	(pt 528 240)
-	(bus)
+	(pt 528 192)
+	(pt 480 192)
 )
 (connector
-	(pt 464 336)
-	(pt 528 336)
-	(bus)
+	(pt 528 208)
+	(pt 480 208)
 )
 (connector
 	(pt 528 224)
-	(pt 464 224)
+	(pt 480 224)
+	(bus)
+)
+(connector
+	(pt 528 240)
+	(pt 480 240)
+	(bus)
+)
+(connector
+	(pt 528 256)
+	(pt 480 256)
 	(bus)
 )
 (connector
 	(pt 528 272)
-	(pt 464 272)
-	(bus)
-)
-(connector
-	(pt 464 208)
-	(pt 528 208)
-)
-(connector
-	(pt 528 192)
-	(pt 464 192)
-)
-(connector
-	(pt 528 256)
-	(pt 464 256)
+	(pt 480 272)
 	(bus)
 )
 (connector
 	(pt 528 288)
-	(pt 464 288)
+	(pt 480 288)
 )
 (connector
 	(pt 528 304)
-	(pt 464 304)
-)
-(connector
-	(pt 528 376)
-	(pt 464 376)
-)
-(connector
-	(pt 528 392)
-	(pt 464 392)
-)
-(connector
-	(pt 528 408)
-	(pt 464 408)
-)
-(connector
-	(pt 528 520)
-	(pt 464 520)
-)
-(connector
-	(pt 528 592)
-	(pt 464 592)
-)
-(connector
-	(pt 464 664)
-	(pt 528 664)
-)
-(connector
-	(pt 464 728)
-	(pt 528 728)
-)
-(connector
-	(pt 464 744)
-	(pt 528 744)
-)
-(connector
-	(pt 464 760)
-	(pt 528 760)
-)
-(connector
-	(pt 464 776)
-	(pt 528 776)
+	(pt 480 304)
 )
 (connector
 	(pt 528 320)
-	(pt 464 320)
+	(pt 480 320)
 )
 (connector
-	(pt 464 448)
+	(pt 528 336)
+	(pt 480 336)
+	(bus)
+)
+(connector
+	(pt 528 376)
+	(pt 480 376)
+)
+(connector
+	(pt 528 392)
+	(pt 480 392)
+)
+(connector
+	(pt 528 408)
+	(pt 480 408)
+)
+(connector
 	(pt 528 448)
+	(pt 480 448)
 )
 (connector
-	(pt 464 464)
 	(pt 528 464)
+	(pt 480 464)
 )
 (connector
-	(pt 464 536)
-	(pt 528 536)
-)
-(connector
-	(pt 464 552)
-	(pt 528 552)
-)
-(connector
-	(pt 464 608)
-	(pt 528 608)
-)
-(connector
-	(pt 464 624)
-	(pt 528 624)
-)
-(connector
-	(pt 464 680)
-	(pt 528 680)
-)
-(connector
-	(pt 464 696)
-	(pt 528 696)
-)
-(connector
-	(pt 464 712)
-	(pt 528 712)
-)
-(connector
-	(pt 464 480)
 	(pt 528 480)
+	(pt 480 480)
 )
 (connector
-	(pt 464 816)
+	(pt 528 520)
+	(pt 480 520)
+)
+(connector
+	(pt 528 536)
+	(pt 480 536)
+)
+(connector
+	(pt 528 552)
+	(pt 480 552)
+)
+(connector
+	(pt 528 592)
+	(pt 480 592)
+)
+(connector
+	(pt 528 608)
+	(pt 480 608)
+)
+(connector
+	(pt 528 624)
+	(pt 480 624)
+)
+(connector
+	(pt 528 664)
+	(pt 480 664)
+)
+(connector
+	(pt 528 680)
+	(pt 480 680)
+)
+(connector
+	(pt 528 696)
+	(pt 480 696)
+)
+(connector
+	(pt 528 712)
+	(pt 480 712)
+)
+(connector
+	(pt 528 728)
+	(pt 480 728)
+)
+(connector
+	(pt 528 744)
+	(pt 480 744)
+)
+(connector
+	(pt 528 760)
+	(pt 480 760)
+)
+(connector
+	(pt 528 776)
+	(pt 480 776)
+)
+(connector
 	(pt 528 816)
+	(pt 480 816)
 )
 (connector
-	(pt 464 832)
 	(pt 528 832)
+	(pt 480 832)
 )
 (connector
-	(pt 464 848)
 	(pt 528 848)
+	(pt 480 848)
 )
 (connector
-	(pt 464 864)
 	(pt 528 864)
+	(pt 480 864)
 )
 (connector
-	(pt 464 880)
 	(pt 528 880)
+	(pt 480 880)
 )
 (connector
-	(pt 464 896)
 	(pt 528 896)
+	(pt 480 896)
 )
 (connector
-	(pt 464 912)
 	(pt 528 912)
+	(pt 480 912)
 )
 (connector
-	(pt 464 928)
 	(pt 528 928)
+	(pt 480 928)
 )
 (connector
-	(pt 464 944)
 	(pt 528 944)
+	(pt 480 944)
 )
 (connector
-	(pt 464 960)
 	(pt 528 960)
+	(pt 480 960)
 )
 (connector
-	(pt 464 976)
 	(pt 528 976)
+	(pt 480 976)
 )
 (connector
-	(pt 464 992)
 	(pt 528 992)
+	(pt 480 992)
 )
 (connector
-	(pt 464 1008)
 	(pt 528 1008)
+	(pt 480 1008)
 )
 (connector
-	(pt 464 1024)
 	(pt 528 1024)
+	(pt 480 1024)
 )
 (connector
-	(pt 464 1040)
 	(pt 528 1040)
+	(pt 480 1040)
 )
 (connector
-	(pt 464 1056)
 	(pt 528 1056)
+	(pt 480 1056)
 )
 (connector
-	(pt 464 1072)
 	(pt 528 1072)
+	(pt 480 1072)
 )
 (connector
-	(pt 464 1088)
 	(pt 528 1088)
+	(pt 480 1088)
 )
 (connector
-	(pt 464 1104)
 	(pt 528 1104)
+	(pt 480 1104)
 )
 (connector
-	(pt 464 1120)
 	(pt 528 1120)
+	(pt 480 1120)
 )
 (connector
-	(pt 464 1136)
 	(pt 528 1136)
+	(pt 480 1136)
 )
 (connector
-	(pt 464 1152)
 	(pt 528 1152)
+	(pt 480 1152)
 )
 (connector
-	(pt 464 1168)
 	(pt 528 1168)
+	(pt 480 1168)
 )
 (connector
-	(pt 464 1184)
 	(pt 528 1184)
+	(pt 480 1184)
 )
 (connector
-	(pt 464 1200)
 	(pt 528 1200)
+	(pt 480 1200)
 )
 (connector
-	(pt 464 1216)
 	(pt 528 1216)
+	(pt 480 1216)
 )
 (connector
-	(pt 464 1256)
 	(pt 528 1256)
+	(pt 480 1256)
 )
 (connector
-	(pt 464 1272)
 	(pt 528 1272)
+	(pt 480 1272)
 )
 (connector
-	(pt 464 1288)
 	(pt 528 1288)
+	(pt 480 1288)
 )
 (connector
-	(pt 464 1304)
 	(pt 528 1304)
+	(pt 480 1304)
 )
 (connector
-	(pt 464 1320)
 	(pt 528 1320)
+	(pt 480 1320)
 )
 (connector
-	(pt 464 1336)
 	(pt 528 1336)
+	(pt 480 1336)
 )
 (connector
-	(pt 464 1352)
 	(pt 528 1352)
+	(pt 480 1352)
 )
 (connector
-	(pt 464 1368)
 	(pt 528 1368)
+	(pt 480 1368)
 )
 (connector
-	(pt 464 1384)
 	(pt 528 1384)
+	(pt 480 1384)
 )
 (connector
-	(pt 464 1400)
 	(pt 528 1400)
+	(pt 480 1400)
 )
 (connector
-	(pt 464 1416)
 	(pt 528 1416)
+	(pt 480 1416)
 )
 (connector
-	(pt 464 1432)
 	(pt 528 1432)
+	(pt 480 1432)
 )
 (connector
-	(pt 464 1448)
 	(pt 528 1448)
+	(pt 480 1448)
 )
 (connector
-	(pt 464 1464)
 	(pt 528 1464)
+	(pt 480 1464)
 )
 (connector
-	(pt 464 1480)
 	(pt 528 1480)
+	(pt 480 1480)
 )
 (connector
-	(pt 464 1496)
 	(pt 528 1496)
+	(pt 480 1496)
 )
 (connector
-	(pt 464 1512)
 	(pt 528 1512)
+	(pt 480 1512)
 )
 (connector
-	(pt 464 1528)
 	(pt 528 1528)
+	(pt 480 1528)
 )
 (connector
-	(pt 464 1544)
 	(pt 528 1544)
+	(pt 480 1544)
 )
 (connector
-	(pt 464 1560)
 	(pt 528 1560)
+	(pt 480 1560)
 )
 (connector
-	(pt 464 1576)
 	(pt 528 1576)
+	(pt 480 1576)
 )
 (connector
-	(pt 464 1592)
 	(pt 528 1592)
+	(pt 480 1592)
 )
 (connector
-	(pt 464 1608)
 	(pt 528 1608)
+	(pt 480 1608)
 )
 (connector
-	(pt 464 1624)
 	(pt 528 1624)
+	(pt 480 1624)
 )
 (connector
-	(pt 464 1640)
 	(pt 528 1640)
+	(pt 480 1640)
 )
 (connector
-	(pt 464 1656)
-	(pt 528 1656)
+	(pt 480 1696)
+	(pt 528 1696)
 )
 (junction (pt 872 2256))
 (junction (pt 872 2272))
