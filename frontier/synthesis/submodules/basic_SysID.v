@@ -6,12 +6,14 @@ input					csi_MCLK_clk,
 //Avalon-MM LED Control.
 output	[31:0]	avs_SysID_readdata,
 input		[1:0]		avs_SysID_address,
-input					avs_SysID_read
+input					avs_SysID_read,
+output				avs_SysID_waitrequest
 );
 
 reg		[31:0]	out_data;
 
 assign	avs_SysID_readdata = out_data;
+assign	avs_SysID_waitrequest = 1'b0;
 
 always@(avs_SysID_address)
 begin:MUX

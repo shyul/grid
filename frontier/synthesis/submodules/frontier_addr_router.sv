@@ -31,20 +31,20 @@
 
 module frontier_addr_router_default_decode
   #(
-     parameter DEFAULT_CHANNEL = 0,
-               DEFAULT_DESTID = 0 
+     parameter DEFAULT_CHANNEL = 1,
+               DEFAULT_DESTID = 1 
    )
-  (output [85 - 83 : 0] default_destination_id,
-   output [8-1 : 0] default_src_channel
+  (output [81 - 81 : 0] default_destination_id,
+   output [2-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
-    DEFAULT_DESTID[85 - 83 : 0];
+    DEFAULT_DESTID[81 - 81 : 0];
   generate begin : default_decode
     if (DEFAULT_CHANNEL == -1)
       assign default_src_channel = '0;
     else
-      assign default_src_channel = 8'b1 << DEFAULT_CHANNEL;
+      assign default_src_channel = 2'b1 << DEFAULT_CHANNEL;
   end endgenerate
 
 endmodule
@@ -62,7 +62,7 @@ module frontier_addr_router
     // Command Sink (Input)
     // -------------------
     input                       sink_valid,
-    input  [87-1 : 0]    sink_data,
+    input  [83-1 : 0]    sink_data,
     input                       sink_startofpacket,
     input                       sink_endofpacket,
     output                      sink_ready,
@@ -71,8 +71,8 @@ module frontier_addr_router
     // Command Source (Output)
     // -------------------
     output                          src_valid,
-    output reg [87-1    : 0] src_data,
-    output reg [8-1 : 0] src_channel,
+    output reg [83-1    : 0] src_data,
+    output reg [2-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
     input                           src_ready
@@ -83,10 +83,10 @@ module frontier_addr_router
     // -------------------------------------------------------
     localparam PKT_ADDR_H = 67;
     localparam PKT_ADDR_L = 36;
-    localparam PKT_DEST_ID_H = 85;
-    localparam PKT_DEST_ID_L = 83;
-    localparam ST_DATA_W = 87;
-    localparam ST_CHANNEL_W = 8;
+    localparam PKT_DEST_ID_H = 81;
+    localparam PKT_DEST_ID_L = 81;
+    localparam ST_DATA_W = 83;
+    localparam ST_CHANNEL_W = 2;
     localparam DECODER_TYPE = 0;
 
     localparam PKT_TRANS_WRITE = 70;
@@ -103,20 +103,14 @@ module frontier_addr_router
     // during address decoding
     // -------------------------------------------------------
     localparam PAD0 = log2ceil(32'h10000010 - 32'h10000000);
-    localparam PAD1 = log2ceil(32'h10000084 - 32'h10000080);
-    localparam PAD2 = log2ceil(32'h10000088 - 32'h10000084);
-    localparam PAD3 = log2ceil(32'h1000008c - 32'h10000088);
-    localparam PAD4 = log2ceil(32'h10000090 - 32'h1000008c);
-    localparam PAD5 = log2ceil(32'h40000004 - 32'h40000000);
-    localparam PAD6 = log2ceil(32'h40000008 - 32'h40000004);
-    localparam PAD7 = log2ceil(32'h4000000c - 32'h40000008);
+    localparam PAD1 = log2ceil(32'h10000200 - 32'h10000100);
 
     // -------------------------------------------------------
     // Work out which address bits are significant based on the
     // address range of the slaves. If the required width is too
     // large or too small, we use the address field width instead.
     // -------------------------------------------------------
-    localparam ADDR_RANGE = 32'h4000000c;
+    localparam ADDR_RANGE = 32'h10000200;
     localparam RANGE_ADDR_WIDTH = log2ceil(ADDR_RANGE);
     localparam OPTIMIZED_ADDR_H = (RANGE_ADDR_WIDTH > PKT_ADDR_W) ||
                                   (RANGE_ADDR_WIDTH == 0) ?
@@ -135,7 +129,7 @@ module frontier_addr_router
     assign src_endofpacket   = sink_endofpacket;
 
     wire [PKT_DEST_ID_W-1:0] default_destid;
-    wire [8-1 : 0] default_src_channel;
+    wire [2-1 : 0] default_src_channel;
 
 
 
@@ -157,50 +151,14 @@ module frontier_addr_router
 
         // ( 0x10000000 .. 0x10000010 )
         if ( {address[RG:PAD0],{PAD0{1'b0}}} == 'h10000000 ) begin
-            src_channel = 8'b00000001;
+            src_channel = 2'b01;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
         end
 
-        // ( 0x10000080 .. 0x10000084 )
-        if ( {address[RG:PAD1],{PAD1{1'b0}}} == 'h10000080 ) begin
-            src_channel = 8'b00000010;
+        // ( 0x10000100 .. 0x10000200 )
+        if ( {address[RG:PAD1],{PAD1{1'b0}}} == 'h10000100 ) begin
+            src_channel = 2'b10;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
-        end
-
-        // ( 0x10000084 .. 0x10000088 )
-        if ( {address[RG:PAD2],{PAD2{1'b0}}} == 'h10000084 ) begin
-            src_channel = 8'b00000100;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
-        end
-
-        // ( 0x10000088 .. 0x1000008c )
-        if ( {address[RG:PAD3],{PAD3{1'b0}}} == 'h10000088 ) begin
-            src_channel = 8'b00001000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
-        end
-
-        // ( 0x1000008c .. 0x10000090 )
-        if ( {address[RG:PAD4],{PAD4{1'b0}}} == 'h1000008c ) begin
-            src_channel = 8'b00010000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
-        end
-
-        // ( 0x40000000 .. 0x40000004 )
-        if ( {address[RG:PAD5],{PAD5{1'b0}}} == 'h40000000 ) begin
-            src_channel = 8'b00100000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
-        end
-
-        // ( 0x40000004 .. 0x40000008 )
-        if ( {address[RG:PAD6],{PAD6{1'b0}}} == 'h40000004 ) begin
-            src_channel = 8'b01000000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 6;
-        end
-
-        // ( 0x40000008 .. 0x4000000c )
-        if ( {address[RG:PAD7],{PAD7{1'b0}}} == 'h40000008 ) begin
-            src_channel = 8'b10000000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 7;
         end
     end
 

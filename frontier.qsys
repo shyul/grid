@@ -12,58 +12,6 @@
    element $${FILENAME}
    {
    }
-   element FuncLED_0
-   {
-      datum _sortIndex
-      {
-         value = "2";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element FuncLED_1
-   {
-      datum _sortIndex
-      {
-         value = "4";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element FuncLED_2
-   {
-      datum _sortIndex
-      {
-         value = "6";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element FuncLED_3
-   {
-      datum _sortIndex
-      {
-         value = "8";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
    element HPS_Tabby
    {
       datum _sortIndex
@@ -77,58 +25,6 @@
          type = "boolean";
       }
    }
-   element FuncLED_1.LEDD
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "268435588";
-         type = "long";
-      }
-   }
-   element FuncLED_2.LEDD
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "268435592";
-         type = "long";
-      }
-   }
-   element FuncLED_3.LEDD
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "268435596";
-         type = "long";
-      }
-   }
-   element FuncLED_0.LEDD
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "268435584";
-         type = "long";
-      }
-   }
    element SysID
    {
       datum _sortIndex
@@ -138,7 +34,7 @@
       }
       datum sopceditor_expanded
       {
-         value = "0";
+         value = "1";
          type = "boolean";
       }
    }
@@ -155,103 +51,24 @@
          type = "long";
       }
    }
-   element test_RegRW32_1.TestReg
+   element test_RegWaitRW32_0.test
    {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
       datum baseAddress
       {
-         value = "1073741828";
+         value = "268435712";
          type = "long";
       }
    }
-   element test_RegRW32_0.TestReg
-   {
-      datum baseAddress
-      {
-         value = "1073741824";
-         type = "long";
-      }
-   }
-   element test_RegRW32_2.TestReg
-   {
-      datum baseAddress
-      {
-         value = "1073741832";
-         type = "long";
-      }
-   }
-   element test_LEDState_0
+   element test_RegWaitRW32_0
    {
       datum _sortIndex
       {
-         value = "3";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element test_LEDState_1
-   {
-      datum _sortIndex
-      {
-         value = "5";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element test_LEDState_2
-   {
-      datum _sortIndex
-      {
-         value = "7";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element test_LEDState_3
-   {
-      datum _sortIndex
-      {
-         value = "9";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "0";
-         type = "boolean";
-      }
-   }
-   element test_RegRW32_0
-   {
-      datum _sortIndex
-      {
-         value = "10";
-         type = "int";
-      }
-   }
-   element test_RegRW32_1
-   {
-      datum _sortIndex
-      {
-         value = "11";
-         type = "int";
-      }
-   }
-   element test_RegRW32_2
-   {
-      datum _sortIndex
-      {
-         value = "12";
+         value = "2";
          type = "int";
       }
    }
@@ -270,241 +87,43 @@
  <parameter name="projectName" value="grid.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1342881271452" />
+ <parameter name="timeStamp" value="1342924872981" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="m1" internal="HPS_Tabby.EXPORT" type="conduit" dir="end" />
- <interface name="led_f0" internal="FuncLED_0.EXPORT" type="conduit" dir="end" />
- <interface name="led_f1" internal="FuncLED_1.EXPORT" type="conduit" dir="end" />
- <interface name="led_f2" internal="FuncLED_2.EXPORT" type="conduit" dir="end" />
- <interface name="led_f3" internal="FuncLED_3.EXPORT" type="conduit" dir="end" />
- <module kind="hps_tabby" version="1.1" enabled="1" name="HPS_Tabby" />
- <module kind="basic_SysID" version="1.0" enabled="1" name="SysID">
+ <module kind="hps_tabby" version="1.3" enabled="1" name="HPS_Tabby" />
+ <module kind="basic_SysID" version="1.1" enabled="1" name="SysID">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
  </module>
- <module kind="basic_FuncLED" version="1.0" enabled="1" name="FuncLED_0">
-  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
- </module>
- <module kind="basic_FuncLED" version="1.0" enabled="1" name="FuncLED_1">
-  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
- </module>
- <module kind="basic_FuncLED" version="1.0" enabled="1" name="FuncLED_2">
-  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
- </module>
- <module kind="basic_FuncLED" version="1.0" enabled="1" name="FuncLED_3">
-  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
- </module>
- <module kind="test_LEDState" version="1.0" enabled="1" name="test_LEDState_0">
-  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
- </module>
- <module kind="test_LEDState" version="1.0" enabled="1" name="test_LEDState_1">
-  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
- </module>
- <module kind="test_LEDState" version="1.0" enabled="1" name="test_LEDState_2">
-  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
- </module>
- <module kind="test_LEDState" version="1.0" enabled="1" name="test_LEDState_3">
-  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
- </module>
- <module kind="test_RegRW32" version="1.0" enabled="1" name="test_RegRW32_0">
-  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
- </module>
- <module kind="test_RegRW32" version="1.0" enabled="1" name="test_RegRW32_1">
-  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
- </module>
- <module kind="test_RegRW32" version="1.0" enabled="1" name="test_RegRW32_2">
+ <module
+   kind="test_RegWaitRW32"
+   version="1.1"
+   enabled="1"
+   name="test_RegWaitRW32_0">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
  </module>
  <connection kind="reset" version="11.1" start="HPS_Tabby.MRST" end="SysID.MRST" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="HPS_Tabby.MRST"
-   end="FuncLED_0.MRST" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="HPS_Tabby.MRST"
-   end="FuncLED_1.MRST" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="HPS_Tabby.MRST"
-   end="FuncLED_2.MRST" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="HPS_Tabby.MRST"
-   end="FuncLED_3.MRST" />
  <connection kind="clock" version="11.1" start="HPS_Tabby.MCLK" end="SysID.MCLK" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="HPS_Tabby.MCLK"
-   end="FuncLED_0.MCLK" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="HPS_Tabby.MCLK"
-   end="FuncLED_1.MCLK" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="HPS_Tabby.MCLK"
-   end="FuncLED_2.MCLK" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="HPS_Tabby.MCLK"
-   end="FuncLED_3.MCLK" />
  <connection kind="avalon" version="11.1" start="HPS_Tabby.M1" end="SysID.SysID">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x10000000" />
  </connection>
  <connection
-   kind="avalon"
-   version="11.1"
-   start="HPS_Tabby.M1"
-   end="FuncLED_0.LEDD">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10000080" />
- </connection>
- <connection
-   kind="avalon"
-   version="11.1"
-   start="HPS_Tabby.M1"
-   end="FuncLED_1.LEDD">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10000084" />
- </connection>
- <connection
-   kind="avalon"
-   version="11.1"
-   start="HPS_Tabby.M1"
-   end="FuncLED_2.LEDD">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10000088" />
- </connection>
- <connection
-   kind="avalon"
-   version="11.1"
-   start="HPS_Tabby.M1"
-   end="FuncLED_3.LEDD">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x1000008c" />
- </connection>
- <connection
-   kind="avalon_streaming"
-   version="11.1"
-   start="test_LEDState_0.LEDS"
-   end="FuncLED_0.LEDS" />
- <connection
    kind="reset"
    version="11.1"
    start="HPS_Tabby.MRST"
-   end="test_LEDState_0.MRST" />
+   end="test_RegWaitRW32_0.MRST" />
  <connection
    kind="clock"
    version="11.1"
    start="HPS_Tabby.MCLK"
-   end="test_LEDState_0.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="HPS_Tabby.MRST"
-   end="test_LEDState_1.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="HPS_Tabby.MCLK"
-   end="test_LEDState_1.MCLK" />
- <connection
-   kind="avalon_streaming"
-   version="11.1"
-   start="test_LEDState_1.LEDS"
-   end="FuncLED_1.LEDS" />
- <connection
-   kind="avalon_streaming"
-   version="11.1"
-   start="test_LEDState_2.LEDS"
-   end="FuncLED_2.LEDS" />
- <connection
-   kind="avalon_streaming"
-   version="11.1"
-   start="test_LEDState_3.LEDS"
-   end="FuncLED_3.LEDS" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="HPS_Tabby.MRST"
-   end="test_LEDState_2.MRST" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="HPS_Tabby.MRST"
-   end="test_LEDState_3.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="HPS_Tabby.MCLK"
-   end="test_LEDState_2.MCLK" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="HPS_Tabby.MCLK"
-   end="test_LEDState_3.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="HPS_Tabby.MRST"
-   end="test_RegRW32_0.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="HPS_Tabby.MCLK"
-   end="test_RegRW32_1.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="HPS_Tabby.MRST"
-   end="test_RegRW32_2.MRST" />
- <connection
-   kind="clock"
-   version="11.1"
-   start="HPS_Tabby.MCLK"
-   end="test_RegRW32_2.MCLK" />
- <connection
-   kind="reset"
-   version="11.1"
-   start="HPS_Tabby.MRST"
-   end="test_RegRW32_1.MRST" />
+   end="test_RegWaitRW32_0.MCLK" />
  <connection
    kind="avalon"
    version="11.1"
    start="HPS_Tabby.M1"
-   end="test_RegRW32_0.TestReg">
+   end="test_RegWaitRW32_0.test">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x40000000" />
+  <parameter name="baseAddress" value="0x10000100" />
  </connection>
- <connection
-   kind="avalon"
-   version="11.1"
-   start="HPS_Tabby.M1"
-   end="test_RegRW32_1.TestReg">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x40000004" />
- </connection>
- <connection
-   kind="avalon"
-   version="11.1"
-   start="HPS_Tabby.M1"
-   end="test_RegRW32_2.TestReg">
-  <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x40000008" />
- </connection>
- <connection
-   kind="clock"
-   version="11.1"
-   start="HPS_Tabby.MCLK"
-   end="test_RegRW32_0.MCLK" />
 </system>

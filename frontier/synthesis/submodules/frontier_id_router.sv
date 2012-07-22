@@ -34,17 +34,17 @@ module frontier_id_router_default_decode
      parameter DEFAULT_CHANNEL = 0,
                DEFAULT_DESTID = 0 
    )
-  (output [85 - 83 : 0] default_destination_id,
-   output [8-1 : 0] default_src_channel
+  (output [81 - 81 : 0] default_destination_id,
+   output [2-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
-    DEFAULT_DESTID[85 - 83 : 0];
+    DEFAULT_DESTID[81 - 81 : 0];
   generate begin : default_decode
     if (DEFAULT_CHANNEL == -1)
       assign default_src_channel = '0;
     else
-      assign default_src_channel = 8'b1 << DEFAULT_CHANNEL;
+      assign default_src_channel = 2'b1 << DEFAULT_CHANNEL;
   end endgenerate
 
 endmodule
@@ -62,7 +62,7 @@ module frontier_id_router
     // Command Sink (Input)
     // -------------------
     input                       sink_valid,
-    input  [87-1 : 0]    sink_data,
+    input  [83-1 : 0]    sink_data,
     input                       sink_startofpacket,
     input                       sink_endofpacket,
     output                      sink_ready,
@@ -71,8 +71,8 @@ module frontier_id_router
     // Command Source (Output)
     // -------------------
     output                          src_valid,
-    output reg [87-1    : 0] src_data,
-    output reg [8-1 : 0] src_channel,
+    output reg [83-1    : 0] src_data,
+    output reg [2-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
     input                           src_ready
@@ -83,10 +83,10 @@ module frontier_id_router
     // -------------------------------------------------------
     localparam PKT_ADDR_H = 67;
     localparam PKT_ADDR_L = 36;
-    localparam PKT_DEST_ID_H = 85;
-    localparam PKT_DEST_ID_L = 83;
-    localparam ST_DATA_W = 87;
-    localparam ST_CHANNEL_W = 8;
+    localparam PKT_DEST_ID_H = 81;
+    localparam PKT_DEST_ID_L = 81;
+    localparam ST_DATA_W = 83;
+    localparam ST_CHANNEL_W = 2;
     localparam DECODER_TYPE = 1;
 
     localparam PKT_TRANS_WRITE = 70;
@@ -127,7 +127,7 @@ module frontier_id_router
     assign src_endofpacket   = sink_endofpacket;
 
     wire [PKT_DEST_ID_W-1:0] default_destid;
-    wire [8-1 : 0] default_src_channel;
+    wire [2-1 : 0] default_src_channel;
 
 
 
@@ -149,7 +149,7 @@ module frontier_id_router
 
 
         if (destid == 0 ) begin
-            src_channel = 8'b1;
+            src_channel = 2'b1;
         end
 
     end
