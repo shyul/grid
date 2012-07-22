@@ -12,7 +12,6 @@
 *.smsg
 .sopc_builder/
 .qsys_edit/
-stp_root/
 db/
 incremental_db/
 output/

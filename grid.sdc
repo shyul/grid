@@ -91,7 +91,7 @@ set_output_delay -clock HPS_Clocks 2 [all_outputs]
 # Set Maximum Delay
 #**************************************************************
 
-
+set_max_delay -from [get_clocks {inst|hps_tabby|m1_bus_pll_inst1|auto_generated|pll1|clk[0]}] -to [get_registers {frontier:inst|hps_tabby:hps_tabby|state[0] frontier:inst|hps_tabby:hps_tabby|state[1] frontier:inst|hps_tabby:hps_tabby|state[2] frontier:inst|hps_tabby:hps_tabby|state[3]}] 1
 
 #**************************************************************
 # Set Minimum Delay

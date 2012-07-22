@@ -12,33 +12,15 @@
    element $${FILENAME}
    {
    }
-   element HPS_Tabby
+   element HPS_tabby
    {
       datum _sortIndex
       {
          value = "0";
          type = "int";
       }
-      datum sopceditor_expanded
-      {
-         value = "1";
-         type = "boolean";
-      }
    }
-   element SysID
-   {
-      datum _sortIndex
-      {
-         value = "1";
-         type = "int";
-      }
-      datum sopceditor_expanded
-      {
-         value = "1";
-         type = "boolean";
-      }
-   }
-   element SysID.SysID
+   element basic_SysID.SysID
    {
       datum _lockedAddress
       {
@@ -51,7 +33,55 @@
          type = "long";
       }
    }
-   element test_RegWaitRW32_0.test
+   element basic_FuncLED_0
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+   element basic_FuncLED_1
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element basic_FuncLED_2
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element basic_FuncLED_3
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
+   element basic_ShieldCtrl_0
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element basic_SysID
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element basic_FuncLED_0.ctrl
    {
       datum _lockedAddress
       {
@@ -64,11 +94,63 @@
          type = "long";
       }
    }
-   element test_RegWaitRW32_0
+   element basic_FuncLED_2.ctrl
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "268435720";
+         type = "long";
+      }
+   }
+   element basic_FuncLED_3.ctrl
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "268435724";
+         type = "long";
+      }
+   }
+   element basic_FuncLED_1.ctrl
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "268435716";
+         type = "long";
+      }
+   }
+   element basic_ShieldCtrl_0.ctrl
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "268435968";
+         type = "long";
+      }
+   }
+   element test_LEDState_0
    {
       datum _sortIndex
       {
-         value = "2";
+         value = "6";
          type = "int";
       }
    }
@@ -87,43 +169,204 @@
  <parameter name="projectName" value="grid.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1342924872981" />
+ <parameter name="timeStamp" value="1342932669431" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
- <interface name="m1" internal="HPS_Tabby.EXPORT" type="conduit" dir="end" />
- <module kind="hps_tabby" version="1.3" enabled="1" name="HPS_Tabby" />
- <module kind="basic_SysID" version="1.1" enabled="1" name="SysID">
+ <interface name="m0" internal="HPS_tabby.EXPORT" type="conduit" dir="end" />
+ <interface
+   name="led_f0"
+   internal="basic_FuncLED_0.EXPORT"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="led_f1"
+   internal="basic_FuncLED_1.EXPORT"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="led_f2"
+   internal="basic_FuncLED_2.EXPORT"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="led_f3"
+   internal="basic_FuncLED_3.EXPORT"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="shield_ctrl"
+   internal="basic_ShieldCtrl_0.EXPORT"
+   type="conduit"
+   dir="end" />
+ <module kind="hps_tabby" version="1.1" enabled="1" name="HPS_tabby" />
+ <module kind="basic_SysID" version="1.0" enabled="1" name="basic_SysID">
+  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
+ </module>
+ <module kind="basic_FuncLED" version="1.0" enabled="1" name="basic_FuncLED_0">
+  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
+ </module>
+ <module kind="basic_FuncLED" version="1.0" enabled="1" name="basic_FuncLED_1">
+  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
+ </module>
+ <module kind="basic_FuncLED" version="1.0" enabled="1" name="basic_FuncLED_2">
+  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
+ </module>
+ <module kind="basic_FuncLED" version="1.0" enabled="1" name="basic_FuncLED_3">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
  </module>
  <module
-   kind="test_RegWaitRW32"
-   version="1.1"
+   kind="basic_ShieldCtrl"
+   version="1.0"
    enabled="1"
-   name="test_RegWaitRW32_0">
+   name="basic_ShieldCtrl_0">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
  </module>
- <connection kind="reset" version="11.1" start="HPS_Tabby.MRST" end="SysID.MRST" />
- <connection kind="clock" version="11.1" start="HPS_Tabby.MCLK" end="SysID.MCLK" />
- <connection kind="avalon" version="11.1" start="HPS_Tabby.M1" end="SysID.SysID">
+ <module kind="test_LEDState" version="1.0" enabled="1" name="test_LEDState_0">
+  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
+ </module>
+ <connection
+   kind="reset"
+   version="11.1"
+   start="HPS_tabby.MRST"
+   end="basic_SysID.MRST" />
+ <connection
+   kind="clock"
+   version="11.1"
+   start="HPS_tabby.MCLK"
+   end="basic_SysID.MCLK" />
+ <connection
+   kind="avalon"
+   version="11.1"
+   start="HPS_tabby.M1"
+   end="basic_SysID.SysID">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x10000000" />
  </connection>
  <connection
    kind="reset"
    version="11.1"
-   start="HPS_Tabby.MRST"
-   end="test_RegWaitRW32_0.MRST" />
+   start="HPS_tabby.MRST"
+   end="basic_FuncLED_0.MRST" />
  <connection
    kind="clock"
    version="11.1"
-   start="HPS_Tabby.MCLK"
-   end="test_RegWaitRW32_0.MCLK" />
+   start="HPS_tabby.MCLK"
+   end="basic_FuncLED_0.MCLK" />
  <connection
    kind="avalon"
    version="11.1"
-   start="HPS_Tabby.M1"
-   end="test_RegWaitRW32_0.test">
+   start="HPS_tabby.M1"
+   end="basic_FuncLED_0.ctrl">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x10000100" />
  </connection>
+ <connection
+   kind="reset"
+   version="11.1"
+   start="HPS_tabby.MRST"
+   end="basic_FuncLED_1.MRST" />
+ <connection
+   kind="clock"
+   version="11.1"
+   start="HPS_tabby.MCLK"
+   end="basic_FuncLED_1.MCLK" />
+ <connection
+   kind="avalon"
+   version="11.1"
+   start="HPS_tabby.M1"
+   end="basic_FuncLED_1.ctrl">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10000104" />
+ </connection>
+ <connection
+   kind="reset"
+   version="11.1"
+   start="HPS_tabby.MRST"
+   end="basic_FuncLED_2.MRST" />
+ <connection
+   kind="clock"
+   version="11.1"
+   start="HPS_tabby.MCLK"
+   end="basic_FuncLED_2.MCLK" />
+ <connection
+   kind="avalon"
+   version="11.1"
+   start="HPS_tabby.M1"
+   end="basic_FuncLED_2.ctrl">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10000108" />
+ </connection>
+ <connection
+   kind="reset"
+   version="11.1"
+   start="HPS_tabby.MRST"
+   end="basic_FuncLED_3.MRST" />
+ <connection
+   kind="clock"
+   version="11.1"
+   start="HPS_tabby.MCLK"
+   end="basic_FuncLED_3.MCLK" />
+ <connection
+   kind="avalon"
+   version="11.1"
+   start="HPS_tabby.M1"
+   end="basic_FuncLED_3.ctrl">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x1000010c" />
+ </connection>
+ <connection
+   kind="reset"
+   version="11.1"
+   start="HPS_tabby.MRST"
+   end="basic_ShieldCtrl_0.MRST" />
+ <connection
+   kind="clock"
+   version="11.1"
+   start="HPS_tabby.MCLK"
+   end="basic_ShieldCtrl_0.MCLK" />
+ <connection
+   kind="avalon"
+   version="11.1"
+   start="HPS_tabby.M1"
+   end="basic_ShieldCtrl_0.ctrl">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10000200" />
+ </connection>
+ <connection
+   kind="interrupt"
+   version="11.1"
+   start="HPS_tabby.EVENTS"
+   end="basic_ShieldCtrl_0.OC">
+  <parameter name="irqNumber" value="0" />
+ </connection>
+ <connection
+   kind="reset"
+   version="11.1"
+   start="HPS_tabby.MRST"
+   end="test_LEDState_0.MRST" />
+ <connection
+   kind="clock"
+   version="11.1"
+   start="HPS_tabby.MCLK"
+   end="test_LEDState_0.MCLK" />
+ <connection
+   kind="avalon_streaming"
+   version="11.1"
+   start="test_LEDState_0.fled0"
+   end="basic_FuncLED_0.ledf" />
+ <connection
+   kind="avalon_streaming"
+   version="11.1"
+   start="test_LEDState_0.fled1"
+   end="basic_FuncLED_1.ledf" />
+ <connection
+   kind="avalon_streaming"
+   version="11.1"
+   start="test_LEDState_0.fled2"
+   end="basic_FuncLED_2.ledf" />
+ <connection
+   kind="avalon_streaming"
+   version="11.1"
+   start="test_LEDState_0.fled3"
+   end="basic_FuncLED_3.ledf" />
 </system>

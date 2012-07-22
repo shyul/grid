@@ -57,7 +57,7 @@ assign	q_reset = rso_MRST_reset;
 
 wire					q_clock;
 wire					q_reset;
-reg		[4:0]		state = 0;
+reg		[3:0]		state = 0;
 
 reg		[31:0]	h_rdata = 0;
 reg					h_wait = 0;
@@ -73,6 +73,8 @@ wire					q_rdvalid, q_wait;
 
 reg		[3:0]		tmp_cs;
 reg		[21:0]	tmp_addr;
+
+reg		[19:0]	timeout = 0;
 
 always@(posedge q_clock or posedge q_reset)
 begin
@@ -101,24 +103,26 @@ begin
 		q_rd <= 0;
 		q_btrans <= 0;
 		h_wait <= 0;
-		state <= 0;
+		timeout <= 0;
+		state <= 4'd0;
 	end
 	else begin
 		case(state)
-			0: begin
+			5'd0: begin
+				timeout <= 0;
 				if((coe_M1_CSN != 4'b1111)&&(!coe_M1_RDN)) begin
 					q_btrans <= 0;
 					q_wr <= 0;
 					q_rd <= 0;
 					h_wait <= 1;
-					state <= 5;
+					state <= 4'd3;
 				end
 				else if((coe_M1_CSN != 4'b1111)&&(!coe_M1_WRN)) begin	
 					q_btrans <= 0;
 					q_wr <= 0;
 					q_rd <= 0;
 					h_wait <= 0;
-					state <= 12;
+					state <= 4'd8;
 				end
 				else begin
 					h_rdata <= 0;
@@ -127,62 +131,72 @@ begin
 					q_rd <= 0;
 					q_btrans <= 0;
 					h_wait <= 0;
-					state <= 0;
+					state <= 4'd0;
 				end
 			end
 			
 			// Read process.
-			5: begin
+			4'd3: begin
 				tmp_addr <= coe_M1_ADDR;
 				tmp_cs <= coe_M1_CSN;
-				if(!q_wait) begin
+				if((!q_wait)||(timeout == 20'hFFFFF)) begin
 					q_btrans <= 1;
 					q_rd <= 1;
-					state <= state + 1;
-				end				
+					timeout <= 0;
+					state <= 4'd4;
+				end
+				else timeout <= timeout + 1;
 			end			
 			
-			6: begin
+			4'd4: begin
 				q_btrans <= 0;
 				q_rd <= 0;
-				if(q_rdvalid) begin h_rdata <= q_rdata; h_wait <= q_wait; state <= state + 1; end
+				if((q_rdvalid)||(timeout == 20'hFFFFF)) begin h_rdata <= q_rdata; h_wait <= q_wait; timeout <= 0; state <= 4'd5; end
+				else timeout <= timeout + 1;
 			end
 			
-			7: begin
+			4'd5: begin
 				h_wait <= q_wait; 
-				if((tmp_addr != coe_M1_ADDR)||(tmp_cs != coe_M1_CSN)||(coe_M1_RDN)) state <= 0;
+				if((tmp_addr != coe_M1_ADDR)||(tmp_cs != coe_M1_CSN)||(coe_M1_RDN)||(timeout == 20'hFFFFF)) state <= 4'd0;
+				else timeout <= timeout + 1;
 			end
 			
 			// Write process.
-			12: begin
+			4'd8: begin
 				q_wdata <= coe_M1_DATA;
 				if(coe_M1_WRN) begin
 					h_wait <= 1;
-					state <= state + 1;
+					state <= 4'd9;
 				end
 			end
 			
-			13: begin
-				if(!q_wait) begin 
+			4'd9: begin
+				if((!q_wait)||(timeout == 20'hFFFFF)) begin 
 					q_btrans <= 1;
 					q_wr <= 1;
-					state <= state + 1;
+					timeout <= 0;
+					state <= 4'd10;
 				end
+				else timeout <= timeout + 1;
 			end
 			
-			14: begin
+			4'd10: begin
 				q_btrans <= 0;
 				q_wr <= 0;
-				if(!q_wait) begin
-					state <= state + 1;
-				end			
+				if((!q_wait)||(timeout == 20'hFFFFF)) begin
+					timeout <= 0;
+					state <= 4'd11;
+				end
+				else timeout <= timeout + 1;		
 			end
 			
-			15: begin
-				if(!q_wait) begin
+			4'd11: begin
+				if((!q_wait)||(timeout == 20'hFFFFF)) begin
+					timeout <= 0;
 					h_wait <= 0;
-					state <= 0;
-				end			
+					state <= 4'd0;
+				end
+				else timeout <= timeout + 1;
 			end
 
 			default: begin
@@ -192,7 +206,8 @@ begin
 				q_wr <= 0;
 				q_rd <= 0;
 				q_btrans <= 0;
-				state <= 0;
+				timeout <= 0;
+				state <= 4'd0;
 			end
 			
 		endcase

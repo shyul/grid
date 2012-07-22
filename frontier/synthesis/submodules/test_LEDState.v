@@ -4,12 +4,33 @@ input					rsi_MRST_reset,	// reset_n from MCU GPIO
 input					csi_MCLK_clk,
 
 //Avalon-ST LED Control.
-output	[23:0]	aso_LEDS_data,
-output				aso_LEDS_valid
+output	[23:0]	aso_fled0_data,
+output				aso_fled0_valid,
+
+//Avalon-ST LED Control.
+output	[23:0]	aso_fled1_data,
+output				aso_fled1_valid,
+
+//Avalon-ST LED Control.
+output	[23:0]	aso_fled2_data,
+output				aso_fled2_valid,
+
+//Avalon-ST LED Control.
+output	[23:0]	aso_fled3_data,
+output				aso_fled3_valid
 );
 
-assign	aso_LEDS_valid = 1;
-assign	aso_LEDS_data = {r_cnt, g_cnt, b_cnt};
+assign	aso_fled0_valid = 1;
+assign	aso_fled0_data = {r_cnt, g_cnt, b_cnt};
+
+assign	aso_fled1_valid = 1;
+assign	aso_fled1_data = {g_cnt, b_cnt, r_cnt};
+
+assign	aso_fled2_valid = 1;
+assign	aso_fled2_data = {b_cnt, r_cnt, g_cnt};
+
+assign	aso_fled3_valid = 1;
+assign	aso_fled3_data = {g_cnt, r_cnt, b_cnt};
 
 reg	[5:0]		state;
 reg	[7:0]		r_cnt, g_cnt, b_cnt;
