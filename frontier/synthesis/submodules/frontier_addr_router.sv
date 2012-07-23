@@ -35,7 +35,7 @@ module frontier_addr_router_default_decode
                DEFAULT_DESTID = 6 
    )
   (output [87 - 84 : 0] default_destination_id,
-   output [9-1 : 0] default_src_channel
+   output [10-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
@@ -44,7 +44,7 @@ module frontier_addr_router_default_decode
     if (DEFAULT_CHANNEL == -1)
       assign default_src_channel = '0;
     else
-      assign default_src_channel = 9'b1 << DEFAULT_CHANNEL;
+      assign default_src_channel = 10'b1 << DEFAULT_CHANNEL;
   end endgenerate
 
 endmodule
@@ -72,7 +72,7 @@ module frontier_addr_router
     // -------------------
     output                          src_valid,
     output reg [89-1    : 0] src_data,
-    output reg [9-1 : 0] src_channel,
+    output reg [10-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
     input                           src_ready
@@ -86,7 +86,7 @@ module frontier_addr_router
     localparam PKT_DEST_ID_H = 87;
     localparam PKT_DEST_ID_L = 84;
     localparam ST_DATA_W = 89;
-    localparam ST_CHANNEL_W = 9;
+    localparam ST_CHANNEL_W = 10;
     localparam DECODER_TYPE = 0;
 
     localparam PKT_TRANS_WRITE = 70;
@@ -111,13 +111,14 @@ module frontier_addr_router
     localparam PAD6 = log2ceil(32'h20000080 - 32'h20000000);
     localparam PAD7 = log2ceil(32'h20000100 - 32'h20000080);
     localparam PAD8 = log2ceil(32'h20000120 - 32'h20000100);
+    localparam PAD9 = log2ceil(32'h20000140 - 32'h20000120);
 
     // -------------------------------------------------------
     // Work out which address bits are significant based on the
     // address range of the slaves. If the required width is too
     // large or too small, we use the address field width instead.
     // -------------------------------------------------------
-    localparam ADDR_RANGE = 32'h20000120;
+    localparam ADDR_RANGE = 32'h20000140;
     localparam RANGE_ADDR_WIDTH = log2ceil(ADDR_RANGE);
     localparam OPTIMIZED_ADDR_H = (RANGE_ADDR_WIDTH > PKT_ADDR_W) ||
                                   (RANGE_ADDR_WIDTH == 0) ?
@@ -136,7 +137,7 @@ module frontier_addr_router
     assign src_endofpacket   = sink_endofpacket;
 
     wire [PKT_DEST_ID_W-1:0] default_destid;
-    wire [9-1 : 0] default_src_channel;
+    wire [10-1 : 0] default_src_channel;
 
 
 
@@ -158,56 +159,62 @@ module frontier_addr_router
 
         // ( 0x10000000 .. 0x10000010 )
         if ( {address[RG:PAD0],{PAD0{1'b0}}} == 'h10000000 ) begin
-            src_channel = 9'b000000001;
+            src_channel = 10'b0000000001;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
         end
 
         // ( 0x10000100 .. 0x10000104 )
         if ( {address[RG:PAD1],{PAD1{1'b0}}} == 'h10000100 ) begin
-            src_channel = 9'b000000010;
+            src_channel = 10'b0000000010;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
         end
 
         // ( 0x10000104 .. 0x10000108 )
         if ( {address[RG:PAD2],{PAD2{1'b0}}} == 'h10000104 ) begin
-            src_channel = 9'b000000100;
+            src_channel = 10'b0000000100;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
         end
 
         // ( 0x10000108 .. 0x1000010c )
         if ( {address[RG:PAD3],{PAD3{1'b0}}} == 'h10000108 ) begin
-            src_channel = 9'b000001000;
+            src_channel = 10'b0000001000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
         end
 
         // ( 0x1000010c .. 0x10000110 )
         if ( {address[RG:PAD4],{PAD4{1'b0}}} == 'h1000010c ) begin
-            src_channel = 9'b000010000;
+            src_channel = 10'b0000010000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
         end
 
         // ( 0x10000200 .. 0x10000204 )
         if ( {address[RG:PAD5],{PAD5{1'b0}}} == 'h10000200 ) begin
-            src_channel = 9'b000100000;
+            src_channel = 10'b0000100000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 5;
         end
 
         // ( 0x20000000 .. 0x20000080 )
         if ( {address[RG:PAD6],{PAD6{1'b0}}} == 'h20000000 ) begin
-            src_channel = 9'b001000000;
+            src_channel = 10'b0001000000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 6;
         end
 
         // ( 0x20000080 .. 0x20000100 )
         if ( {address[RG:PAD7],{PAD7{1'b0}}} == 'h20000080 ) begin
-            src_channel = 9'b010000000;
+            src_channel = 10'b0010000000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 7;
         end
 
         // ( 0x20000100 .. 0x20000120 )
         if ( {address[RG:PAD8],{PAD8{1'b0}}} == 'h20000100 ) begin
-            src_channel = 9'b100000000;
+            src_channel = 10'b0100000000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 8;
+        end
+
+        // ( 0x20000120 .. 0x20000140 )
+        if ( {address[RG:PAD9],{PAD9{1'b0}}} == 'h20000120 ) begin
+            src_channel = 10'b1000000000;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 9;
         end
     end
 

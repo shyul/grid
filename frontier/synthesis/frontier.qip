@@ -2,7 +2,7 @@ set_global_assignment -entity "frontier" -library "lib_frontier" -name IP_TOOL_N
 set_global_assignment -entity "frontier" -library "lib_frontier" -name IP_TOOL_VERSION "11.1sp2"
 set_global_assignment -entity "frontier" -library "lib_frontier" -name IP_TOOL_ENV "qsys"
 set_global_assignment -library "lib_frontier" -name MISC_FILE [file join $::quartus(qip_path) ../../frontier.sopcinfo]
-set_instance_assignment -entity "frontier" -library "lib_frontier" -name SLD_INFO "QSYS_NAME frontier HAS_SOPCINFO 1 GENERATION_ID 1342947068"
+set_instance_assignment -entity "frontier" -library "lib_frontier" -name SLD_INFO "QSYS_NAME frontier HAS_SOPCINFO 1 GENERATION_ID 1343028259"
 set_global_assignment -library "lib_frontier" -name MISC_FILE [file join $::quartus(qip_path) ../../frontier.qsys]
 
 set_global_assignment -library "lib_frontier" -name VERILOG_FILE [file join $::quartus(qip_path) frontier.v]

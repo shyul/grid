@@ -106,7 +106,7 @@
          type = "boolean";
       }
    }
-   element basic_FuncLED_1.ctrl
+   element basic_ShieldCtrl.ctrl
    {
       datum _lockedAddress
       {
@@ -115,20 +115,7 @@
       }
       datum baseAddress
       {
-         value = "268435716";
-         type = "long";
-      }
-   }
-   element basic_FuncLED_3.ctrl
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "268435724";
+         value = "268435968";
          type = "long";
       }
    }
@@ -145,6 +132,19 @@
          type = "long";
       }
    }
+   element basic_FuncLED_3.ctrl
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "268435724";
+         type = "long";
+      }
+   }
    element basic_FuncLED_2.ctrl
    {
       datum _lockedAddress
@@ -158,7 +158,7 @@
          type = "long";
       }
    }
-   element basic_ShieldCtrl.ctrl
+   element basic_FuncLED_1.ctrl
    {
       datum _lockedAddress
       {
@@ -167,7 +167,7 @@
       }
       datum baseAddress
       {
-         value = "268435968";
+         value = "268435716";
          type = "long";
       }
    }
@@ -221,6 +221,14 @@
          type = "int";
       }
    }
+   element grid_PWM_1
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
    element grid_PWM_0.pwm
    {
       datum _lockedAddress
@@ -234,6 +242,19 @@
          type = "long";
       }
    }
+   element grid_PWM_1.pwm
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "536871200";
+         type = "long";
+      }
+   }
    element test_LEDState
    {
       datum _sortIndex
@@ -243,7 +264,7 @@
       }
       datum sopceditor_expanded
       {
-         value = "1";
+         value = "0";
          type = "boolean";
       }
    }
@@ -262,7 +283,7 @@
  <parameter name="projectName" value="grid.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1342946660801" />
+ <parameter name="timeStamp" value="1343027953094" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="m0" internal="HPS_tabby.EXPORT" type="conduit" dir="end" />
@@ -294,6 +315,7 @@
  <interface name="slot_a" internal="grid_PIO26_A.EXPORT" type="conduit" dir="end" />
  <interface name="slot_b" internal="grid_PIO26_B.EXPORT" type="conduit" dir="end" />
  <interface name="pwm_c0" internal="grid_PWM_0.EXPORT" type="conduit" dir="end" />
+ <interface name="pwm_c1" internal="grid_PWM_1.EXPORT" type="conduit" dir="end" />
  <module kind="hps_tabby" version="1.1" enabled="1" name="HPS_tabby" />
  <module kind="basic_SysID" version="1.0" enabled="1" name="basic_SysID">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
@@ -327,6 +349,10 @@
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
  </module>
  <module kind="grid_PWM" version="1.0" enabled="1" name="grid_PWM_0">
+  <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
+  <parameter name="AUTO_PWMCLK_CLOCK_RATE" value="200000000" />
+ </module>
+ <module kind="grid_PWM" version="1.0" enabled="1" name="grid_PWM_1">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
   <parameter name="AUTO_PWMCLK_CLOCK_RATE" value="200000000" />
  </module>
@@ -553,4 +579,32 @@
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x20000100" />
  </connection>
+ <connection
+   kind="reset"
+   version="11.1"
+   start="HPS_tabby.MRST"
+   end="grid_PWM_1.MRST" />
+ <connection
+   kind="clock"
+   version="11.1"
+   start="HPS_tabby.MCLK"
+   end="grid_PWM_1.MCLK" />
+ <connection
+   kind="avalon"
+   version="11.1"
+   start="HPS_tabby.M1"
+   end="grid_PWM_1.pwm">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x20000120" />
+ </connection>
+ <connection
+   kind="reset"
+   version="11.1"
+   start="HPS_tabby.MRST"
+   end="grid_PWM_1.PWMRST" />
+ <connection
+   kind="clock"
+   version="11.1"
+   start="HPS_tabby.H2CLK"
+   end="grid_PWM_1.PWMCLK" />
 </system>
