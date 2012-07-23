@@ -18,7 +18,7 @@
 #
 # Quartus II 32-bit
 # Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Full Version
-# Date created = 19:22:30  July 21, 2012
+# Date created = 18:59:38  July 22, 2012
 #
 # -------------------------------------------------------------------------- #
 #
@@ -447,6 +447,11 @@ set_instance_assignment -name IO_STANDARD "1.8 V" -to LCD_DEN
 set_global_assignment -name GENERATE_RBF_FILE ON
 set_global_assignment -name STRATIX_JTAG_USER_CODE EA68B010
 
+# SignalTap II Assignments
+# ========================
+set_global_assignment -name ENABLE_SIGNALTAP OFF
+set_global_assignment -name USE_SIGNALTAP_FILE stp_root/test_bus.stp
+
 # Power Estimation Assignments
 # ============================
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
@@ -523,6 +528,15 @@ set_global_assignment -name OUTPUT_IO_TIMING_ENDPOINT "NEAR END"
 # end ENTITY(altera_merlin_traffic_limiter)
 # -----------------------------------------
 
+# -------------------------------------
+# start ENTITY(altera_reset_controller)
+
+	# Project-Wide Assignments
+	# ========================
+
+# end ENTITY(altera_reset_controller)
+# -----------------------------------
+
 # ----------------------
 # start ENTITY(frontier)
 
@@ -594,8 +608,8 @@ set_global_assignment -name OUTPUT_IO_TIMING_ENDPOINT "NEAR END"
 
 		# LogicLock Region Assignments
 		# ============================
-set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
-set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+		set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+		set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 
 	# end LOGICLOCK_REGION(Root Region)
 	# ---------------------------------
@@ -605,15 +619,13 @@ set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 
 		# Incremental Compilation Assignments
 		# ===================================
-set_global_assignment -name PARTITION_NETLIST_TYPE POST_FIT -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+		set_global_assignment -name PARTITION_NETLIST_TYPE POST_FIT -section_id Top
+		set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+		set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+		set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 
 	# end DESIGN_PARTITION(Top)
 	# -------------------------
 
 # end ENTITY(grid)
 # ----------------
-set_global_assignment -name ENABLE_SIGNALTAP OFF
-set_global_assignment -name USE_SIGNALTAP_FILE stp_root/test_bus.stp
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
