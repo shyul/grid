@@ -165,16 +165,16 @@ begin
 	end
 	else begin
 		case(state)
-			0: begin state <= state + 1; spi_clk <= 1; spi_din <= rWRITE; spi_cs <= 1; delay <= 0; end
-			1: begin if(delay > cnv_delay) begin delay <= 0; state <= state + 1; end else delay <= delay + 1; end
-			2: begin state <= state + 1; spi_clk <= 1; spi_din <= rWRITE; spi_cs <= 0; end
-			3: begin state <= state + 1; spi_clk <= 0; adc_aso_ch[3] <= spi_dout; end
-			4: begin state <= state + 1; spi_clk <= 1; spi_din <= rSEQ; end
-			5: begin state <= state + 1; spi_clk <= 0; adc_aso_ch[2] <= spi_dout; end
-			6: begin state <= state + 1; spi_clk <= 1; spi_din <= adc_addr[3]; end
-			7: begin state <= state + 1; spi_clk <= 0; adc_aso_ch[1] <= spi_dout; end
-			8: begin state <= state + 1; spi_clk <= 1; spi_din <= adc_addr[2]; end
-			9: begin state <= state + 1; spi_clk <= 0; adc_aso_ch[0] <= spi_dout; end
+			0:  begin state <= state + 1; spi_clk <= 1; spi_din <= rWRITE; spi_cs <= 1; delay <= 0; end
+			1:  begin if(delay > cnv_delay) begin delay <= 0; state <= state + 1; end else delay <= delay + 1; end
+			2:  begin state <= state + 1; spi_clk <= 1; spi_din <= rWRITE; spi_cs <= 0; end
+			3:  begin state <= state + 1; spi_clk <= 0; adc_aso_ch[3] <= spi_dout; end
+			4:  begin state <= state + 1; spi_clk <= 1; spi_din <= rSEQ; end
+			5:  begin state <= state + 1; spi_clk <= 0; adc_aso_ch[2] <= spi_dout; end
+			6:  begin state <= state + 1; spi_clk <= 1; spi_din <= adc_addr[3]; end
+			7:  begin state <= state + 1; spi_clk <= 0; adc_aso_ch[1] <= spi_dout; end
+			8:  begin state <= state + 1; spi_clk <= 1; spi_din <= adc_addr[2]; end
+			9:  begin state <= state + 1; spi_clk <= 0; adc_aso_ch[0] <= spi_dout; end
 			10: begin state <= state + 1; spi_clk <= 1; spi_din <= adc_addr[1]; end
 			11: begin state <= state + 1; spi_clk <= 0; adc_aso_data[11] <= spi_dout; end
 			12: begin state <= state + 1; spi_clk <= 1; spi_din <= adc_addr[0]; end
@@ -199,9 +199,34 @@ begin
 			31: begin state <= state + 1; spi_clk <= 0; adc_aso_data[1] <= spi_dout; end
 			32: begin state <= state + 1; spi_clk <= 1; end
 			33: begin state <= state + 1; spi_clk <= 0; adc_aso_data[0] <= spi_dout; end
-			
+			34: begin state <= state + 1; spi_clk <= 1; adc_ch[adc_aso_ch] <= adc_aso_data; adc_aso_valid <= 1; end
+			35: begin state <= 0; spi_cs <= 1; adc_aso_valid <= 0; adc_addr <= adc_addr + 1; end
 			default: begin
-			
+				adc_ch[0] <= 0;
+				adc_ch[1] <= 0;
+				adc_ch[2] <= 0;
+				adc_ch[3] <= 0;
+				adc_ch[4] <= 0;
+				adc_ch[5] <= 0;
+				adc_ch[6] <= 0;
+				adc_ch[7] <= 0;
+				adc_ch[8] <= 0;
+				adc_ch[9] <= 0;
+				adc_ch[10] <= 0;
+				adc_ch[11] <= 0;
+				adc_ch[12] <= 0;
+				adc_ch[13] <= 0;
+				adc_ch[14] <= 0;
+				adc_ch[15] <= 0;
+				adc_addr <= 0;
+				adc_aso_ch <= 0;
+				adc_aso_data <= 0;
+				adc_aso_valid <= 0;
+				spi_din <= 0;
+				spi_cs <= 1;
+				spi_clk <= 1;
+				state <= 0;
+				delay <= 0;
 			end
 		endcase
 	end
