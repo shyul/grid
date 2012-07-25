@@ -16,6 +16,7 @@ db/
 incremental_db/
 output/
 greybox_tmp/
+.DS_Store
 
 
 # Compiled Dynamic libraries
