@@ -11,10 +11,10 @@
 // agreement for further details.
 
 
-// $Id: //acds/rel/12.0/ip/merlin/altera_irq_mapper/altera_irq_mapper.sv.terp#1 $
+// $Id: //acds/rel/11.1sp2/ip/merlin/altera_irq_mapper/altera_irq_mapper.sv.terp#1 $
 // $Revision: #1 $
-// $Date: 2012/02/13 $
-// $Author: swbranch $
+// $Date: 2011/11/10 $
+// $Author: max $
 
 // -------------------------------------------------------
 // Altera IRQ Mapper

@@ -12,7 +12,7 @@
    element $${FILENAME}
    {
    }
-   element grid_CloseID_0.CloseID
+   element grid_CloseID.CloseID
    {
       datum baseAddress
       {
@@ -114,7 +114,7 @@
          type = "boolean";
       }
    }
-   element basic_FuncLED_2.ctrl
+   element basic_ShieldCtrl.ctrl
    {
       datum _lockedAddress
       {
@@ -123,7 +123,7 @@
       }
       datum baseAddress
       {
-         value = "268435720";
+         value = "268435968";
          type = "long";
       }
    }
@@ -137,19 +137,6 @@
       datum baseAddress
       {
          value = "268435712";
-         type = "long";
-      }
-   }
-   element basic_ShieldCtrl.ctrl
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "268435968";
          type = "long";
       }
    }
@@ -179,7 +166,7 @@
          type = "long";
       }
    }
-   element grid_PIO26_A.gpio
+   element basic_FuncLED_2.ctrl
    {
       datum _lockedAddress
       {
@@ -188,7 +175,7 @@
       }
       datum baseAddress
       {
-         value = "536870912";
+         value = "268435720";
          type = "long";
       }
    }
@@ -205,7 +192,20 @@
          type = "long";
       }
    }
-   element grid_CloseID_0
+   element grid_PIO26_A.gpio
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "536870912";
+         type = "long";
+      }
+   }
+   element grid_CloseID
    {
       datum _sortIndex
       {
@@ -437,72 +437,11 @@
          type = "int";
       }
    }
-   element grid_PWM_24.pwm
+   element grid_PWM_7.pwm
    {
       datum baseAddress
       {
-         value = "536871936";
-         type = "long";
-      }
-   }
-   element grid_PWM_2.pwm
-   {
-      datum baseAddress
-      {
-         value = "536871232";
-         type = "long";
-      }
-   }
-   element grid_PWM_16.pwm
-   {
-      datum baseAddress
-      {
-         value = "536871680";
-         type = "long";
-      }
-   }
-   element grid_PWM_15.pwm
-   {
-      datum baseAddress
-      {
-         value = "536871648";
-         type = "long";
-      }
-   }
-   element grid_PWM_10.pwm
-   {
-      datum baseAddress
-      {
-         value = "536871488";
-         type = "long";
-      }
-   }
-   element grid_PWM_4.pwm
-   {
-      datum baseAddress
-      {
-         value = "536871296";
-         type = "long";
-      }
-   }
-   element grid_PWM_14.pwm
-   {
-      datum baseAddress
-      {
-         value = "536871616";
-         type = "long";
-      }
-   }
-   element grid_PWM_0.pwm
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "536871168";
+         value = "536871392";
          type = "long";
       }
    }
@@ -519,35 +458,43 @@
          type = "long";
       }
    }
+   element grid_PWM_24.pwm
+   {
+      datum baseAddress
+      {
+         value = "536871936";
+         type = "long";
+      }
+   }
+   element grid_PWM_18.pwm
+   {
+      datum baseAddress
+      {
+         value = "536871744";
+         type = "long";
+      }
+   }
+   element grid_PWM_6.pwm
+   {
+      datum baseAddress
+      {
+         value = "536871360";
+         type = "long";
+      }
+   }
+   element grid_PWM_17.pwm
+   {
+      datum baseAddress
+      {
+         value = "536871712";
+         type = "long";
+      }
+   }
    element grid_PWM_25.pwm
    {
       datum baseAddress
       {
          value = "536871968";
-         type = "long";
-      }
-   }
-   element grid_PWM_19.pwm
-   {
-      datum baseAddress
-      {
-         value = "536871776";
-         type = "long";
-      }
-   }
-   element grid_PWM_23.pwm
-   {
-      datum baseAddress
-      {
-         value = "536871904";
-         type = "long";
-      }
-   }
-   element grid_PWM_9.pwm
-   {
-      datum baseAddress
-      {
-         value = "536871456";
          type = "long";
       }
    }
@@ -559,27 +506,11 @@
          type = "long";
       }
    }
-   element grid_PWM_20.pwm
+   element grid_PWM_21.pwm
    {
       datum baseAddress
       {
-         value = "536871808";
-         type = "long";
-      }
-   }
-   element grid_PWM_12.pwm
-   {
-      datum baseAddress
-      {
-         value = "536871552";
-         type = "long";
-      }
-   }
-   element grid_PWM_18.pwm
-   {
-      datum baseAddress
-      {
-         value = "536871744";
+         value = "536871840";
          type = "long";
       }
    }
@@ -599,19 +530,40 @@
          type = "long";
       }
    }
-   element grid_PWM_22.pwm
+   element grid_PWM_9.pwm
    {
       datum baseAddress
       {
-         value = "536871872";
+         value = "536871456";
          type = "long";
       }
    }
-   element grid_PWM_21.pwm
+   element grid_PWM_0.pwm
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "536871168";
+         type = "long";
+      }
+   }
+   element grid_PWM_15.pwm
    {
       datum baseAddress
       {
-         value = "536871840";
+         value = "536871648";
+         type = "long";
+      }
+   }
+   element grid_PWM_23.pwm
+   {
+      datum baseAddress
+      {
+         value = "536871904";
          type = "long";
       }
    }
@@ -623,14 +575,6 @@
          type = "long";
       }
    }
-   element grid_PWM_6.pwm
-   {
-      datum baseAddress
-      {
-         value = "536871360";
-         type = "long";
-      }
-   }
    element grid_PWM_8.pwm
    {
       datum baseAddress
@@ -639,19 +583,75 @@
          type = "long";
       }
    }
-   element grid_PWM_7.pwm
+   element grid_PWM_4.pwm
    {
       datum baseAddress
       {
-         value = "536871392";
+         value = "536871296";
          type = "long";
       }
    }
-   element grid_PWM_17.pwm
+   element grid_PWM_20.pwm
    {
       datum baseAddress
       {
-         value = "536871712";
+         value = "536871808";
+         type = "long";
+      }
+   }
+   element grid_PWM_14.pwm
+   {
+      datum baseAddress
+      {
+         value = "536871616";
+         type = "long";
+      }
+   }
+   element grid_PWM_2.pwm
+   {
+      datum baseAddress
+      {
+         value = "536871232";
+         type = "long";
+      }
+   }
+   element grid_PWM_19.pwm
+   {
+      datum baseAddress
+      {
+         value = "536871776";
+         type = "long";
+      }
+   }
+   element grid_PWM_10.pwm
+   {
+      datum baseAddress
+      {
+         value = "536871488";
+         type = "long";
+      }
+   }
+   element grid_PWM_22.pwm
+   {
+      datum baseAddress
+      {
+         value = "536871872";
+         type = "long";
+      }
+   }
+   element grid_PWM_16.pwm
+   {
+      datum baseAddress
+      {
+         value = "536871680";
+         type = "long";
+      }
+   }
+   element grid_PWM_12.pwm
+   {
+      datum baseAddress
+      {
+         value = "536871552";
          type = "long";
       }
    }
@@ -672,7 +672,7 @@
 ]]></parameter>
  <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
  <parameter name="device" value="EP4CE15F23C8" />
- <parameter name="deviceFamily" value="Cyclone IV E" />
+ <parameter name="deviceFamily" value="CYCLONEIVE" />
  <parameter name="deviceSpeedGrade" value="8" />
  <parameter name="fabricMode" value="QSYS" />
  <parameter name="generateLegacySim" value="false" />
@@ -683,7 +683,7 @@
  <parameter name="projectName" value="grid.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1343204708437" />
+ <parameter name="timeStamp" value="1344156221900" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="m0" internal="HPS_tabby.EXPORT" type="conduit" dir="end" />
@@ -876,22 +876,22 @@
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
   <parameter name="AUTO_PWMCLK_CLOCK_RATE" value="133333333" />
  </module>
- <module kind="grid_CloseID" version="1.0" enabled="1" name="grid_CloseID_0">
+ <module kind="grid_CloseID" version="1.1" enabled="1" name="grid_CloseID">
   <parameter name="AUTO_MCLK_CLOCK_RATE" value="133333333" />
  </module>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="basic_SysID.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="basic_SysID.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="basic_SysID.SysID">
   <parameter name="arbitrationPriority" value="1" />
@@ -899,17 +899,17 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="basic_FuncLED_0.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="basic_FuncLED_0.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="basic_FuncLED_0.ctrl">
   <parameter name="arbitrationPriority" value="1" />
@@ -917,17 +917,17 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="basic_FuncLED_1.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="basic_FuncLED_1.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="basic_FuncLED_1.ctrl">
   <parameter name="arbitrationPriority" value="1" />
@@ -935,17 +935,17 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="basic_FuncLED_2.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="basic_FuncLED_2.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="basic_FuncLED_2.ctrl">
   <parameter name="arbitrationPriority" value="1" />
@@ -953,17 +953,17 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="basic_FuncLED_3.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="basic_FuncLED_3.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="basic_FuncLED_3.ctrl">
   <parameter name="arbitrationPriority" value="1" />
@@ -971,17 +971,17 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="basic_ShieldCtrl.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="basic_ShieldCtrl.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="basic_ShieldCtrl.ctrl">
   <parameter name="arbitrationPriority" value="1" />
@@ -989,54 +989,54 @@
  </connection>
  <connection
    kind="interrupt"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.EVENTS"
    end="basic_ShieldCtrl.OC">
   <parameter name="irqNumber" value="0" />
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="test_LEDState.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="test_LEDState.MCLK" />
  <connection
    kind="avalon_streaming"
-   version="12.0"
+   version="11.1"
    start="test_LEDState.fled0"
    end="basic_FuncLED_0.ledf" />
  <connection
    kind="avalon_streaming"
-   version="12.0"
+   version="11.1"
    start="test_LEDState.fled1"
    end="basic_FuncLED_1.ledf" />
  <connection
    kind="avalon_streaming"
-   version="12.0"
+   version="11.1"
    start="test_LEDState.fled2"
    end="basic_FuncLED_2.ledf" />
  <connection
    kind="avalon_streaming"
-   version="12.0"
+   version="11.1"
    start="test_LEDState.fled3"
    end="basic_FuncLED_3.ledf" />
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PIO26_A.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PIO26_A.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PIO26_A.gpio">
   <parameter name="arbitrationPriority" value="1" />
@@ -1044,17 +1044,17 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PIO26_B.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PIO26_B.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PIO26_B.gpio">
   <parameter name="arbitrationPriority" value="1" />
@@ -1062,36 +1062,36 @@
  </connection>
  <connection
    kind="interrupt"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.EVENTS"
    end="grid_PIO26_A.gpint">
   <parameter name="irqNumber" value="1" />
  </connection>
  <connection
    kind="interrupt"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.EVENTS"
    end="grid_PIO26_B.gpint">
   <parameter name="irqNumber" value="2" />
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_0.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_0.MCLK" />
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_0.PWMRST" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PWM_0.pwm">
   <parameter name="arbitrationPriority" value="1" />
@@ -1099,17 +1099,17 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_1.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_1.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PWM_1.pwm">
   <parameter name="arbitrationPriority" value="1" />
@@ -1117,27 +1117,27 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_1.PWMRST" />
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_2.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_2.MCLK" />
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_2.PWMRST" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PWM_2.pwm">
   <parameter name="arbitrationPriority" value="1" />
@@ -1145,17 +1145,17 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_3.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_3.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PWM_3.pwm">
   <parameter name="arbitrationPriority" value="1" />
@@ -1163,22 +1163,22 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_3.PWMRST" />
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_4.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_4.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PWM_4.pwm">
   <parameter name="arbitrationPriority" value="1" />
@@ -1186,22 +1186,22 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_4.PWMRST" />
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_5.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_5.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PWM_5.pwm">
   <parameter name="arbitrationPriority" value="1" />
@@ -1209,52 +1209,52 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_5.PWMRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_5.PWMCLK" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_4.PWMCLK" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_3.PWMCLK" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_2.PWMCLK" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_1.PWMCLK" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_0.PWMCLK" />
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_6.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_6.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PWM_6.pwm">
   <parameter name="arbitrationPriority" value="1" />
@@ -1262,27 +1262,27 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_6.PWMRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_6.PWMCLK" />
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_7.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_7.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PWM_7.pwm">
   <parameter name="arbitrationPriority" value="1" />
@@ -1290,27 +1290,27 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_7.PWMRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_7.PWMCLK" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_8.MCLK" />
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_8.MRST" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PWM_8.pwm">
   <parameter name="arbitrationPriority" value="1" />
@@ -1318,27 +1318,27 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_8.PWMRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_8.PWMCLK" />
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_9.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_9.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PWM_9.pwm">
   <parameter name="arbitrationPriority" value="1" />
@@ -1346,27 +1346,27 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_9.PWMRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_9.PWMCLK" />
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_10.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_10.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PWM_10.pwm">
   <parameter name="arbitrationPriority" value="1" />
@@ -1374,27 +1374,27 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_10.PWMRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_10.PWMCLK" />
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_11.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_11.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PWM_11.pwm">
   <parameter name="arbitrationPriority" value="1" />
@@ -1402,27 +1402,27 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_11.PWMRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_11.PWMCLK" />
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_12.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_12.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PWM_12.pwm">
   <parameter name="arbitrationPriority" value="1" />
@@ -1430,27 +1430,27 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_12.PWMRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_12.PWMCLK" />
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_13.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_13.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PWM_13.pwm">
   <parameter name="arbitrationPriority" value="1" />
@@ -1458,27 +1458,27 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_13.PWMRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_13.PWMCLK" />
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_14.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_14.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PWM_14.pwm">
   <parameter name="arbitrationPriority" value="1" />
@@ -1486,27 +1486,27 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_14.PWMRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_14.PWMCLK" />
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_15.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_15.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PWM_15.pwm">
   <parameter name="arbitrationPriority" value="1" />
@@ -1514,27 +1514,27 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_15.PWMRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_15.PWMCLK" />
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_16.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_16.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PWM_16.pwm">
   <parameter name="arbitrationPriority" value="1" />
@@ -1542,27 +1542,27 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_16.PWMRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_16.PWMCLK" />
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_17.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_17.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PWM_17.pwm">
   <parameter name="arbitrationPriority" value="1" />
@@ -1570,27 +1570,27 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_17.PWMRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_17.PWMCLK" />
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_18.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_18.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PWM_18.pwm">
   <parameter name="arbitrationPriority" value="1" />
@@ -1598,27 +1598,27 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_18.PWMRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_18.PWMCLK" />
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_19.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_19.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PWM_19.pwm">
   <parameter name="arbitrationPriority" value="1" />
@@ -1626,27 +1626,27 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_19.PWMRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_19.PWMCLK" />
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_20.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_20.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PWM_20.pwm">
   <parameter name="arbitrationPriority" value="1" />
@@ -1654,27 +1654,27 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_20.PWMRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_20.PWMCLK" />
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_21.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_21.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PWM_21.pwm">
   <parameter name="arbitrationPriority" value="1" />
@@ -1682,27 +1682,27 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_21.PWMRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_21.PWMCLK" />
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_22.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_22.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PWM_22.pwm">
   <parameter name="arbitrationPriority" value="1" />
@@ -1710,27 +1710,27 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_22.PWMRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_22.PWMCLK" />
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_23.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_23.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PWM_23.pwm">
   <parameter name="arbitrationPriority" value="1" />
@@ -1738,27 +1738,27 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_23.PWMRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_23.PWMCLK" />
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_24.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_24.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PWM_24.pwm">
   <parameter name="arbitrationPriority" value="1" />
@@ -1766,27 +1766,27 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_24.PWMRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_24.PWMCLK" />
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_25.MRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_25.MCLK" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
    end="grid_PWM_25.pwm">
   <parameter name="arbitrationPriority" value="1" />
@@ -1794,30 +1794,30 @@
  </connection>
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
    end="grid_PWM_25.PWMRST" />
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
    end="grid_PWM_25.PWMCLK" />
  <connection
    kind="reset"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MRST"
-   end="grid_CloseID_0.MRST" />
+   end="grid_CloseID.MRST" />
  <connection
    kind="avalon"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.M1"
-   end="grid_CloseID_0.CloseID">
+   end="grid_CloseID.CloseID">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x20000440" />
  </connection>
  <connection
    kind="clock"
-   version="12.0"
+   version="11.1"
    start="HPS_tabby.MCLK"
-   end="grid_CloseID_0.MCLK" />
+   end="grid_CloseID.MCLK" />
 </system>

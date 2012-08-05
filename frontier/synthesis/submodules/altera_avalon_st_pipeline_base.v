@@ -11,12 +11,6 @@
 // agreement for further details.
 
 
-// $File: //acds/rel/12.0/ip/avalon_st/altera_avalon_st_pipeline_stage/altera_avalon_st_pipeline_base.v $
-// $Revision: #1 $
-// $Date: 2012/02/13 $
-// $Author: swbranch $
-//------------------------------------------------------------------------------
-
 `timescale 1ns / 1ns
 
 module altera_avalon_st_pipeline_base (
