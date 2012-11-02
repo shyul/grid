@@ -11,10 +11,10 @@
 // agreement for further details.
 
 
-// $Id: //acds/rel/11.1sp2/ip/merlin/altera_irq_clock_crosser/altera_irq_clock_crosser.sv#1 $
+// $Id: //acds/rel/12.0sp2/ip/merlin/altera_irq_clock_crosser/altera_irq_clock_crosser.sv#1 $
 // $Revision: #1 $
-// $Date: 2011/11/10 $
-// $Author: max $
+// $Date: 2012/06/21 $
+// $Author: swbranch $
 
 `timescale 1 ns / 1 ns
 

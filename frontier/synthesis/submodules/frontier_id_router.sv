@@ -11,10 +11,10 @@
 // agreement for further details.
 
 
-// $Id: //acds/rel/11.1sp2/ip/merlin/altera_merlin_router/altera_merlin_router.sv.terp#1 $
+// $Id: //acds/rel/12.0sp2/ip/merlin/altera_merlin_router/altera_merlin_router.sv.terp#1 $
 // $Revision: #1 $
-// $Date: 2011/11/10 $
-// $Author: max $
+// $Date: 2012/06/21 $
+// $Author: swbranch $
 
 // -------------------------------------------------------
 // Merlin Router
@@ -34,12 +34,12 @@ module frontier_id_router_default_decode
      parameter DEFAULT_CHANNEL = 0,
                DEFAULT_DESTID = 0 
    )
-  (output [91 - 86 : 0] default_destination_id,
+  (output [98 - 93 : 0] default_destination_id,
    output [35-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
-    DEFAULT_DESTID[91 - 86 : 0];
+    DEFAULT_DESTID[98 - 93 : 0];
   generate begin : default_decode
     if (DEFAULT_CHANNEL == -1)
       assign default_src_channel = '0;
@@ -62,7 +62,7 @@ module frontier_id_router
     // Command Sink (Input)
     // -------------------
     input                       sink_valid,
-    input  [93-1 : 0]    sink_data,
+    input  [109-1 : 0]    sink_data,
     input                       sink_startofpacket,
     input                       sink_endofpacket,
     output                      sink_ready,
@@ -71,7 +71,7 @@ module frontier_id_router
     // Command Source (Output)
     // -------------------
     output                          src_valid,
-    output reg [93-1    : 0] src_data,
+    output reg [109-1    : 0] src_data,
     output reg [35-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
@@ -83,9 +83,9 @@ module frontier_id_router
     // -------------------------------------------------------
     localparam PKT_ADDR_H = 67;
     localparam PKT_ADDR_L = 36;
-    localparam PKT_DEST_ID_H = 91;
-    localparam PKT_DEST_ID_L = 86;
-    localparam ST_DATA_W = 93;
+    localparam PKT_DEST_ID_H = 98;
+    localparam PKT_DEST_ID_L = 93;
+    localparam ST_DATA_W = 109;
     localparam ST_CHANNEL_W = 35;
     localparam DECODER_TYPE = 1;
 
