@@ -1,6 +1,6 @@
 # -------------------------------------------------------------------------- #
 #
-# Copyright (C) 1991-2011 Altera Corporation
+# Copyright (C) 1991-2012 Altera Corporation
 # Your use of Altera Corporation's design tools, logic functions 
 # and other software and tools, and its AMPP partner logic 
 # functions, and any output files from any of the foregoing 
@@ -17,8 +17,8 @@
 # -------------------------------------------------------------------------- #
 #
 # Quartus II 32-bit
-# Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Full Version
-# Date created = 18:59:38  July 22, 2012
+# Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Full Version
+# Date created = 11:25:51  February 26, 2013
 #
 # -------------------------------------------------------------------------- #
 #
@@ -41,9 +41,8 @@
 # ========================
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "10.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "00:00:01  FEB 01, 2012"
-set_global_assignment -name LAST_QUARTUS_VERSION "11.1 SP2"
+set_global_assignment -name LAST_QUARTUS_VERSION "12.1 SP1"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY .\\output
-set_global_assignment -name QIP_FILE frontier/synthesis/frontier.qip
 set_global_assignment -name BDF_FILE grid.bdf
 set_global_assignment -name SDC_FILE grid.sdc
 set_global_assignment -name CDF_FILE grid.cdf
@@ -465,141 +464,6 @@ set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -
 set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
 set_global_assignment -name OUTPUT_IO_TIMING_ENDPOINT "NEAR END"
 
-# -----------------------------------
-# start ENTITY(altera_avalon_sc_fifo)
-
-	# Project-Wide Assignments
-	# ========================
-
-# end ENTITY(altera_avalon_sc_fifo)
-# ---------------------------------
-
-# --------------------------------------
-# start ENTITY(altera_irq_clock_crosser)
-
-	# Project-Wide Assignments
-	# ========================
-
-# end ENTITY(altera_irq_clock_crosser)
-# ------------------------------------
-
-# ----------------------------------------
-# start ENTITY(altera_merlin_master_agent)
-
-	# Project-Wide Assignments
-	# ========================
-
-# end ENTITY(altera_merlin_master_agent)
-# --------------------------------------
-
-# ---------------------------------------------
-# start ENTITY(altera_merlin_master_translator)
-
-	# Project-Wide Assignments
-	# ========================
-
-# end ENTITY(altera_merlin_master_translator)
-# -------------------------------------------
-
-# ---------------------------------------
-# start ENTITY(altera_merlin_slave_agent)
-
-	# Project-Wide Assignments
-	# ========================
-
-# end ENTITY(altera_merlin_slave_agent)
-# -------------------------------------
-
-# --------------------------------------------
-# start ENTITY(altera_merlin_slave_translator)
-
-	# Project-Wide Assignments
-	# ========================
-
-# end ENTITY(altera_merlin_slave_translator)
-# ------------------------------------------
-
-# -------------------------------------------
-# start ENTITY(altera_merlin_traffic_limiter)
-
-	# Project-Wide Assignments
-	# ========================
-
-# end ENTITY(altera_merlin_traffic_limiter)
-# -----------------------------------------
-
-# -------------------------------------
-# start ENTITY(altera_reset_controller)
-
-	# Project-Wide Assignments
-	# ========================
-
-# end ENTITY(altera_reset_controller)
-# -----------------------------------
-
-# ----------------------
-# start ENTITY(frontier)
-
-	# Project-Wide Assignments
-	# ========================
-
-# end ENTITY(frontier)
-# --------------------
-
-# ----------------------------------
-# start ENTITY(frontier_addr_router)
-
-	# Project-Wide Assignments
-	# ========================
-
-# end ENTITY(frontier_addr_router)
-# --------------------------------
-
-# -------------------------------------
-# start ENTITY(frontier_cmd_xbar_demux)
-
-	# Project-Wide Assignments
-	# ========================
-
-# end ENTITY(frontier_cmd_xbar_demux)
-# -----------------------------------
-
-# --------------------------------
-# start ENTITY(frontier_id_router)
-
-	# Project-Wide Assignments
-	# ========================
-
-# end ENTITY(frontier_id_router)
-# ------------------------------
-
-# ---------------------------------
-# start ENTITY(frontier_irq_mapper)
-
-	# Project-Wide Assignments
-	# ========================
-
-# end ENTITY(frontier_irq_mapper)
-# -------------------------------
-
-# -------------------------------------
-# start ENTITY(frontier_rsp_xbar_demux)
-
-	# Project-Wide Assignments
-	# ========================
-
-# end ENTITY(frontier_rsp_xbar_demux)
-# -----------------------------------
-
-# -----------------------------------
-# start ENTITY(frontier_rsp_xbar_mux)
-
-	# Project-Wide Assignments
-	# ========================
-
-# end ENTITY(frontier_rsp_xbar_mux)
-# ---------------------------------
-
 # ------------------
 # start ENTITY(grid)
 
@@ -608,8 +472,8 @@ set_global_assignment -name OUTPUT_IO_TIMING_ENDPOINT "NEAR END"
 
 		# LogicLock Region Assignments
 		# ============================
-set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
-set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+		set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+		set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 
 	# end LOGICLOCK_REGION(Root Region)
 	# ---------------------------------
@@ -619,13 +483,14 @@ set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 
 		# Incremental Compilation Assignments
 		# ===================================
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+		set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+		set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+		set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 
 	# end DESIGN_PARTITION(Top)
 	# -------------------------
 
 # end ENTITY(grid)
 # ----------------
+set_global_assignment -name QIP_FILE frontier/synthesis/frontier.qip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
